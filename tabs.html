@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width, initial-scale=1">
+<script src="js/jquery-1.11.1.min.js"></script>
+<head>
+    <style>
+        *{margin:0; padding:0;}
+        .switch_tab{position:relative; width:80%; overflow:hidden; margin:auto;}
+        .switch_tab_butt{width:100%; border-bottom:1px solid #eee;}
+        .switch_tab_butt li{display:inline-block; padding:10px 0; width:120px; line-height:25px; text-align:center; cursor:pointer;}
+        .line{position:absolute; top:44px; width:120px; height:2px; background:red;}
+        .switch_tab_cont{padding-top:10px; line-height:20px;}
+        .switch_tab_cont div{display:none;}
+        .switch_tab_cont .on{display:block;}
+    </style>
+</head>
+<body>
+<div class="switch_tab">
+    <ul class="switch_tab_butt">
+        <li>butt1</li>
+        <li>butt2</li>
+        <li>butt3</li>
+    </ul>
+    <p class="line"></p>
+    <div class="switch_tab_cont">
+        <div class="on">tab1的内容</div>
+        <div>tab2的内容</div>
+        <div>tab3的内容</div>
+    </div>
+</div>
+</body>
+<!--选项卡的实现-->
+<script>
+    $('.switch_tab_butt li').hover(function(){
+        var liLeft = $(this).position().left;
+        $('.line').stop(true).animate({'left':liLeft},300);
+        //$('.switch_tab_cont div').removeClass('on');
+        //$('.switch_tab_cont div').eq($(this).index()).addClass('on');
+        $('.switch_tab_cont div').hide();
+        $('.switch_tab_cont div').eq($(this).index()).show();
+    })
+</script>
+</html>
