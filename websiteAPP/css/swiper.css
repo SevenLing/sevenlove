@@ -1,0 +1,30 @@
+.swiper-container {
+  height:100%;
+  overflow:hidden;
+}
+.swiper-slide {
+    float: left;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.pagination {
+  position: absolute;
+  left: 0;
+  text-align: right;
+  bottom:0;
+  width: 100%;
+}
+.swiper-pagination-switch {
+  display: inline-block;
+  width:.9rem;
+  height:.9rem;
+  background:url(../images/focus_bg.png) no-repeat right center;
+  background-size:contain;
+  margin-left:.5rem;
+  cursor: pointer;
+}
+.swiper-active-switch {
+  background:url(../images/focus_c_bg.png) no-repeat right center;
+  background-size:contain;
+}

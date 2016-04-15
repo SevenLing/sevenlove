@@ -1,0 +1,124 @@
+<ul class="nav-list">
+    <li><a class="first-menu" href="about.html">品牌故事</a></li>
+    <li class="tow-menu"><div class="menu-cont">
+        <a class="first-menu">产品</a>
+        <span class="nav_title"></span>
+        <ul class="child-menu">
+            <li>形象大片 \
+                <ul class="child-menu2">
+                    <li><a href="2015QDDP.html" class="third-menu">2015秋冬大片</a></li>
+                    <li><a href="#" class="third-menu">2016春季大片</a></li>
+                </ul>
+            </li>
+            <li>系列产品 \
+                <ul class="child-menu2">
+                    <li><a href="2015QDCP-X.html" class="third-menu">2015秋冬产品|鞋</a>
+                        <ul class="child-menu3">
+                            <li><a href="2015QDCP-X-CMG.html" class="four-menu">2015秋冬产品|鞋|刺玫瑰</a></li>
+                            <li><a class="third-menu">2015秋冬产品|鞋|永恒线条</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="third-menu">2016春季产品|鞋</a></li>
+                    <li><a href="2015QDCP-B.html" class="third-menu">2015秋冬产品|包</a></li>
+                    <li><a href="#" class="third-menu">2016春季产品|包</a></li>
+                </ul>
+            </li>           
+        </ul></div>
+    </li>
+    <li><div class="menu-cont">
+        <a class="first-menu">COOE世界</a>
+        <span class="nav_title"></span>
+        <ul class="child-menu">
+            <li><a href="#">明星穿搭</a></li>
+            <li><a href="COOE-JPCD.html">街拍穿搭</a></li>
+            <li><a href="COOE-MTHD.html">媒体活动</a></li>
+            <li><a href="#">店铺活动</a></li>
+        </ul></div>
+    </li>     
+    <li><a href="shop-info.html" class="first-menu">店铺信息</a></li>
+    <li><div class="menu-cont">
+        <a class="first-menu">Follow COOE</a>
+        <span class="nav_title"></span>
+        <ul class="child-menu">
+            <li><a href="contact.html">联系我们</a></li>
+            <li><a href="http://jobs.51job.com/guangzhou/co3514962.html" target="_blank">加入我们</a></li>
+        </ul></div>
+    </li>     
+    <li><a href="vip.html" class="first-menu">会员俱乐部</a></li>
+</ul>
+<script>
+    //切换一级菜单样式
+    $("nav li a").each(function(){  
+        if(/*$(this)[0].href*/this.href==String(window.location)){         //判断li中a的链接是否等于目前的页面链接
+            $(this).addClass("select");
+            $(this).click(function(){
+                return false;
+            })
+        }
+    })
+    $(".nav-list .first-menu").click(function(){
+        $(this).parent().find('.child-menu li').removeClass("menu_chioce");
+        $(".menu_chioce").slideUp(); 
+        //$(this).parent().find('.child-menu > li').toggle();
+        if($(this).parent().find('.child-menu > li').css("display") == "none"){
+            //$(this).parent().find('.child-menu > li').css("display","block");
+            $(this).parent().find('.child-menu > li').slideDown();
+        }
+        else if($(this).parent().find('.child-menu > li').css("display") == "list-item"){
+            //$(this).parent().find('.child-menu li').css("display","none");
+            $(this).parent().find('.child-menu > li').slideUp();
+        }
+        $(this).parent().find('.child-menu > li').addClass("menu_chioce");
+
+        var menu_h = $(this).parent().find(".child-menu").height();
+        //$('.panel_cont').animate({'margin-top':-menu_h},1000);    
+    })           
+    //切换一级菜单样式end
+
+    //切换二级菜单样式
+    $(".child-menu li a").each(function(){             
+        if($(this)[0].href==String(window.location)){         //判断li中a的链接是否等于目前的页面链接
+            $(this).parent().parent().parent().find('.nav_title').text($(this).text());
+            $(this).parent().parent().parent().find('.first-menu').addClass("select");              
+        } 
+    })
+
+    $(".child-menu > li").click(function(){
+        $(this).find('.child-menu2 li').removeClass("child-menu2_chioce");
+        $(".child-menu2_chioce").slideUp();
+        if($(this).find('.child-menu2 li').css("display") == "none"){
+            //$(this).find('.child-menu2 > li').css("display","block");
+            $(this).find('.child-menu2 > li').slideDown();
+        }
+        else if($(this).find('.child-menu2 > li').css("display") == "list-item"){
+            //$(this).find('.child-menu2 > li').css("display","none");
+            $(this).find('.child-menu2 > li').slideUp();
+        }
+        $(this).find('.child-menu2 > li').addClass("child-menu2_chioce");
+
+        var menu_h = $(this).parent().height();
+            //$('.panel_cont').animate({'margin-top':-menu_h},1000);
+    })
+    //切换二级菜单样式end
+    
+    //切换三级菜单样式
+    $(".third-menu").each(function(){             
+        if($(this)[0].href==String(window.location)){         //判断li中a的链接是否等于目前的页面链接
+            //alert(12)
+            //$(this).parent().parent().parent().css("display","block"); 
+           // $(this).parent().css("display","block"); 
+            $(this).parent().parent().parent().parent().parent().find('.nav_title').text($(this).text());
+            $(this).parent().parent().parent().parent().parent().find('.first-menu').addClass("select");              
+        } 
+    })
+    //切换三级菜单样式end
+    
+    //切换四级菜单样式
+    $(".four-menu").each(function(){             
+        if($(this)[0].href==String(window.location)){         //判断li中a的链接是否等于目前的页面链接
+            $(this).parent().parent().parent().parent().parent().parent().parent().find('.nav_title').text($(this).text());
+            $(this).parent().parent().parent().parent().parent().parent().parent().find('.first-menu').addClass("select");              
+        } 
+    })
+    //切换三级菜单样式end
+</script>
