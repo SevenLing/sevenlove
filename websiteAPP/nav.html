@@ -78,8 +78,8 @@
     //切换二级菜单样式
     $(".child-menu li a").each(function(){             
         if($(this)[0].href==String(window.location)){         //判断li中a的链接是否等于目前的页面链接
-            $(this).parent().parent().parent().find('.nav_title').text($(this).text());
-            $(this).parent().parent().parent().find('.first-menu').addClass("select");              
+            $(this).parents('.menu-cont').find('.nav_title').text($(this).text());
+            $(this).parents('.menu-cont').find('.first-menu').addClass("select");              
         } 
     })
 
@@ -107,8 +107,8 @@
             //alert(12)
             //$(this).parent().parent().parent().css("display","block"); 
            // $(this).parent().css("display","block"); 
-            $(this).parent().parent().parent().parent().parent().find('.nav_title').text($(this).text());
-            $(this).parent().parent().parent().parent().parent().find('.first-menu').addClass("select");              
+            $(this).parents('.menu-cont').find('.nav_title').text($(this).text());
+            $(this).parents('.menu-cont').find('.first-menu').addClass("select");              
         } 
     })
     //切换三级菜单样式end
@@ -116,8 +116,8 @@
     //切换四级菜单样式
     $(".four-menu").each(function(){             
         if($(this)[0].href==String(window.location)){         //判断li中a的链接是否等于目前的页面链接
-            $(this).parent().parent().parent().parent().parent().parent().parent().find('.nav_title').text($(this).text());
-            $(this).parent().parent().parent().parent().parent().parent().parent().find('.first-menu').addClass("select");              
+            $(this).parents('.menu-cont').find('.nav_title').text($(this).text());
+            $(this).parents('.menu-cont').find('.first-menu').addClass("select");              
         } 
     })
     //切换三级菜单样式end

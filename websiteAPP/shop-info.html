@@ -8,13 +8,13 @@
 <title>COOE蔻伊</title>
 <link rel="stylesheet" href="css/css.css" />
 <link rel="stylesheet" href="css/swiper.css" />
-<script src="js/jquery-1.8.3.min.js"></script> 
+<script src="js/jquery-1.11.1.min.js"></script> 
 <script src="js/html5shiv.js"></script>
 </head>
 <body>
     <div class="panel">
         <div class="loading"></div>
-        <span class="goback"><a href="index.html"><img src="images/goback.png" alt="cooe" /></a></span> 
+        <span class="goback"><a href="javascript:window.history.go(-1)"><img src="images/goback.png" alt="cooe" /></a></span> 
         <span class="menu_butt"><img src="images/menu.png" alt="cooe" /></span>
         <header>
             <p class="logo"><img src="images/store_logo.png" alt="cooe" /></p>                 
@@ -161,19 +161,6 @@
       autoplay: 2500,
       autoplayDisableOnInteraction: false
     })
-    /*$('.arrow-left').on('click', function(e){
-      e.preventDefault()
-      mySwiper.swipePrev()
-    })
-    $('.arrow-right').on('click', function(e){
-      e.preventDefault()
-      mySwiper.swipeNext()
-    })
-      
-    var _timer = null;
-    clearInterval(_timer);
-    _timer=setInterval(function(){$('.arrow-right').click()},3000);
-    轮播图，触屏切换*/
 
     /***选择省市***/
     $('.Pinpt').click(function(){
@@ -257,7 +244,7 @@
                  }
              }  
     })
-    $('.Clist li').live('click',function(){
+    $('.Clist').on('click','li',function(){
         $('.Cinpt').val($(this).html());
         $('.Clist').hide();
         //$(".shop-cont").css('opacity',1);

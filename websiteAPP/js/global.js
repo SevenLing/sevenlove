@@ -34,19 +34,6 @@ $(document).ready(function(){
 	$('body').height($(window).height());   //设置页面的body高度与浏览器可视高度一致
 
 	//根据不同分辨率设置html的fontsize大小
-    /*(function (doc, win) {
-      var docEl = doc.documentElement,
-        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-        recalc = function () {
-          var clientWidth = docEl.clientWidth;
-          if (!clientWidth) return;
-          docEl.style.fontSize = 10 * (clientWidth / 320) + 'px';
-        };
-
-      if (!doc.addEventListener) return;
-      win.addEventListener(resizeEvt, recalc, false);
-      doc.addEventListener('DOMContentLoaded', recalc, false);
-    })(document, window);*/
     var docEl = document.documentElement,
         clientWidth = $('body').width();
           if (!clientWidth) return;
@@ -59,11 +46,11 @@ $(document).ready(function(){
 	因为冒泡了，会让最外层的document执行到下面的方法。
     */
 	$('.menu_butt').click(function(e){
-	    if(parseInt($('nav').css('right')) == 0){
-	    	$('nav').animate({'right':-40+"%"},500);
+	    if($('nav').hasClass('show_nav')){
+	    	$('nav').removeClass('show_nav');
 	    }
 	    else{
-	    	$('nav').animate({'right':0},500);
+	    	$('nav').addClass('show_nav');
 	    }
 	    var ev = e || window.event;
 	        if(ev.stopPropagation){
@@ -74,7 +61,7 @@ $(document).ready(function(){
 	        }
     })
 	document.onclick = function(){
-	    $('nav').animate({'right':-40+"%"},500);
+	    $('nav').removeClass('show_nav');
 	}
 	$("nav").click(function(e){
 	    var ev = e || window.event;
@@ -100,12 +87,12 @@ $(document).ready(function(){
     $('.about_cont1').css('min-height',$('.aboutsection').height());  //设置公司简介页的页面高度
 
     $('.color img').each(function(){   //设置与当前大图相同地址的缩略图高亮，点击缩略图，切换成大图
-        if($(this).attr('src') == $('.prod_img img').attr('src')){        	
+        if($(this).attr('src') == $(this).parents('.collect_list_inner').find('.prod_img img').attr('src')){        	
         	$(this).css('opacity',1);
         }
         $(this).click(function(){
 	        var smallimgSrc = $(this).attr('src');
-	        $(this).parent().parent().parent().parent().find('.prod_img img').attr('src',smallimgSrc);
+	        $(this).parents('.collect_list_inner').find('.prod_img img').attr('src',smallimgSrc);
 	        $(this).css('opacity',1).siblings().css('opacity',.2);   //设置当前缩略图高亮，其余缩略图变灰
 	    })
     })
@@ -124,7 +111,7 @@ $(document).ready(function(){
 
     /***slide-button的执行动画***/
 	$('input').each(function(){
-		var label_wid = $(this).parent().width(),
+		var label_wid = $(this).parent().width();
 	    span_wid = $('.slide-butt').width();
 		if($(this).val() != ""){
 			$(this).parent().find('.slide-butt').animate({'left':label_wid - span_wid},0);
@@ -142,6 +129,30 @@ $(document).ready(function(){
 		$(this).parent().find('.slide-butt').animate({'left':0},700);
 	})
 	/***slide-button的执行动画 end***/ 
+
+    //上拉加载数据
+    $(window).bind('scroll',function(){show()});
+
+    function show(){
+        if($(window).scrollTop()+$(window).height()>=$(document).height()-$('footer').height()){
+            ajaxRead();
+        }
+    }   
+
+    function ajaxRead(){
+        var html="";
+        $.ajax({
+            type:'post',
+            dataType:'json',
+            url:"#",
+            beforeSend:function(){$('.load-data').show()},
+            success:function(data){
+                            var html=data;
+            },
+            //complete:function(){$('.load-data').hide()}
+        });
+    }
+    //上拉加载数据end
 })
 
 
