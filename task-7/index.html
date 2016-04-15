@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html charset="utf-8">
+<head>
+  <meta charset="utf-8">
+  <title>任务19</title>
+  <style>
+	.operate{margin-top:20px; height:35px; text-align:center;}
+	.operate input{width:200px; height:35px; line-height:21px; padding:7px; border:1px solid #ccc; border-radius:3px; box-sizing: border-box;}
+	.operate button{height:35px; border:1px solid #ccc; background:#eee; border-radius:3px; cursor:pointer;}
+	#right-in,#right-out{margin-right:30px;}
+	#rank{margin-top:80px; padding:0; height:380px; text-align:center;}
+	#rank li{display:inline-block; width:18px; margin:20px 1px; font-size:0; vertical-align:bottom; background:red; transition:all .3s ease-in-out;}
+  </style>
+</head>
+<body>
+  <div class="operate">
+    <input type="text" id="enter-inp" placeholder="请输入10-100之间的数值" />
+   	<button id="left-in">左侧入</button>
+	<button id="right-in">右侧入</button>
+	<button id="left-out">左侧出</button>
+	<button id="right-out">右侧出</button>
+	<button id="sort">排序</button>
+  </div>
+  <ul id="rank"></ul>
+  <script>
+    var left_in = document.getElementById('left-in');
+    var left_out = document.getElementById('left-out');
+    var right_in = document.getElementById('right-in');
+    var right_out = document.getElementById('right-out');
+    var enter_inp = document.getElementById('enter-inp');
+    var sort = document.getElementById('sort');
+    var rank = document.getElementById('rank');
+    var rank_li = rank.childNodes;
+
+    left_in.onclick = leftIn;
+    left_out.onclick = leftOut;
+    right_in.onclick = rightIn;
+    right_out.onclick = rightOut;
+    sort.onclick = childSort;
+     
+    function leftIn(){
+      var inp_val = enter_inp.value;
+      if(inp_val>=10 && inp_val<=100){
+      	if(rank_li.length>60){
+      	  alert("您插入的数据已经超出最大值，暂不能再插入！");
+      	}
+      	else{
+      	  rank.innerHTML = '<li style="height:'+inp_val+'px;"></li>'+rank.innerHTML;    //从左边增添li元素
+      	}
+      }
+      else{
+      	alert("请输入10-100之间的数值");
+      }
+      enter_inp.value = "";
+    }
+
+    function leftOut(){
+      if(rank_li.length<=0){
+      	alert("数据已全部删除！");
+      }
+      else{
+      	rank.removeChild(rank_li[0]);   //删除第一个li
+      }
+    }
+
+    function rightIn(){
+      var inp_val = enter_inp.value;
+      if(inp_val>=10 && inp_val<=100){
+      	if(rank_li.length>60){
+      	  alert("您插入的数据已经超出最大值，暂不能再插入！");
+      	}
+      	else{
+      	  rank.innerHTML += '<li style="height:'+inp_val+'px;"></li>';   //从右边增添li元素
+      	}
+      }
+      else{
+      	alert("请输入10-100之间的数值");
+      }
+      enter_inp.value = "";
+    }
+
+    function rightOut(){
+      if(rank_li.length<=0){
+      	alert("数据已全部删除！");
+      }
+      else{
+      	rank.removeChild(rank_li[rank_li.length-1]);   //删除最后一个li
+      }
+    }
+
+    function childSort(){
+      var rank_li = rank.childNodes;
+      var temp=0;
+      for(var i=0; i<rank_li.length-1; i++){
+      	for(var j=0; j<rank_li.length-i-1; j++){
+          if(parseInt(rank_li[j].style.height) > parseInt(rank_li[j+1].style.height)){
+          	temp = rank_li[j].style.height;
+          	rank_li[j].style.height = rank_li[j+1].style.height;
+          	rank_li[j+1].style.height = temp;
+          }
+      	}
+      }
+    }
+  </script>
+</body>
+</html>
