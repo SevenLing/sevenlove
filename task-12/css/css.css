@@ -1,0 +1,43 @@
+ul,li{list-style: none; margin:0; padding:0;}
+.change-inpt{width:180px; height:18px; padding:5px; display:block; margin:auto; line-height:18px; border:1px solid #ccc; border-radius:3px; -webkit-transition:width .3s linear; -moz-transition:width .3s linear; transition:width .3s linear;}
+.change-inpt:focus{width:260px; border-color:#f00; box-shadow:0 0 5px #ccc;}
+.banner{position:relative; margin:auto; margin-top:50px; width:380px; height:260px; overflow:hidden;}
+.bannerList{position:relative; width:380px; height:260px; /*-webkit-animation:slide 6s infinite; -moz-animation:slide 6s infinite; animation:slide 6s infinite;*/}
+.bannerList li{position:absolute; width:380px; height:260px; -webkit-transition:all .3s linear; -moz-transition:all .3s linear; transition:all .3s linear; opacity:0;}
+.bannerList .item1{background:#f00;}
+.bannerList .item2{background:#0f0;}
+.bannerList .item3{background:#00f;}
+.controlList{position:absolute; z-index:99; bottom:3px; right:3px; color:#f00;}
+.controlList label{display:inline-block; width:20px; height:20px; background:#eee; text-align:center; line-height:20px; cursor:pointer;}
+.banner input{display:none;}
+#check-box-1:checked ~ .bannerList .item1{opacity:1; z-index:2;}
+#check-box-2:checked ~ .bannerList .item2{opacity:1; z-index:2;}
+#check-box-3:checked ~ .bannerList .item3{opacity:1; z-index:2;}
+#check-box-1:checked ~ .controlList .controlList-item1{color:#00f;}
+#check-box-2:checked ~ .controlList .controlList-item2{color:#00f;}
+#check-box-3:checked ~ .controlList .controlList-item3{color:#00f;}
+
+/*@-webkit-keyframes slide{
+	0%{opacity:0;}
+	20%{left:-100%;}
+	40%{left:-100%;}
+	60%{left:-200%;}
+	80%{left:-200%;}
+	100%{left:0;}
+}
+@-moz-keyframes slide{
+	0%{left:0;}
+	20%{left:-100%;}
+	40%{left:-100%;}
+	60%{left:-200%;}
+	80%{left:-200%;}
+	100%{left:0;}
+}
+@keyframes slide{
+	0%{left:0;}
+	20%{left:-100%;}
+	40%{left:-100%;}
+	60%{left:-200%;}
+	80%{left:-200%;}
+	100%{left:0;}
+}*/
