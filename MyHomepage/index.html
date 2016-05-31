@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/mystyle.css">
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="swiper-slide-cont">
+                    <p class="pImage"><img src="images/me.jpg" alt="sevenling" /></p>
+                    <div class="pInfo">
+                        <p class="pName"><span>凌焯华</span>前端开发</p>
+                        <p class="pTel"><span>18825039720</span></p>
+                        <p class="pQQ"><span>858416930</span></p>
+                        <p class="pGitHub"><span>https://github.com/SevenLing</span></p>
+                    </div>
+                </div>    
+            </div><!-- swiper-slide/ -->
+
+            <div class="swiper-slide">
+                <div class="swiper-slide-cont swiper-slide-cont2">
+                    <h1 class="opacity">专业技能</h1>
+                    <div class="skill_logo">
+                        <span class="html_logo"></span>
+                        <span class="css_logo"></span>
+                        <span class="jq_logo"></span>
+                        <span class="ps_logo"></span>
+                        <span class="js_logo"></span>
+                        <span class="php_logo"></span>
+                    </div>
+                    <div class="whiteBg animation-bg">
+                        <div class="skill">
+                            <span>Html(80%)</span>
+                            <p><span class="html_employ light move"></span><span class="gray"></span></p>
+                            
+                        </div>
+                        <div class="skill">
+                            <span>Css(85%)</span>
+                            <p><span class="css_employ light move"></span><span class="gray"></span></p>
+                            
+                        </div>
+                        <div class="skill">
+                            <span>Js(60%)</span>
+                            <p><span class="js_employ light move"></span><span class="gray"></span></p>
+                            
+                        </div>
+                        <div class="skill">
+                            <span>Php(30%)</span>
+                            <p><span class="php_employ light move"></span><span class="gray"></span></p>
+                            
+                        </div>
+                        <div class="skill">
+                            <span>Ps(60%)</span>
+                            <p><span class="ps_employ light move"></span><span class="gray"></span></p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div><!-- swiper-slide/ -->
+
+            <div class="swiper-slide">
+                <div class="swiper-slide-cont swiper-slide-cont2">
+                    <h1 class="opacity">个人项目</h1>
+                    <div class="whiteBg animation-bg2">
+                        <div class="project">
+                            <h1><a href="http://www.cooefashion.com">COOE官网PC端</a></h1>
+                            <p>描述：页面布局主要用html5与css3，通过@media与js的结合来控制页面的响应式，用jq的Ajax来进行数据的交互。</p>
+                            <p>职责：负责设计图的裁切，前端的开发</p>
+                        </div>
+                        <div class="project">
+                            <h1><a href="http://vip.cooefashion.com">VIP系统</a></h1>
+                            <p>描述：页面布局主要用html5与css3，移动端通过@media与js的结合来控制页面的响应式，PC端则用bootstrap框架。</p>
+                            <p>职责：负责设计图的裁切，前端的开发</p>
+                        </div>
+                        <div class="project">
+                            <h1><a href="http://sevenling.github.io/sevenlove/websiteAPP">COOE官网移动端</a></h1>
+                            <p>描述：页面布局主要用html5与css3，通过rem单位与js的结合来控制页面的响应式，用jq的Ajax来进行数据的交互。</p>
+                            <p>职责：负责设计图的裁切，前端的开发</p>
+                        </div>
+                        <div class="project hidden">
+                            <h1><a href="#">订货会系统</a></h1>
+                            <p>描述：页面布局主要用html与css3，通过@media与js的结合来控制页面的响应式，用jq的Ajax来进行数据的交互</p>
+                            <p>职责：负责设计图的裁切，前端的开发</p>
+                        </div>
+                        <div class="project hidden">
+                            <h1><a href="#">销售系统</a></h1>
+                            <p>描述：页面布局主要用html5与css3，用bootstrap框架来做响应式布局。</p>
+                            <p>职责：负责设计图的裁切，前端的开发</p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- swiper-slide/ -->
+        </div><!-- swiper-wrapper/ -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-arrow"></div>
+    </div><!-- swiper-container/ -->
+    <script src="js/swiper.min.js"></script>
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        direction: 'vertical',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 30,
+        mousewheelControl: true
+    });
+    </script>
+</body>
+</html>

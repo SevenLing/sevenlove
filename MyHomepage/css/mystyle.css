@@ -1,0 +1,184 @@
+html,body{position: relative;height: 100%;}
+body,ul,li,p{padding:0; margin:0;}
+ul,li{list-style:none;}
+a{text-decoration:none;}
+img{max-width:100%;}
+body{background: #fff;font-size: 13px;color:#383838; min-width:320px; background:url(../images/body-bg.jpg) no-repeat center; background-size:100% 100%; background-attachment:fixed;}
+.whiteBg{background:#fff; padding:15px;}
+.swiper-wrapper{background:none;}
+.swiper-arrow{position:absolute; bottom:8px; left:50%; z-index:999; margin-left:-10px; display:none; width:20px; height:20px; background:url(../images/arrow.png) no-repeat center; background-size:contain;}
+.swiper-container{width: 100%;height: 100%;margin-left: auto;margin-right: auto;}
+.swiper-slide {text-align: center;font-size: 16px;background: #fff;display: -webkit-box;display: -ms-flexbox;isplay: -webkit-flex;display: flex;-webkit-box-pack: center;-ms-flex-pack: center;-webkit-justify-content: center;justify-content: center;-webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center; background:none;}
+.swiper-slide:before{content:""; display:inline-block; width:0; height:100%; vertical-align:middle;}
+.swiper-slide-cont{display:inline-block; padding:40px; max-width:1024px; width:100%; vertical-align:middle;}
+.swiper-slide-cont p{margin-bottom:15px;}
+/***slide1***/
+.pImage{margin:auto; margin-bottom:25px; width:280px; height:280px; overflow:hidden; border-radius:50%; border:3px solid #fff; box-shadow:0 0 6px #bacfec;display:inline-block; vertical-align:middle;}
+.pInfo{display:inline-block; padding:20px; margin-left:30px; vertical-align:middle; text-align:left; color:#fff;}
+.pName span{display:inline-block; padding-right:10px; font-size:24px;}
+.pTel span,.pQQ span,.pGitHub span{display:inline-block; padding-left:30px; width:auto; line-height:25px; background:url(../images/pLogo.png) no-repeat;}
+.pTel span{background-position:left -60px;}
+.pQQ span{background-position:left 2px;}
+.pGitHub span{background-position:left -29px;}
+.swiper-slide-active .pImage{-webkit-animation:pImage 2s; -moz-animation:pImage 2s; animation:pImage 2s;}
+.swiper-slide-active .pName{-webkit-animation:pName 2.5s; -moz-animation:pName 2.5s; animation:pName 2.5s;}
+.swiper-slide-active .pTel{-webkit-animation:pTel 2.5s; -moz-animation:pTel 2.5s; animation:pTel 2.5s;}
+.swiper-slide-active .pQQ{-webkit-animation:pQQ 2.5s; -moz-animation:pQQ 2.5s; animation:pQQ 2.5s;}
+.swiper-slide-active .pGitHub{-webkit-animation:pGitHub 2.5s; -moz-animation:pGitHub 2.5s; animation:pGitHub 2.5s;}
+/***动画css***/
+@keyframes pImage{
+  0%{opacity:0;-webkit-transform:scale(.2); -moz-transform:scale(.2); transform:scale(.2);}
+  20%{opacity:1;-webkit-transform:scale(1); -moz-transform:scale(1); transform:scale(1);}
+}
+@keyframes pName{
+  0%{opacity:0;}
+  20%{opacity:0;}
+  40%{opacity:1;}
+}
+@keyframes pTel{
+  0%{opacity:0;}
+  40%{opacity:0;}
+  60%{opacity:1;}
+}
+@keyframes pQQ{
+  0%{opacity:0;}
+  60%{opacity:0;}
+  80%{opacity:1;}
+}
+@keyframes pGitHub{
+  0%{opacity:0;}
+  80%{opacity:0;}
+  100%{opacity:1;}
+}
+
+/***slide2***/
+.swiper-slide-cont2 h1{-webkit-transform:scale(0); -moz-transform:scale(0); transform:scale(0); font-weight:normal; font-size:24px; color:#fff;}
+.swiper-slide-cont2 .opacity{-webkit-transition:all 1s; -moz-transition:all 1s; transition:all 1s;}
+.skill_logo{position:relative; height:185px; width:310px; margin:auto; margin-top:40px; margin-bottom:70px;}
+.html_logo{position:absolute; bottom:20px; left:50%; margin-left:-50px; height:70px; width:100px; background:url(../images/html_logo.png) no-repeat center; background-size:contain;}
+.css_logo{position:absolute; bottom:0; right:26px; height:70px; width:70px; background:url(../images/css_logo.png) no-repeat center; background-size:contain;}
+.jq_logo{position:absolute; bottom:0; left:26px; height:70px; width:70px; background:url(../images/jq_logo.png) no-repeat center; background-size:contain;}
+.ps_logo{position:absolute; top:15px; left:0; height:70px; width:70px; background:url(../images/ps_logo.png) no-repeat center; background-size:contain;}
+.js_logo{position:absolute; top:15px; right:0; height:70px; width:70px; background:url(../images/js_logo.png) no-repeat center; background-size:contain;}
+.php_logo{position:absolute; top:0; left:50%; margin-left:-75px; height:70px; width:150px; background:url(../images/php_logo.png) no-repeat center; background-size:contain;}
+.pImage,.pName,.pTel,.pQQ,.pGitHub,.html_logo,.css_logo,.jq_logo,.js_logo,.ps_logo,.php_logo{visibility:hidden;}
+.swiper-slide-active .pImage,.swiper-slide-active .pName,.swiper-slide-active .pTel,.swiper-slide-active .pQQ,.swiper-slide-active .pGitHub,.swiper-slide-active .html_logo,.swiper-slide-active .css_logo,.swiper-slide-active .jq_logo,.swiper-slide-active .js_logo,.swiper-slide-active .ps_logo,.swiper-slide-active .php_logo{visibility:visible;}
+.swiper-slide-active h1{-webkit-transform:scale(1); -moz-transform:scale(1); transform:scale(1);}
+.swiper-slide-active .html_logo{-webkit-animation:html_logo 3.5s; -moz-animation:html_logo 3.5s; animation:html_logo 3.5s;}
+.swiper-slide-active .css_logo{-webkit-animation:css_logo 3.5s; -moz-animation:css_logo 3.5s; animation:css_logo 3.5s;}
+.swiper-slide-active .jq_logo{-webkit-animation:jq_logo 3.5s; -moz-animation:jq_logo 3.5s; animation:jq_logo 3.5s;}
+.swiper-slide-active .js_logo{-webkit-animation:js_logo 3.5s; -moz-animation:js_logo 3.5s; animation:js_logo 3.5s;}
+.swiper-slide-active .ps_logo{-webkit-animation:ps_logo 3.5s; -moz-animation:ps_logo 3.5s; animation:ps_logo 3.5s;}
+.swiper-slide-active .php_logo{-webkit-animation:php_logo 3.5s; -moz-animation:php_logo 3.5s; animation:php_logo 3.5s;}
+.animation-bg{visibility:hidden; text-align:left;}
+.skill p{position:relative; margin-bottom:20px;}
+.skill span{display:block; height:16px; margin-bottom:10px;}
+.skill .light{background:#26bcdc;}
+.skill .gray{background:#eee;}
+/*.skill .move{-webkit-transition:visibility 2.5s .5s; -moz-transition:visibility 2.5s .5s; transition:visibility 2.5s .5s;}*/
+.skill .html_employ,.skill .css_employ,.skill .js_employ,.skill .php_employ,.skill .ps_employ{position:absolute; left:0; top:0;}
+.skill .html_employ{visibility:hidden; width:80%;}
+.skill .css_employ{visibility:hidden; width:85%;}
+.skill .js_employ{visibility:hidden; width:60%;}
+.skill .php_employ{visibility:hidden; width:30%;}
+.skill .ps_employ{visibility:hidden; width:60%;}
+.swiper-slide-active .animation-bg{visibility:visible; -webkit-animation:skill 4s; -moz-animation:skill 4s; animation:skill 4s;}
+.swiper-slide-active .html_employ{visibility:visible; -webkit-animation:html_employ 4.5s; -moz-animation:html_employ 4.5s; animation:html_employ 4.5s;}
+.swiper-slide-active .css_employ{visibility:visible; -webkit-animation:css_employ 4.5s; -moz-animation:css_employ 4.5s; animation:css_employ 4.5s;}
+.swiper-slide-active .js_employ{visibility:visible; -webkit-animation:js_employ 4.5s; -moz-animation:js_employ 4.5s; animation:js_employ 4.5s;}
+.swiper-slide-active .php_employ{visibility:visible; -webkit-animation:php_employ 4.5s; -moz-animation:php_employ 4.5s; animation:php_employ 4.5s;}
+.swiper-slide-active .ps_employ{visibility:visible; -webkit-animation:ps_employ 4.5s; -moz-animation:ps_employ 4.5s; animation:ps_employ 4.5s;}
+
+/***动画css***/
+@keyframes html_logo{
+  0%{opacity:0;-webkit-transform:scale(0); -moz-transform:scale(0); transform:scale(0);}
+  14.2%{opacity:0;-webkit-transform:scale(0); -moz-transform:scale(0); transform:scale(0);}
+  28.4%{opacity:1;-webkit-transform:scale(1); -moz-transform:scale(1); transform:scale(1);}
+}
+@keyframes css_logo{
+  0%{opacity:0;-webkit-transform:scale(0); -moz-transform:scale(0); transform:scale(0);}
+  28.4%{opacity:0;-webkit-transform:scale(0); -moz-transform:scale(0); transform:scale(0);}
+  42.6%{opacity:1;-webkit-transform:scale(1); -moz-transform:scale(1); transform:scale(1);}
+}
+@keyframes jq_logo{
+  0%{opacity:0;-webkit-transform:scale(0); -moz-transform:scale(0); transform:scale(0);}
+  42.6%{opacity:0;-webkit-transform:scale(0); -moz-transform:scale(0); transform:scale(0);}
+  56.8%{opacity:1;-webkit-transform:scale(1); -moz-transform:scale(1); transform:scale(1);}
+}
+@keyframes js_logo{
+  0%{opacity:0;-webkit-transform:scale(0); -moz-transform:scale(0); transform:scale(0);}
+  56.8%{opacity:0;-webkit-transform:scale(0); -moz-transform:scale(0); transform:scale(0);}
+  71%{opacity:1;-webkit-transform:scale(1); -moz-transform:scale(1); transform:scale(1);}
+}
+@keyframes ps_logo{
+  0%{opacity:0;-webkit-transform:scale(0); -moz-transform:scale(0); transform:scale(0);}
+  71%{opacity:0;-webkit-transform:scale(0); -moz-transform:scale(0); transform:scale(0);}
+  85.2%{opacity:1;-webkit-transform:scale(1); -moz-transform:scale(1); transform:scale(1);}
+}
+@keyframes php_logo{
+  0%{opacity:0;-webkit-transform:scale(0); -moz-transform:scale(0); transform:scale(0);}
+  85.2%{opacity:0;-webkit-transform:scale(0); -moz-transform:scale(0); transform:scale(0);}
+  100%{opacity:1;-webkit-transform:scale(1); -moz-transform:scale(1); transform:scale(1);}
+}
+
+@keyframes skill{
+  0%{opacity:0;}
+  77%{opacity:0;}
+  100%{opacity:1;}
+}
+@keyframes html_employ{
+  0%{width:0;}
+  77%{width:0;}
+  100%{width:80%;}
+}
+@keyframes css_employ{
+  0%{width:0;}
+  77%{width:0;}
+  100%{width:85%;}
+}
+@keyframes js_employ{
+  0%{width:0;}
+  77%{width:0;}
+  100%{width:60%;}
+}
+@keyframes php_employ{
+  0%{width:0;}
+  77%{width:0;}
+  100%{width:30%;}
+}
+@keyframes ps_employ{
+  0%{width:0;}
+  77%{width:0;}
+  100%{width:60%;}
+}
+
+/***slide3***/
+.animation-bg2{visibility:hidden;}
+.project{padding:0 10px; margin-bottom:20px;}
+.project h1 a{font-size:16px; color:#6CF;}
+.project p{font-size:14px; line-height:20px;}
+.swiper-slide-active .animation-bg2{visibility:visible; -webkit-animation:project 2s; -moz-animation:project 2s; animation:project 2s;}
+/***动画css***/
+@keyframes project{
+  0%{opacity:0;}
+  50%{opacity:0;}
+  100%{opacity:1;}
+}
+
+@media(max-width:767px){
+.swiper-slide-cont p{margin-bottom:10px;}
+.swiper-slide-cont{padding:15px;}
+.swiper-pagination{display:none;}
+.swiper-arrow{display:block;}
+.pInfo{display:block; padding:0; margin-left:0; text-align:center;}
+.project{margin-bottom:10px;}
+.hidden{display:none;}
+
+/***slide2***/
+.skill_logo{margin-top:20px; margin-bottom:40px; height:140px; width:218px;}
+.html_logo{margin-left:-25px;}
+.html_logo,.css_logo,.jq_logo,.ps_logo,.js_logo{height:50px; width:50px;}
+.php_logo{margin-left:-50px; height:70px; width:100px;}
+.skill p{margin-bottom:10px;}
+.skill span{margin-bottom:5px;}
+}
