@@ -28,6 +28,30 @@ body{background: #fff;font-size: 13px;color:#383838; min-width:320px; background
 .swiper-slide-active .pQQ{-webkit-animation:pQQ 2.5s; -moz-animation:pQQ 2.5s; animation:pQQ 2.5s;}
 .swiper-slide-active .pGitHub{-webkit-animation:pGitHub 2.5s; -moz-animation:pGitHub 2.5s; animation:pGitHub 2.5s;}
 /***动画css***/
+@-webkit-keyframes pImage{
+  0%{opacity:0;-webkit-transform:scale(.2); -moz-transform:scale(.2); transform:scale(.2);}
+  20%{opacity:1;-webkit-transform:scale(1); -moz-transform:scale(1); transform:scale(1);}
+}
+@-webkit-keyframes pName{
+  0%{opacity:0;}
+  20%{opacity:0;}
+  40%{opacity:1;}
+}
+@-webkit-keyframes pTel{
+  0%{opacity:0;}
+  40%{opacity:0;}
+  60%{opacity:1;}
+}
+@-webkit-keyframes pQQ{
+  0%{opacity:0;}
+  60%{opacity:0;}
+  80%{opacity:1;}
+}
+@-webkit-keyframes pGitHub{
+  0%{opacity:0;}
+  80%{opacity:0;}
+  100%{opacity:1;}
+}
 @keyframes pImage{
   0%{opacity:0;-webkit-transform:scale(.2); -moz-transform:scale(.2); transform:scale(.2);}
   20%{opacity:1;-webkit-transform:scale(1); -moz-transform:scale(1); transform:scale(1);}
@@ -92,6 +116,36 @@ body{background: #fff;font-size: 13px;color:#383838; min-width:320px; background
 .swiper-slide-active .ps_employ{-webkit-animation:ps_employ 4.5s; -moz-animation:ps_employ 4.5s; animation:ps_employ 4.5s;}
 
 /***动画css***/
+@-webkit--webkit--webkit-keyframes html_logo{
+  0%{opacity:0;-webkit-transform:scale(0); -moz-transform:scale(0); transform:scale(0);}
+  14.2%{opacity:0;-webkit-transform:scale(0); -moz-transform:scale(0); transform:scale(0);}
+  28.4%{opacity:1;-webkit-transform:scale(1); -moz-transform:scale(1); transform:scale(1);}
+}
+@-webkit--webkit-keyframes css_logo{
+  0%{opacity:0;-webkit-transform:scale(0); -moz-transform:scale(0); transform:scale(0);}
+  28.4%{opacity:0;-webkit-transform:scale(0); -moz-transform:scale(0); transform:scale(0);}
+  42.6%{opacity:1;-webkit-transform:scale(1); -moz-transform:scale(1); transform:scale(1);}
+}
+@-webkit-keyframes jq_logo{
+  0%{opacity:0;-webkit-transform:scale(0); -moz-transform:scale(0); transform:scale(0);}
+  42.6%{opacity:0;-webkit-transform:scale(0); -moz-transform:scale(0); transform:scale(0);}
+  56.8%{opacity:1;-webkit-transform:scale(1); -moz-transform:scale(1); transform:scale(1);}
+}
+@-webkit-keyframes js_logo{
+  0%{opacity:0;-webkit-transform:scale(0); -moz-transform:scale(0); transform:scale(0);}
+  56.8%{opacity:0;-webkit-transform:scale(0); -moz-transform:scale(0); transform:scale(0);}
+  71%{opacity:1;-webkit-transform:scale(1); -moz-transform:scale(1); transform:scale(1);}
+}
+@-webkit-keyframes ps_logo{
+  0%{opacity:0;-webkit-transform:scale(0); -moz-transform:scale(0); transform:scale(0);}
+  71%{opacity:0;-webkit-transform:scale(0); -moz-transform:scale(0); transform:scale(0);}
+  85.2%{opacity:1;-webkit-transform:scale(1); -moz-transform:scale(1); transform:scale(1);}
+}
+@-webkit-keyframes php_logo{
+  0%{opacity:0;-webkit-transform:scale(0); -moz-transform:scale(0); transform:scale(0);}
+  85.2%{opacity:0;-webkit-transform:scale(0); -moz-transform:scale(0); transform:scale(0);}
+  100%{opacity:1;-webkit-transform:scale(1); -moz-transform:scale(1); transform:scale(1);}
+}
 @keyframes html_logo{
   0%{opacity:0;-webkit-transform:scale(0); -moz-transform:scale(0); transform:scale(0);}
   14.2%{opacity:0;-webkit-transform:scale(0); -moz-transform:scale(0); transform:scale(0);}
@@ -123,6 +177,36 @@ body{background: #fff;font-size: 13px;color:#383838; min-width:320px; background
   100%{opacity:1;-webkit-transform:scale(1); -moz-transform:scale(1); transform:scale(1);}
 }
 
+@-webkit-keyframes skill{
+  0%{opacity:0;}
+  90%{opacity:0;}
+  100%{opacity:1;}
+}
+@-webkit-keyframes html_employ{
+  0%{width:0;}
+  90%{width:0;}
+  100%{width:80%;}
+}
+@-webkit-keyframes css_employ{
+  0%{width:0;}
+  90%{width:0;}
+  100%{width:85%;}
+}
+@-webkit-keyframes js_employ{
+  0%{width:0;}
+  90%{width:0;}
+  100%{width:60%;}
+}
+@-webkit-keyframes php_employ{
+  0%{width:0;}
+  90%{width:0;}
+  100%{width:30%;}
+}
+@-webkit-keyframes ps_employ{
+  0%{width:0;}
+  90%{width:0;}
+  100%{width:60%;}
+}
 @keyframes skill{
   0%{opacity:0;}
   90%{opacity:0;}
@@ -161,6 +245,11 @@ body{background: #fff;font-size: 13px;color:#383838; min-width:320px; background
 .project p{font-size:14px; line-height:20px;}
 .swiper-slide-active .animation-bg2{-webkit-animation:project 2s; -moz-animation:project 2s; animation:project 2s;}
 /***动画css***/
+@-webkit-keyframes project{
+  0%{opacity:0;}
+  50%{opacity:0;}
+  100%{opacity:1;}
+}
 @keyframes project{
   0%{opacity:0;}
   50%{opacity:0;}
