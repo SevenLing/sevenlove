@@ -17,7 +17,7 @@
                         <p class="pName"><span>凌焯华</span>前端开发</p>
                         <p class="pTel"><span>18825039720</span></p>
                         <p class="pQQ"><span>858416930</span></p>
-                        <p class="pGitHub"><span>https://github.com/SevenLing</span></p>
+                        <p class="pGitHub"><span><a href="https://github.com/SevenLing" target="_blank">https://github.com/SevenLing</a></span></p>
                     </div>
                 </div>    
             </div><!-- swiper-slide/ -->
@@ -68,17 +68,17 @@
                     <h1 class="opacity">个人项目</h1>
                     <div class="whiteBg animation-bg2">
                         <div class="project">
-                            <h1><a href="http://www.cooefashion.com">COOE官网PC端</a></h1>
+                            <h1><a href="http://www.cooefashion.com" target="_blank">COOE官网PC端</a></h1>
                             <p>描述：页面布局主要用html5与css3，通过@media与js的结合来控制页面的响应式，用jq的Ajax来进行数据的交互。</p>
                             <p>职责：负责设计图的裁切，前端的开发</p>
                         </div>
                         <div class="project">
-                            <h1><a href="http://vip.cooefashion.com">VIP系统</a></h1>
+                            <h1><a href="http://vip.cooefashion.com" target="_blank">VIP系统</a></h1>
                             <p>描述：页面布局主要用html5与css3，移动端通过@media与js的结合来控制页面的响应式，PC端则用bootstrap框架。</p>
                             <p>职责：负责设计图的裁切，前端的开发</p>
                         </div>
                         <div class="project">
-                            <h1><a href="http://sevenling.github.io/sevenlove/websiteAPP">COOE官网移动端</a></h1>
+                            <h1><a href="http://sevenling.github.io/sevenlove/websiteAPP" target="_blank">COOE官网移动端</a></h1>
                             <p>描述：页面布局主要用html5与css3，通过rem单位与js的结合来控制页面的响应式，用jq的Ajax来进行数据的交互。</p>
                             <p>职责：负责设计图的裁切，前端的开发</p>
                         </div>
@@ -101,14 +101,25 @@
     </div><!-- swiper-container/ -->
     <script src="js/swiper.min.js"></script>
     <script>
-    var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        direction: 'vertical',
-        slidesPerView: 1,
-        paginationClickable: true,
-        spaceBetween: 30,
-        mousewheelControl: true
-    });
+        var browser=navigator.appName   //获取浏览器的类别
+        var b_version=navigator.appVersion   //获取浏览器的版本号
+        var version=b_version.split(";");   //将版本号分割成一个数组
+        var trim_Version=version[1].replace(/[ ]/g,""); 
+        if(browser=="Microsoft Internet Explorer"){ 
+            var str = trim_Version.substr(4, trim_Version.indexOf('.'));
+            if(str < 10){
+                alert("您的IE版本过低，为了更好的体验，请升级至IE10或以上版本！");
+            }
+        } 
+        
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            direction: 'vertical',
+            slidesPerView: 1,
+            paginationClickable: true,
+            spaceBetween: 30,
+            mousewheelControl: true
+        });
     </script>
 </body>
 </html>
