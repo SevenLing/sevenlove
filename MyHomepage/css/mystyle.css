@@ -18,9 +18,9 @@ body{background: #fff;font-size: 13px;color:#383838; min-width:320px; background
 .pInfo{display:inline-block; padding:20px; margin-left:30px; vertical-align:middle; text-align:left; color:#fff;}
 .pName span{display:inline-block; padding-right:10px; font-size:24px;}
 .pTel span,.pQQ span,.pGitHub span{display:inline-block; padding-left:30px; width:auto; line-height:25px; background:url(../images/pLogo.png) no-repeat;}
-.pTel span{background-position:left -60px;}
-.pQQ span{background-position:left 2px;}
-.pGitHub span{background-position:left -29px;}
+.pTel span{background-position:left top;}
+.pQQ span{background-position:left -33px;}
+.pGitHub span{background-position:left -68px;}
 .pGitHub a{color:#fff;}
 .swiper-slide-active .pImage{-webkit-animation:pImage 2s; -moz-animation:pImage 2s; animation:pImage 2s;}
 .swiper-slide-active .pName{-webkit-animation:pName 2.5s; -moz-animation:pName 2.5s; animation:pName 2.5s;}
@@ -78,7 +78,7 @@ body{background: #fff;font-size: 13px;color:#383838; min-width:320px; background
 }
 
 /***slide2***/
-.swiper-slide-cont2 h1{-webkit-transform:scale(0); -moz-transform:scale(0); transform:scale(0); font-weight:normal; font-size:24px; color:#fff;}
+.swiper-slide-cont2 h1{-webkit-transform:scale(0); -moz-transform:scale(0); transform:scale(0); font-weight:normal; font-size:24px; color:#383838;}
 .swiper-slide-cont2 .opacity{-webkit-transition:all 1s; -moz-transition:all 1s; transition:all 1s;}
 .skill_logo{position:relative; height:185px; width:310px; margin:auto; margin-top:40px; margin-bottom:70px;}
 .html_logo{position:absolute; bottom:20px; left:50%; margin-left:-50px; height:70px; width:100px; background:url(../images/html_logo.png) no-repeat center; background-size:contain;}
@@ -239,7 +239,6 @@ body{background: #fff;font-size: 13px;color:#383838; min-width:320px; background
 }
 
 /***slide3***/
-
 .project{padding:0 10px; margin-bottom:20px;}
 .project h1{margin-top: 5px; margin-bottom: 10px;}
 .project h1 a{font-size:16px; color:#6CF;}
@@ -258,6 +257,12 @@ body{background: #fff;font-size: 13px;color:#383838; min-width:320px; background
 }
 
 @media(max-width:767px){
+body{background:#fff;}
+.pInfo,.pGitHub a,.swiper-slide-cont2 h1{color:#383838;}
+.pTel span,.pQQ span,.pGitHub span{background:url(../images/pLogo1.png) no-repeat;}
+.pTel span{background-position:left top;}
+.pQQ span{background-position:left -33px;}
+.pGitHub span{background-position:left -68px;}
 .swiper-slide {font-size:14px;}
 .swiper-slide-cont p{margin-bottom:10px;}
 .swiper-slide-cont{padding:15px;}
