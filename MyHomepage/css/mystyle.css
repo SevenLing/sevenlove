@@ -241,6 +241,7 @@ body{background: #fff;font-size: 13px;color:#383838; min-width:320px; background
 /***slide3***/
 
 .project{padding:0 10px; margin-bottom:20px;}
+.project h1{margin-top: 5px; margin-bottom: 10px;}
 .project h1 a{font-size:16px; color:#6CF;}
 .project p{font-size:14px; line-height:20px;}
 .swiper-slide-active .animation-bg2{-webkit-animation:project 2s; -moz-animation:project 2s; animation:project 2s;}
@@ -257,6 +258,7 @@ body{background: #fff;font-size: 13px;color:#383838; min-width:320px; background
 }
 
 @media(max-width:767px){
+.swiper-slide {font-size:14px;}
 .swiper-slide-cont p{margin-bottom:10px;}
 .swiper-slide-cont{padding:15px;}
 .swiper-pagination{display:none;}
@@ -271,5 +273,5 @@ body{background: #fff;font-size: 13px;color:#383838; min-width:320px; background
 .html_logo,.css_logo,.jq_logo,.ps_logo,.js_logo{height:50px; width:50px;}
 .php_logo{margin-left:-50px; height:70px; width:100px;}
 .skill p{margin-bottom:10px;}
-.skill span{margin-bottom:5px;}
+.skill span{height:12px; margin-bottom:8px;}
 }
