@@ -101,17 +101,17 @@
     </div><!-- swiper-container/ -->
     <script src="js/swiper.min.js"></script>
     <script>
-        var browser=navigator.appName   //获取浏览器的类别
-        var b_version=navigator.appVersion   //获取浏览器的版本号
-        var version=b_version.split(";");   //将版本号分割成一个数组
-        var trim_Version=version[1].replace(/[ ]/g,""); 
+        var browser=navigator.appName   //获取浏览器的类别 
         if(browser=="Microsoft Internet Explorer"){ 
+            var b_version=navigator.appVersion   //获取浏览器的版本号
+            var version=b_version.split(";");   //将版本号分割成一个数组
+            var trim_Version=version[1].replace(/[ ]/g,"");
             var str = trim_Version.substr(4, trim_Version.indexOf('.'));
             if(str < 10){
                 alert("您的IE版本过低，为了更好的体验，请升级至IE10或以上版本！");
             }
         } 
-        
+
         var swiper = new Swiper('.swiper-container', {
             pagination: '.swiper-pagination',
             direction: 'vertical',
