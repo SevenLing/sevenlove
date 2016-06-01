@@ -4,13 +4,14 @@ ul,li{list-style:none;}
 a{text-decoration:none;}
 img{max-width:100%;}
 body{background: #fff;font-size: 13px;color:#383838; min-width:320px; background:url(../images/body-bg.jpg) no-repeat center; background-size:100% 100%; background-attachment:fixed;}
-.whiteBg{background:#fff; padding:15px;}
+.WhiteBg{padding:15px; background:#fff;}
+.whiteBg{background:#fff;}
 .swiper-wrapper{background:none;}
 .swiper-arrow{position:absolute; bottom:8px; left:50%; z-index:999; margin-left:-10px; display:none; width:20px; height:20px; background:url(../images/arrow.png) no-repeat center; background-size:contain;}
 .swiper-container{width: 100%;height: 100%;margin-left: auto;margin-right: auto;}
 .swiper-slide {text-align: center;font-size: 16px;background: #fff;display: -webkit-box;display: -ms-flexbox;isplay: -webkit-flex;display: flex;-webkit-box-pack: center;-ms-flex-pack: center;-webkit-justify-content: center;justify-content: center;-webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center; background:none;}
-.swiper-slide:before{content:""; display:inline-block; width:0; height:100%; vertical-align:middle;}
-.swiper-slide-cont{visibility:hidden; display:inline-block; padding:40px; max-width:1024px; width:100%; vertical-align:middle;}
+/*.swiper-slide:before{content:""; display:inline-block; width:0; height:100%; vertical-align:middle;}*/
+.swiper-slide-cont{visibility:hidden; /*display:inline-block;*/ padding:40px; max-width:1024px; width:100%; vertical-align:middle; -webkit-box-sizing:border-box; box-sizing:border-box;}
 .swiper-slide-cont p{margin-bottom:15px;}
 .swiper-slide-active .swiper-slide-cont{visibility:visible;}
 /***slide1***/
@@ -97,7 +98,8 @@ body{background: #fff;font-size: 13px;color:#383838; min-width:320px; background
 .swiper-slide-active .ps_logo{-webkit-animation:ps_logo 3.5s; -moz-animation:ps_logo 3.5s; animation:ps_logo 3.5s;}
 .swiper-slide-active .php_logo{-webkit-animation:php_logo 3.5s; -moz-animation:php_logo 3.5s; animation:php_logo 3.5s;}
 .animation-bg{text-align:left;}
-.skill p{position:relative; margin-bottom:20px;}
+.skill{padding:0 15px;}
+.skill p{position:relative; margin-bottom:20px; width:100%;}
 .skill span{display:block; height:16px; margin-bottom:10px;}
 .skill .light{background:#26bcdc;}
 .skill .gray{background:#eee;}
