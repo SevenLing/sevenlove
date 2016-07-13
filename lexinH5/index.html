@@ -10,10 +10,8 @@
 	<link rel="stylesheet" type="text/css" href="css/animate.css"/>
 </head>
 <body>
-	<div id="audio_btn" class="music"><img class="rotate" src="images/music_icon.svg"/>
-	<!--<audio id="MusicBox" autoplay="autoplay" loop="">
-		<source src="music/bg_music.mp3" type="audio/mpeg">
-	</audio>-->
+	<div id="audio_btn" class="music">
+		<img class="rotate" src="images/music_icon.svg"/>
 	    <audio loop="loop" src="music/bg_music.mp3" id="MusicBox" autoplay="autoplay" preload=""></audio>
 	</div>
     <div class="swiper-container">
@@ -39,18 +37,19 @@
             	<p class="arrow"><img src="images/arrow_up.png" alt="HCTT"/></p>
             </div><!-- part1 /-->
             
-            <div class="swiper-slide part2 part">
+            <div class="swiper-slide part2 part flexbox">
             	<p class="diwen"><img src="images/part2_1.png" alt="HCTT"/></p>
-            	<p class="our"><img src="images/part2_2_1.png" alt="HCTT"/></p>
-            	<p class="shili"><img src="images/part2_2_2.png" alt="HCTT"/></p>
-            	<div class="wordBg">
-            		<p class="bg"><img src="images/part2_wordBg.png" alt="HCTT"/></p>
-            		<p class="zijin"><img src="images/part2_3.png" alt="HCTT"/></p>
-	            	<p class="team"><img src="images/part2_4.png" alt="HCTT"/></p>
-	            	<p class="rongyu"><img src="images/part2_5.png" alt="HCTT"/></p>
-	            	<p class="rank"><img src="images/part2_6.png" alt="HCTT"/></p>
+            	<div class="cont">
+	            	<p class="our"><img src="images/part2_2_1.png" alt="HCTT"/></p>
+	            	<p class="shili"><img src="images/part2_2_2.png" alt="HCTT"/></p>
+	            	<div class="wordBg">
+	            		<p class="bg"><img src="images/part2_wordBg.png" alt="HCTT"/></p>
+	            		<p class="zijin"><img src="images/part2_3.png" alt="HCTT"/></p>
+		            	<p class="team"><img src="images/part2_4.png" alt="HCTT"/></p>
+		            	<p class="rongyu"><img src="images/part2_5.png" alt="HCTT"/></p>
+		            	<p class="rank"><img src="images/part2_6.png" alt="HCTT"/></p>
+	            	</div>
             	</div>
-            	
             	<p class="jb"><img src="images/part2_jb.png" alt="HCTT"/></p>
             	<p class="zs"><img src="images/part2_zm.png" alt="HCTT"/></p>
             	<p class="arrow"><img src="images/arrow_up.png" alt="HCTT"/></p>
@@ -73,7 +72,7 @@
             	<p class="arrow"><img src="images/arrow_up.png" alt="HCTT"/></p>
             </div><!-- part3 /-->
             
-            <div class="swiper-slide part4 part" >
+            <div class="swiper-slide part4 part flexbox" >
             	<p class="diwen1"><img src="images/part4_5.png" alt="HCTT"/></p>
             	<p class="diwen2"><img src="images/part4_6.png" alt="HCTT"/></p>
             	<div class="cont">
@@ -89,67 +88,74 @@
             	<p class="arrow"><img src="images/arrow_up.png" alt="HCTT"/></p>
             </div><!-- part4 /-->
             
-            <div class="swiper-slide part5 part" >
-            	<p class="diwen"><img src="images/part5_12.png" alt="HCTT"/></p>      	
-            	<div class="head">
-	            	<p class="zs"><img src="images/part5_1.png" alt="HCTT"/></p>
-	            	<p class="smteam"><img src="images/part5_2.png" alt="HCTT"/></p>
-	            	<p class="qc"><img src="images/part5_3.png" alt="HCTT"/></p>
-            	</div>
-            	<div class="jieshao">
-	            	<p class="js1"><img src="images/part5_4.png" alt="HCTT"/></p>
-	            	<p class="js2"><img src="images/part5_5.png" alt="HCTT"/></p>
-	            	<p class="js3"><img src="images/part5_6.png" alt="HCTT"/></p>
-            	</div>
-            	<div class="manager">
-	            	<p class="img"><img src="images/part5_img.png" alt="HCTT"/></p>
-	            	<p class="name"><img src="images/part5_name.png" alt="HCTT"/></p>
-	            	<p class="xuewei"><img src="images/part5_7.png" alt="HCTT"/></p>
-	            	<p class="tc"><img src="images/part5_8.png" alt="HCTT"/></p>
-            	</div>
-            	<div class="foot">
-	            	<p class="foot1"><img src="images/part5_9.png" alt="HCTT"/></p>
-	            	<p class="foot2"><img src="images/part5_10.png" alt="HCTT"/></p>
-	            	<p class="foot3"><img src="images/part5_11.png" alt="HCTT"/></p>
+            <div class="swiper-slide part5 part flexbox" >
+            	<p class="diwen"><img src="images/part5_12.png" alt="HCTT"/></p> 
+            	<div class="cont">
+	            	<div class="head">
+		            	<p class="zs"><img src="images/part5_1.png" alt="HCTT"/></p>
+		            	<p class="smteam"><img src="images/part5_2.png" alt="HCTT"/></p>
+		            	<p class="qc"><img src="images/part5_3.png" alt="HCTT"/></p>
+	            	</div>
+	            	<div class="jieshao">
+		            	<p class="js1"><img src="images/part5_4.png" alt="HCTT"/></p>
+		            	<p class="js2"><img src="images/part5_5.png" alt="HCTT"/></p>
+		            	<p class="js3"><img src="images/part5_6.png" alt="HCTT"/></p>
+	            	</div>
+	            	<div class="manager">
+		            	<p class="img"><img src="images/part5_img.png" alt="HCTT"/></p>
+		            	<p class="name"><img src="images/part5_name.png" alt="HCTT"/></p>
+		            	<p class="xuewei"><img src="images/part5_7.png" alt="HCTT"/></p>
+		            	<p class="tc"><img src="images/part5_8.png" alt="HCTT"/></p>
+	            	</div>
+	            	<div class="foot">
+		            	<p class="foot1"><img src="images/part5_9.png" alt="HCTT"/></p>
+		            	<p class="foot2"><img src="images/part5_10.png" alt="HCTT"/></p>
+		            	<p class="foot3"><img src="images/part5_11.png" alt="HCTT"/></p>
+	            	</div>
+	            	<div class="tbsm"><p><img src="images/part5_13.png" alt="HCTT"/></p></div>
             	</div>
             	<p class="arrow"><img src="images/arrow_up.png" alt="HCTT"/></p>
             </div><!-- part5 /-->
             
-            <div class="swiper-slide part6 part" >
+            <div class="swiper-slide part6 part flexbox" >
             	<p class="diwen1"><img src="images/part6_6.png" alt="HCTT"/></p> 
             	<p class="diwen2"><img src="images/part6_7.png" alt="HCTT"/></p>
-            	<div class="head">
-	            	<p class="shili"><img src="images/part6_1.png" alt="HCTT"/></p>
-	            	<p class="tzpt"><img src="images/part6_2.png" alt="HCTT"/></p>
-	            	<p class="qc"><img src="images/part6_3.png" alt="HCTT"/></p>
-            	</div>
-            	<p class="jieshao"><img src="images/part6_4.png" alt="HCTT"/></p>
-            	<p class="zzhi"><img src="images/part6_5.png" alt="HCTT"/></p>
-            	<div class="share">
-            		<div class="share_cont">
-            			<p class="bg"><img src="images/part6_gxBg.png" alt="HCTT"/></p>
-		            	<p class="jt"><img src="images/part6_gx1.png" alt="HCTT"/></p>
-		            	<p class="lt"><img src="images/part6_gx3.png" alt="HCTT"/></p>
-		            	<p class="ch"><img src="images/part6_gx2.png" alt="HCTT"/></p>
+            	<div class="cont">
+	            	<div class="head">
+		            	<p class="shili"><img src="images/part6_1.png" alt="HCTT"/></p>
+		            	<p class="tzpt"><img src="images/part6_2.png" alt="HCTT"/></p>
+		            	<p class="qc"><img src="images/part6_3.png" alt="HCTT"/></p>
 	            	</div>
-	            	<p id="more" class="more"><img src="images/part6_more.png" alt="HCTT"/></p>
-            	</div>            	
+	            	<p class="jieshao"><img src="images/part6_4.png" alt="HCTT"/></p>
+	            	<p class="zzhi"><img src="images/part6_5.png" alt="HCTT"/></p>
+	            	<div class="share">
+	            		<div class="share_cont">
+	            			<p class="bg"><img src="images/part6_gxBg.png" alt="HCTT"/></p>
+			            	<p class="jt"><img src="images/part6_gx1.png" alt="HCTT"/></p>
+			            	<p class="lt"><img src="images/part6_gx3.png" alt="HCTT"/></p>
+			            	<p class="ch"><img src="images/part6_gx2.png" alt="HCTT"/></p>
+		            	</div>
+		            	<p id="more" class="more"><img src="images/part6_more.png" alt="HCTT"/></p>
+	            	</div>  
+            	</div>
             	<p class="arrow"><img src="images/arrow_up.png" alt="HCTT"/></p>
             	
-            	<div id="ptjs" class="ptjs">
+            	<div id="ptjs" class="ptjs flexbox">
             		<p class="diwen3"><img src="images/part11_1.png" alt="HCTT"/></p> 
 	            	<p class="diwen4"><img src="images/part11_2.png" alt="HCTT"/></p>
-	            	<p class="head2"><img src="images/part11_3.png" alt="HCTT"/></p>
 	            	<div class="cont">
-		            	<p class="dsl"><img src="images/part11_4.png" alt="HCTT"/></p>
-		            	<p class="dsl1"><img src="images/part11_5.png" alt="HCTT"/></p>
-		            	<p class="dsl2"><img src="images/part11_6.png" alt="HCTT"/></p>
-		            	<p class="dsl3"><img src="images/part11_7.png" alt="HCTT"/></p>
-		            	<p class="dsl4"><img src="images/part11_8.png" alt="HCTT"/></p>
-		            	<p class="jjlt"><img src="images/part11_9.png" alt="HCTT"/></p>
-		            	<p class="jjlt1"><img src="images/part11_10.png" alt="HCTT"/></p>
-		            	<p class="jjlt2"><img src="images/part11_11.png" alt="HCTT"/></p>
-		            	<p class="jjlt3"><img src="images/part11_12.png" alt="HCTT"/></p>
+	            		<div class="head2"><p><img src="images/part11_3.png" alt="HCTT"/></p></div>
+		            	<div class="innercont">
+		            		<p class="dsl"><img src="images/part11_4.png" alt="HCTT"/></p>
+			            	<p class="dsl1"><img src="images/part11_5.png" alt="HCTT"/></p>
+			            	<p class="dsl2"><img src="images/part11_6.png" alt="HCTT"/></p>
+			            	<p class="dsl3"><img src="images/part11_7.png" alt="HCTT"/></p>
+			            	<p class="dsl4"><img src="images/part11_8.png" alt="HCTT"/></p>
+			            	<p class="jjlt"><img src="images/part11_9.png" alt="HCTT"/></p>
+			            	<p class="jjlt1"><img src="images/part11_10.png" alt="HCTT"/></p>
+			            	<p class="jjlt2"><img src="images/part11_11.png" alt="HCTT"/></p>
+			            	<p class="jjlt3"><img src="images/part11_12.png" alt="HCTT"/></p>
+		            	</div>
 	            	</div>	            	
             	</div><!-- ptjs /-->
             </div><!-- part6 /-->
@@ -192,7 +198,7 @@
             	<div class="foot">
             		<p class="table"><img src="images/part8_8.png" alt="HCTT"/></p>
             		<p class="tel"><img src="images/part8_9.png" alt="HCTT"/></p>
-	            	<p class="boda"><a href="tel:4006192266"><img src="images/part8_10.png" alt="HCTT"/></a></p>	            	
+	            	<p class="boda"><a href="tel:4006192266"><img src="images/part8_10.png" alt="HCTT"/></a></p>	            
             	</div>           	
             	<p class="arrow"><img src="images/arrow_up.png" alt="HCTT"/></p>
             </div><!-- part8 /-->
@@ -223,8 +229,25 @@
 		            	<p class="sys"><img src="images/part10_6.png" alt="HCTT"/></p>		            	
 	            	</div>
 	            	<p class="address"><img src="images/part10_7.png" alt="HCTT"/></p>
-            	</div>            	
-            </div><!-- part10 /-->       
+            	</div>  
+            	<p class="arrow"><img src="images/arrow_up.png" alt="HCTT"/></p>
+            </div><!-- part10 /--> 
+            
+            <div class="swiper-slide part11 part flexbox" >
+            	<p class="diwen1"><img src="images/part12_1.png" alt="HCTT"/></p> 
+            	<p class="diwen2"><img src="images/part12_2.png" alt="HCTT"/></p> 
+            	<div class="cont">	 
+	            	<p class="head"><img src="images/part12_head.png" alt="HCTT"/></p>
+	            	<div class="innerCont">	            		
+	            		<p class="fx1"><img src="images/part12_4.png" alt="HCTT"/></p>
+	            		<p class="fx2"><img src="images/part12_5.png" alt="HCTT"/></p>
+	            		<p class="fx3"><img src="images/part12_6.png" alt="HCTT"/></p>
+	            		<p class="fx4"><img src="images/part12_7.png" alt="HCTT"/></p>
+	            		<p class="fx5"><img src="images/part12_8.png" alt="HCTT"/></p>
+	            		<p class="fx6"><img src="images/part12_9.png" alt="HCTT"/></p>
+		            </div>
+	            </div>
+            </div><!-- part11 /--> 
         </div><!-- swiper-wrapper /-->        
     </div><!-- swiper-container /-->
 </body>

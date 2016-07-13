@@ -101,7 +101,7 @@ $(document).ready(function(){
     		
     		case 10: 
 			setState($(".part11"));
-    		break; 	   		
+    		break; 	
     	}    	
     }    
   });
@@ -117,5 +117,6 @@ $(document).ready(function(){
 	
 	$('#more').click(function(){
 		$('#ptjs').addClass('active');
+		$('#ptjs').css("display","flex");
 	})   //点击更多跳转到平台介绍界面
 })
