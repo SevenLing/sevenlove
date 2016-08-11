@@ -1,0 +1,86 @@
+body{-webkit-tap-highlight-color: transparent;}
+img{width:100%;}
+.fishWarp{width:100%; min-width:1024px; overflow:hidden;}
+/**part1**/
+.part1{height:792px; background:url(../images/part_bg_01.jpg) no-repeat top center;}
+
+/**part2**/
+.part2{height:849px; background:url(../images/part_bg_02.jpg) no-repeat top center;}
+.fishGift{position:relative; width:1089px; height:670px; padding-top:180px; margin:auto;}
+.fishGift ul{position:relative; width:100%; height:670px;}
+.fishGift li{position:absolute; width:0; height:0; top:146px; left:377px; z-index:0;cursor:pointer; overflow:hidden;}
+/*.fishGift .fish2{width:223px; height:186px; top:0; left:230px;}
+.fishGift .fish4{width:223px; height:186px; top:0; left:700px;}
+.fishGift .fish3{width:283px; height:236px; top:170px; left:850px;}
+.fishGift .fish5{width:657px; height:547px; top:140px; left:283px;}
+.fishGift .fish1{width:283px; height:236px; top:170px; left:0;}*/
+.fishGift li img{width:100%;height:100%;vertical-align:top;}
+/*.fishGift .prev, .fishGift .next{position:absolute; top:50%; width:39px; height:80px; margin-top:-40px; overflow:hidden; text-indent:-999px; cursor:pointer; background:url(../images/btn.png) no-repeat;}*/
+.fishGift .prev,.fishGift .next{display:none;}
+
+/**part3**/
+.part3{height:317px; background:url(../images/part_bg_03.jpg) no-repeat top center;}
+
+/**part4**/
+.part4{padding-top:167px; height:743px; background:url(../images/part_bg_04.jpg) no-repeat top center;}
+.fishLottery{position:relative; width:948px; height:579px; margin:auto;}
+.fishLottery .fish{position:absolute; cursor:url("http://ossweb-img.qq.com/images/gamevip/act/a20160318ocean/net.ico"),auto; width:260px;}
+.fishLottery .fish_purple{left:15px; top:18px;}
+.fishLottery .fish_red{right:22px; top:-25px;}
+.fishLottery .fish_gold{left:370px; top:133px;}
+.fishLottery .fish_blue{right:0; bottom:55px;}
+.fishLottery .fish_green{left:0; bottom:0;}
+.fishLottery .fishNet{display:none; position:absolute; width:100%; top:0; left:0;}
+.fishButt{width:100%; padding:30px 0; text-align:center;}
+.fishButt .join{width:400px; height:100px; border:0; background:url(../images/fish_butt.png) no-repeat; cursor:pointer}
+.fishButt .start{display:none; width:400px; height:100px; border:0; background:url(../images/fish_butt.png) no-repeat; cursor:pointer;}
+/**part5**/
+.part5{height:589px; background:url(../images/part_bg_05.jpg) no-repeat top center;}
+
+/**part6**/
+.part6{height:524px; background:url(../images/part_bg_06.jpg) no-repeat top center;}
+
+/**part7**/
+.fishOpenacc{position:relative; height:153px; background:url(../images/part_bg_07.jpg) no-repeat top center;}
+.openNow{position:absolute; top:45px; left:50%; margin-left:-200px; width:400px; height:100px; background:url(../images/openaccount.png) no-repeat;}
+
+/**part8**/
+.fishenZbj{height:182px; background:url(../images/part_bg_08.jpg) no-repeat top center;}
+.enzbjCont{position:relative; width:1015px; height:100%; margin:auto;}
+.enzdjButt{position:absolute; top:93px; right:0; width:271px; height:72px; background:url(../images/enzbj.png) no-repeat;}
+
+/**footer**/
+footer{height:67px; padding:17px 0; margin:auto; max-width:1920px; background:url(../images/part_bg_09.jpg) no-repeat top center;; color:#fff; font-size:18px; line-height:33px; text-align:center;}
+
+/*infoAlert*/
+.infoAlert{display:none; position:fixed; z-index:100; top:0; left:0; width:100%; height:100%; background:url(../images/alert_bg.png) repeat;}
+.infoAlert .alertCont{position:absolute; top:50%; margin-top:-266px; left:50%; margin-left:-269px; padding-top:195px; padding-left:100px; height:337px; width:438px; background: url(../images/eninfo_alertbg.png) no-repeat;}
+.alertCont #userLevel{display:none;}
+.alertCont p{position:relative; color:#fff; font-size:16px; line-height:40px; padding-bottom:28px;}
+.alertCont input{width:206px; height:16px; border:0; background:#fff; color:#888; font-size:16px; padding:12px;}
+.alertCont .inpLabel{position:relative;}
+.alertCont span{position:absolute; top:0; left:12px; color:#888; line-height:21px;}
+.alertCont .error{display:none; position:absolute; bottom:2px;left:52px;line-height: 30px; color:#ffd618
+; font-size:14px;}
+.submit{position:absolute; bottom:70px; left:154px; width:194px; height:74px; background:url(../images/submit.png) no-repeat; border:0; cursor:pointer;}
+.alertCont .close{position:absolute; top:53px; left:auto; right:33px; width:32px; height:32px; background:url(../images/close.png) no-repeat; cursor:pointer;}
+
+/*receiveAlert*/
+.receiveAlert{display:none; position:fixed; z-index:100; top:0; left:0; width:100%; height:100%; background:url(../images/alert_bg.png) repeat;}
+.receiveAlert .alertCont{display:none; position:absolute; top:50%; margin-top:-213px; left:50%; margin-left:-267px; width:534px; height:427px;}
+.receiveAlert .alertCont .close{top:23px; right:63px;}
+.receiveAlert .alertCont p{padding-bottom:0;}
+.receiveAlert .fishimgCont{position:absolute; top:50%; left:50%; margin-left:-162px; margin-top:-96px; width:324px; height:193px;}
+.receiveAlert .jpName{width:324px; line-height:36px; font-size:20px; color:#ffe766; text-align:center;}
+.receiveAlert .alertCont1{padding-top:81px; padding-left:106px; width:428px; height:346px; background:url(../images/mj_bg.png) no-repeat;}
+.receiveAlert .alertCont2{padding-top:38px; padding-left:106px; width:428px; height:387px; background:url(../images/lqjp_bg.png) no-repeat;}
+.receiveAlert .alertCont2 .jpImg{padding-top:8px;}
+.receiveAlert .submit{bottom:73px; left:167px; background:url(../images/lq_bg.png)}
+
+/*弹框信息提醒*/
+.tips{display:none; position:fixed; z-index:100; top:0; left:0; width:100%; height:100%;}
+.tips01{background:url(../images/tips01.png) no-repeat center;}
+.tips02{background:url(../images/tips02.png) no-repeat center;}
+.tips03{background:url(../images/tips03.png) no-repeat center;}
+.tips04{background:url(../images/tips04.png) no-repeat center;}
+
