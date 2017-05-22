@@ -1,0 +1,49 @@
+<h1 class="title">我的订单</h1>
+
+<!-- tabTitle -->
+<nav id="tabTitle" class="tabTitle">
+	<div class="titleLeft">
+		<a href="orderPage.html">全部订单</a>
+		<a href="notsendPage.html">待发货</a>
+		<a href="waitdeliverPage.html">待收货</a>
+		<a href="haddeliverPage.html">已收货</a>
+	</div>
+	<div class="titleRight">
+		<label id="dateCont" class="dateCont">
+			<input id="startDate" type="text" placeholder="年 / 月 / 日" readonly />
+		</label>
+		<span class="to">至</span>
+		<label class="dateCont">
+			<input id="endDate" type="text" placeholder="年 / 月 / 日" readonly />
+		</label>
+		<button class="sureButt">确定</button>
+	</div>
+</nav>
+<!-- tabTitle /-->
+<script src="../../js/personal/laydate.dev.js"></script>
+<script>
+	//开始日期选择
+	laydate({
+	    elem:'#startDate'
+	});
+	
+	//结束日期选择
+	laydate({
+	    elem:'#endDate'
+	});	
+	
+	//切换菜单样式
+	$('#tabTitle a').each(function(){
+		var href = String(window.location).split('?')[0];
+		if(href){
+			if($(this)[0].href == href){
+				$(this).addClass('active').siblings().removeClass('active');
+			}
+		}
+		else{
+			if($(this)[0].href == String(window.location)){
+				$(this).addClass('active').siblings().removeClass('active');
+			}
+		}
+	})
+</script>

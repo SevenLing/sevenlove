@@ -1,0 +1,48 @@
+/**common**/
+html{height:100%;}
+body{height:100%; font-size:14px; color:#333; overflow-x:hidden;}
+.orange{color:#ff681b !important;}
+.yellow{color:#eebc66 !important;}
+.labelCont{position:relative;}
+.inpLabel{position:relative; display:block;}
+.inpLabel input,.inpLabel span{position:absolute; left:0; top:0; border:0; background:none; width:100%; height:100%; -webkit-box-sizing:border-box; box-sizing:border-box;}
+.labelCont .error{display:none; position:absolute; left:0; bottom:-16px; padding-left:20px; font-size:12px; background:url(../../../../images/common/pc/personal/tip_icon.png) no-repeat left center;}
+.default label{position:relative; padding-left:23px;}
+.default .defaultBg{position:absolute; left:0; top:1px; padding:0; width:16px; height:16px; background:url(../../../../images/common/pc/personal/select_icon.png) no-repeat left center;}
+.default input:checked + .defaultBg{background-position:-17px center;}
+
+/**弹窗样式**/
+.alertBg{position:fixed; display:none; z-index:997; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0);}
+.alertCont{position:fixed; opacity:0; top:48%; left:50%; border-radius:6px; -webkit-box-shadow:0 0 20px 2px rgba(153,108,31,.3); box-shadow:0 0 20px 2px rgba(153,108,31,.3); background:#fafafa; overflow:hidden;}
+.alertCont.none{display:none;}
+.alertCont.active{-webkit-animation:bounceIn .3s; animation:bounceIn .3s; -webkit-animation-fill-mode:forwards; animation-fill-mode:forwards;}
+.alertCont .title{padding:0 22px; height:44px; line-height:44px;  background:-webkit-linear-gradient(to top, #eebc66, #ffd176); background:linear-gradient(to top, #eebc66, #ffd176); color:#fff;}
+.alertCont .title span{display:block; padding-left:32px; height:100%; background:url(../../../../images/common/pc/personal/title_logo.png) no-repeat left center;}
+.alertCont .close{position:absolute; z-index:9; top:16px; right:20px; cursor:pointer;}
+.alertCont .buttList{padding-bottom:20px; text-align:center;}
+.alertCont .buttList{line-height:32px;}
+.alertCont .buttList .butt{display:inline-block; vertical-align:top; width:78px; height:34px; border:1px solid #eca62c; border-radius:3px; background:#eca62c; color:#fff; font-size:14px; cursor:pointer; -webkit-box-sizing:border-box; box-sizing:border-box;}
+.alertCont .buttList .butt:hover{background:#ffc766; border:1px solid #ffc766; color:#fff;}
+.alertCont .buttList .cancelButt{border:1px solid #999; background:#fff; color:#333;}
+.alertCont .tips{padding:32px; font-size:12px; color:#999; text-align:center;}
+
+/**自动关闭的弹窗样式**/
+.autoAlert{display:none; position:fixed; z-index:9999; top:0; left:0; width:100%; height:100%;}
+.autoAlert .alertInfo{position:absolute; left:50%; top:50%; margin-left:-150px; margin-top:-60px; width:300px; height:80px; text-align:center; background:#fffbf2; box-shadow:0 2px 4px 1px rgba(128,106,64,.5); border-radius:6px;}
+.autoAlert .alertInfo:before{content:''; display:inline-block; width:0; height:100%; vertical-align:middle;}
+.autoAlert .alertInfo span{display:inline-block; vertical-align:middle; font-size:16px; color:#ff6619; line-height:24px;}
+
+/**动画**/
+@-webkit-keyframes bounceIn{
+	0%{opacity:0; -webkit-transform:scale(0.5); -ms-transform:scale(0.5); transform:scale(0.5);}
+	100%{opacity:1; -webkit-transform:scale(1); -ms-transform:scale(1); transform:scale(1);}
+}
+@keyframes bounceIn{
+	0%{opacity:0; -webkit-transform:scale(0.5); -ms-transform:scale(0.5); transform:scale(0.5);}
+	100%{opacity:1; -webkit-transform:scale(1); -ms-transform:scale(1); transform:scale(1);}
+}
+
+/**适配小屏幕**/
+@media only screen and (max-width:1062px) {
+	
+}

@@ -1,0 +1,1 @@
+﻿{"status":"1","provincedata":[{"provinceName":"北京市"},{"provinceName":"广东省"}],"citydata":[{"cityName":"广州市"},{"cityName":"深圳市"}],"areadata":[{"areaName":"天河区"},{"areaName":"海珠区"},{"areaName":"越秀区"}]}

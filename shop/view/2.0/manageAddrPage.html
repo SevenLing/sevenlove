@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>个人中心-收货地址管理</title>
+	<link rel="stylesheet" href="../../css/common/pc/shop/reset.css" />
+	<link rel="stylesheet" href="../../css/common/pc/personal/common.css" />
+	<link rel="stylesheet" href="../../css/common/pc/personal/style-addr.css" />
+	<link id="skin-999" rel="stylesheet" href="">
+	<style>
+		/* 设置滚动条的样式*/
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        /* 滚动槽 */
+        ::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(219,219,219,0);
+            border-radius: 5px;
+        }
+        /* 滚动条滑块*/
+        ::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background: rgba(219,219,219,1);
+            -webkit-box-shadow: inset 0 0 6px rgba(219,219,219,1);
+        }
+        /* 滚动条滑块*/
+        ::-webkit-scrollbar-thumb:hover {
+            border-radius: 10px;
+            background: rgba(174,176,177,1);
+            -webkit-box-shadow: inset 0 0 6px rgba(174,176,177,1);
+        }
+
+        ::-webkit-scrollbar-thumb:window-inactive {
+            background: rgba(219,219,219,1);
+        }
+	</style>
+</head>
+<body>
+	<div id="vueBox" class="addrPanel">
+		<div class="hadAddr">
+			<h1 class="title orange">管理收货地址</h1>							
+			<!-- addrMain -->
+			<div class="addrMain">
+				<div class="tips">
+					<a class="butt" id="createAddr">添加新地址</a>
+					<p class="saveTip">
+						已保存<i class="hadsave orange">3</i>条收货地址，还能保存<i class="remain orange">17</i>条。
+					</p>
+				</div>
+				<ul id="addrList" class="addrList">
+					<li id="addr1" class="isdefault">
+						<div class="row addrInfo">
+							<p>
+								<span class="left">
+									收货人：<i class="userName">李易峰</i>
+								</span>
+								<span class="right">
+									联系电话：<i class="userTel">18712345678</i>
+								</span>
+							</p>
+							<p>
+								收货地址：<i class="province" data="28240">广东省</i>,<i class="city" data="12444">广州市</i>,<i class="area" data="23325">天河区</i><i class="addrDetail">冼村北路保利威座北塔17楼</i>						
+							</p>
+						</div>
+						<div class="row dealHandle">
+							<p class="left default">
+								<label>
+				    				<input type="radio" id="default1" name="defaultAddr" class="defaultAddr" hidden="hidden" value="true" checked />
+				    				<label for="default1" class="defaultBg"></label>	    				
+				    				<span>设为默认地址</span>
+				    			</label>
+			    			</p>
+			    			<p class="buttList right">
+			    				<a class="butt editButt">修改</a>
+			    				<a class="butt deleteButt">删除</a>
+			    			</p>
+						</div>
+					</li>
+					<li id="addr2">
+						<div class="row addrInfo">
+							<p>
+								<span class="left">
+									收货人：<i class="userName">舒畅</i>
+								</span>
+								<span class="right">
+									联系电话：<i class="userTel">15322125325</i>
+								</span>
+							</p>
+							<p>
+								收货地址：<i class="province" data="28240">广东省</i>,<i class="city" data="12444">广州市</i>,<i class="area" data="23325">天河区</i><i class="addrDetail">冼村北路保利威座北塔17楼</i>						
+							</p>
+						</div>
+						<div class="row dealHandle">
+							<p class="left default">
+								<label>
+				    				<input type="radio" id="default2" name="defaultAddr" class="defaultAddr" hidden="hidden" value="true" />
+				    				<label for="default2" class="defaultBg"></label>	    				
+				    				<span>设为默认地址</span>
+				    			</label>
+			    			</p>
+			    			<p class="buttList right">
+			    				<a class="butt editButt">修改</a>
+			    				<a class="butt deleteButt">删除</a>
+			    			</p>
+						</div>
+					</li>
+					<li id="addr3">
+						<div class="row addrInfo">
+							<p>
+								<span class="left">
+									收货人：<i class="userName">李易</i>
+								</span>
+								<span class="right">
+									联系电话：<i class="userTel">18712345678</i>
+								</span>
+							</p>
+							<p>
+								收货地址：<i class="province" data="28240">广东省</i>,<i class="city" data="12444">广州市</i>,<i class="area" data="23330">海珠区</i><i class="addrDetail">冼村北路保利威座北塔17楼</i>						
+							</p>
+						</div>
+						<div class="row dealHandle">
+							<p class="left default">
+								<label>
+				    				<input type="radio" id="default3" name="defaultAddr" class="defaultAddr" hidden="hidden" value="true" />
+				    				<label for="default3" class="defaultBg"></label>	    				
+				    				<span>设为默认地址</span>
+				    			</label>
+			    			</p>
+			    			<p class="buttList right">
+			    				<a class="butt editButt">修改</a>
+			    				<a class="butt deleteButt">删除</a>
+			    			</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- addrMain /-->
+		</div>
+		<!-- hadAddr /-->
+		
+		<div class="notAddr">
+			<div class="notaddrCont">
+				<p><img src="../../images/common/pc/personal/notaddr.png" /></p>
+				<p class="yellow">还没有地址，商品无法发出哦，赶紧创建一个吧！</p>
+				<p><a href="createAddrPage.html" class="butt">创建收货地址</a></p>
+			</div>
+		</div>
+	</div>
+	<!-- addrPanel /-->
+	
+	<!-- 弹窗背景 -->
+	<div id="alertBg" class="alertBg"></div>
+	<!-- 弹窗背景 /-->
+	
+	<!-- 加载弹窗内容 -->
+	<form method="" action="" id="alertCont" class="alertCont"></form>
+	<!-- 加载弹窗内容 /-->
+	
+	<!-- 收货地址已满 -->
+	<div id="addroverTop" class="addroverTop autoAlert">
+		<div class="alertInfo">
+			<span>亲，保存收货地址已满</span>
+		</div>	
+	</div>
+	<!-- 收货地址已满 /-->
+	
+	<!-- 成功设为默认地址 -->
+	<div id="defaultSuccess" class="defaultSuccess autoAlert">
+		<div class="alertInfo">
+			<span>设置默认地址成功</span>
+		</div>	
+	</div>
+	<!-- 成功设为默认地址 /-->	
+	
+	<!-- 删除地址弹窗 -->
+	<div id="deleteAlert" class="alertCont none">
+		<input class="addrId" name="addrId" hidden />
+		<div class="deleteInfo">
+			<span class="closeAlert close">
+				<img src="../../images/common/pc/personal/close_icon.png" />
+			</span>
+			<h1 class="title">
+				<span>提示</span>
+			</h1>
+			<div class="infoCont">
+				<p class="orange2">确定要删除该地址吗？</p>
+			</div>			
+			<div class="buttList">
+				<button type="submit" id="deleteButt" class="butt deleteButt">删除</button>
+				<a class="butt cancelButt">取消</a>
+			</div>
+		</div>
+	</div>
+	<!-- 删除地址弹窗 /-->
+	
+	<!-- 删除地址成功 -->
+	<div id="deleteSuccess" class="deleteSuccess autoAlert">
+		<div class="alertInfo">
+			<span>删除成功</span>
+		</div>	
+	</div>
+	<!-- 删除地址成功 /-->
+	
+	<!-- 修改地址弹窗 -->
+	<form method="" action="" id="editAlert" class="editAlert addrPanel">
+		<input class="addrId" name="addrId" hidden />
+		<h1 class="title orange">修改收货地址</h1>		
+		<div class="addrMain createAddrMain">
+			<div id="addrCont" class="addrCont">				
+				<div class="innerCont">
+					<p class="labelCont">
+						<span class="info">收货人</span>
+						<label class="inpLabel">
+		    				<input class="input-txt" type="text" name="userName" id="userName" />
+		    				<span>输入真实姓名</span>	    				
+		    		    </label>
+		    		    <i class="error orange" id="nameError">收货人不能为空</i>
+		    		</p>
+		    		<p class="labelCont">
+		    			<span class="info">手机号码</span>
+						<label class="inpLabel">
+		    				<input class="input-txt" type="text" name="userTel" id="userTel" maxlength="11" />
+		    				<span>输入有效手机号</span>	    				
+		    		    </label>
+		    		    <i class="error orange" id="telError">请输入有效手机号码</i>
+		    		</p>
+		    		<div class="labelSelect labelCont">
+		    			<span class="info">所在区域</span>
+		    			<div class="selectCont">
+		    				<!--省份列表-->
+		    				<div class="selectBox">
+		    					<input type="text" name="province" class="select_showbox" id="provinceId" value="请选择" />
+		    					<span class="select_icon"></span>
+		    					<ul id="provinceList" class="dataList">
+		    						
+		    					</ul>
+		    					<select id="province" hidden></select>
+		    				</div>
+		    				
+		    				<!--城市列表-->
+		    				<div class="selectBox">
+		    					<input type="text" name="city"  class="select_showbox" id="cityId" />
+		    					<span class="select_icon"></span>
+		    					<ul id="cityList" class="dataList">
+		    						
+		    					</ul>
+		    					<select id="city" hidden></select>
+		    				</div>
+		    				
+		    				<!--区域列表-->
+		    				<div class="selectBox">
+		    					<input type="text" name="area"  class="select_showbox" id="areaId" />
+		    					<span class="select_icon"></span>
+		    					<ul id="areaList" class="dataList">
+		    						
+		    					</ul>
+		    					<select id="area" hidden></select>
+		    				</div>
+		    			</div>
+		    			<!-- selectCont /-->
+		    		</div>
+		    		<p class="labelCont">
+		    			<span class="info">收货地址</span>
+						<label class="inpLabel addrLabel">
+		    				<textarea id="addrDetail" class="input-txt" type="text" name="addrDetail" placeholder="建议您如实填写详细收货地址，如街道名称，门牌号，楼层，房间号等,无需再次填写所在区域信息"></textarea>	    						
+		    		    </label>
+		    		</p>
+		    		<p class="labelCont default">
+		    			<label>
+		    				<input type="checkbox" id="default" name="defaultAddr" hidden="hidden" value="true" />
+		    				<label for="default" class="defaultBg"></label>	    				
+		    				<span>设为默认地址</span>
+		    			</label>
+		    		</p>
+		    		<p class="buttList">
+		    			<button type="submit" id="editButt" class="sureButt butt">确认修改</button>
+		    			<a type="submit" class="butt cancelButt">取消</a>
+		    		</p>
+				</div>
+			</div>			
+		</form>
+		<!-- addrMain /-->
+	</div>
+	<!-- 修改地址弹窗 /-->
+</body>
+<script>
+    var token = false;  //保存用户的userID 
+	var enter="";//{$enter};
+	if(enter == 1){
+		token = true;
+	}
+	else if(enter == 0){
+		//windowRequest('','openLogin');
+		token = true;
+	}
+</script>
+<script src="../../js/common/jquery-1.11.1.min.js"></script>
+<!--<script src="../../js/common/layer2.2/layer.js" ></script>-->
+<!--<script src="../../js/common/vue.min.js" ></script>-->
+<script src="../../js/common/common.js"></script>
+<script src="../../js/personal/initaddr.js"></script>
+<script src="../../js/personal/addrjs.js"></script>
+</html>

@@ -1,0 +1,1 @@
+﻿{"status":"1","data":{"AwardNum":"0.2","userAccount":"1111111111","ActivityType":"have","themeName":"经典原版","themeSrc":"","token":"000","goldNum":12,"deadline":"forever","tel":""}}

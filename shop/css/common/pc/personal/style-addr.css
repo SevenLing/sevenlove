@@ -1,0 +1,68 @@
+.addrPanel{min-width:660px; overflow:hidden; min-height:100%; background:#fafafa;}
+.addrPanel .title{padding:29px 0; font-size:18px; text-align:center; border-bottom:1px solid #efefef;}
+.addrMain{padding:0 33px;}
+.addrCont{padding:20px 0; margin:auto; max-width:600px; /*height:460px;*/}
+.addrPanel .butt{margin:0 15px; display:inline-block; vertical-align:top; width:118px; height:35px; border:1px solid #eca62c; border-radius:3px; background:#eca62c; color:#fff; font-size:14px; cursor:pointer; -webkit-box-sizing:border-box; box-sizing:border-box;}
+.addrPanel a.butt{line-height:33px; text-align:center;}
+.addrPanel .cancelButt{border:1px solid #eda62d; background:#fff; color:#eda62d;}
+.addrPanel .butt:hover{background:#ffc766; border:1px solid #ffc766; color:#fff;}
+.addrPanel .disable{background:#ccc; border:1px solid #ccc;}
+.addrPanel .disable:hover{background:#ccc; border:1px solid #ccc;}
+/*.buttList{line-height:32px;}*/
+
+/**管理收货地址页面**/
+.addrMain .tips{padding-top:10px; padding-bottom:20px;}
+.addrMain .tips .butt{margin:0;}
+.saveTip{float:right; line-height:35px;}
+.saveTip i{padding:0 5px;}
+.addrList li{border:1px solid #ccc; overflow:hidden; margin-top:20px;}
+.addrList li:first-child{margin-top:0;}
+.addrList li:hover,.addrList li.isdefault{border:1px solid #eebc66;}
+.addrList .row{padding:10px 18px; line-height:18px;}
+.addrList .addrInfo p{padding:8px 0; overflow:hidden;}
+.addrList .left{float:left;}
+.addrList .right{float:right;}
+.addrList .dealHandle{border-top:1px solid #e6e6e6; height:35px; line-height:35px; overflow:hidden;}
+.addrList .buttList{display:none; padding:0;}
+.addrList .butt{margin:0 10px; width:78px; border:1px solid #999; color:#333; background:#fff;}
+.addrList .butt:hover{background:#eda62d; border:1px solid #eda62d;}
+.addrList .deleteButt:hover{border:1px solid #999; color:#333; background:#fff;}
+.addrList li:hover .buttList{display:block;}
+
+.notAddr{display:none; height:100%;}
+.notaddrCont{padding-top:40px;}
+.notaddrCont p{display:block; padding:20px 0; text-align:center;}
+
+/**创建收货地址页面**/
+.createAddrMain{padding:0 105px;}
+.addrCont .labelCont{position:relative; padding-bottom:20px; padding-left:82px; line-height:40px; color:#333;}
+.addrCont .info{position:absolute; left:0; width:62px; text-align:right;}
+.addrCont .inpLabel{width:198px; height:38px; border:1px solid #ccc; background:#fff;}
+.addrCont .inpLabel input,.addrCont .inpLabel span{padding:10px; line-height:18px; font-size:14px; color:#999; text-align:left;}
+.addrCont .inpLabel input{color:#333;}
+.addrCont .error{left:290px; bottom:20px; color:#ff681b;}
+.addrCont .selectCont{font-size:0; margin:0 -2.66%;}
+.selectBox{position:relative; display:inline-block; width:28%; margin:0 2.66%; font-size:14px; height:40px;}
+.selectBox .select_showbox,.selectBox .select_icon{position:absolute; z-index:9; top:0; left:0; padding:0 15px; border:1px solid #ccc; height:40px; line-height:40px; width:100%; -webkit-box-sizing:border-box; box-sizing:border-box; background:none; font-size:14px; color:#333;}
+.selectBox .select_showbox{padding-right:30px; overflow:hidden;}
+.selectBox .select_icon{z-index:8; left:auto; right:1px; top:0; border:0; width:35px; background:url(../../../../images/common/pc/personal/arrow.png) no-repeat left center;}
+.addrCont .selectBox:hover .select_icon{background-position:-36px center;}
+.addrCont .selectBox.select .select_icon,.addrCont .selectBox.select:hover .select_icon{background-position:-73px center;}
+.addrCont .selectBox .dataList{display:none; position:absolute; top:40px; z-index:9; width:100%; max-height:165px; background:#fff; -webkit-box-shadow:0 0 6px rgba(0,0,0,.2); box-shadow:0 0 6px rgba(0,0,0,.2); overflow:auto;}
+.addrCont .selectBox li{padding:6px 15px; line-height:18px; color:#999; font-size:14px;}
+.addrCont .selectBox li:hover{background:#f2f1f1; color:#000;}
+.addrCont .selectBox li.select,.addrCont .selectBox li.select:hover{background:#d3f1ff; color:#000;}
+.addrCont .addrLabel{width:100%; height:80px; padding:6px; -webkit-box-sizing:border-box; box-sizing:border-box;}
+.addrCont .addrLabel textarea{width:100%; height:100%; line-height:22px; border:0; background:none; font-size:14px; resize:none; color:#333;}
+.addrLabel textarea::-webkit-input-placeholder{color:#999 !important;}
+
+/**删除商品弹窗**/
+.deleteInfo{width:300px;}
+.deleteInfo .infoCont{padding:32px 0; text-align:center;}
+.deleteInfo .buttList{padding-bottom:25px;}
+.deleteInfo .buttList .butt{margin:0 25px;}
+
+/**修改收货地址弹窗**/
+.editAlert{opacity:0; +display:none; position:fixed; z-index:-1; top:-100%; left:0; transition:all .5s; width:100%; height:100%;}
+.editAlert.active{opacity:1; +display:block; z-index:9999; top:0;}
+

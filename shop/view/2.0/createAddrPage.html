@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>个人中心-创建地址</title>
+	<link rel="stylesheet" href="../../css/common/pc/shop/reset.css" />
+	<link rel="stylesheet" href="../../css/common/pc/personal/common.css" />
+	<link rel="stylesheet" href="../../css/common/pc/personal/style-addr.css" />
+	<link id="skin-999" rel="stylesheet" href="">
+	<style>
+		/* 设置滚动条的样式*/
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        /* 滚动槽 */
+        ::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(219,219,219,0);
+            border-radius: 5px;
+        }
+        /* 滚动条滑块*/
+        ::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background: rgba(219,219,219,1);
+            -webkit-box-shadow: inset 0 0 6px rgba(219,219,219,1);
+        }
+        /* 滚动条滑块*/
+        ::-webkit-scrollbar-thumb:hover {
+            border-radius: 10px;
+            background: rgba(174,176,177,1);
+            -webkit-box-shadow: inset 0 0 6px rgba(174,176,177,1);
+        }
+
+        ::-webkit-scrollbar-thumb:window-inactive {
+            background: rgba(219,219,219,1);
+        }
+	</style>
+</head>
+<body>
+	<div class="addrPanel">
+		<h1 class="title orange">创建收货地址</h1>		
+				
+		<!-- addrMain -->
+		<form method="" action="manageAddrPage.html" class="addrMain createAddrMain">
+			<div id="addrCont" class="addrCont">				
+				<div class="innerCont">
+					<p class="labelCont">
+						<span class="info">收货人</span>
+						<label class="inpLabel">
+		    				<input class="input-txt" type="text" name="userName" id="userName" />
+		    				<span>输入真实姓名</span>	    				
+		    		    </label>
+		    		    <i class="error orange" id="nameError">收货人不能为空</i>
+		    		</p>
+		    		<p class="labelCont">
+		    			<span class="info">手机号码</span>
+						<label class="inpLabel">
+		    				<input class="input-txt" type="text" name="userTel" id="userTel" maxlength="11" />
+		    				<span>输入有效手机号</span>	    				
+		    		    </label>
+		    		    <i class="error orange" id="telError">请输入有效手机号码</i>
+		    		</p>
+		    		<div class="labelSelect labelCont">
+		    			<span class="info">所在区域</span>
+		    			<div class="selectCont">
+		    				<!--省份列表-->
+		    				<div class="selectBox">
+		    					<input type="text" name="province" class="select_showbox" id="provinceId" value="请选择" />
+		    					<span class="select_icon"></span>
+		    					<ul id="provinceList" class="dataList">
+		    						
+		    					</ul>
+		    					<select id="province" hidden></select>
+		    				</div>
+		    				
+		    				<!--城市列表-->
+		    				<div class="selectBox">
+		    					<input type="text" name="city"  class="select_showbox" id="cityId" />
+		    					<span class="select_icon"></span>
+		    					<ul id="cityList" class="dataList">
+		    						
+		    					</ul>
+		    					<select id="city" hidden></select>
+		    				</div>
+		    				
+		    				<!--区域列表-->
+		    				<div class="selectBox">
+		    					<input type="text" name="area"  class="select_showbox" id="areaId" />
+		    					<span class="select_icon"></span>
+		    					<ul id="areaList" class="dataList">
+		    						
+		    					</ul>
+		    					<select id="area" hidden></select>
+		    				</div>
+		    			</div>
+		    			<!-- selectCont /-->
+		    		</div>
+		    		<p class="labelCont">
+		    			<span class="info">收货地址</span>
+						<label class="inpLabel addrLabel">
+		    				<textarea class="input-txt" type="text" name="addrDetail" placeholder="建议您如实填写详细收货地址，如街道名称，门牌号，楼层，房间号等,无需再次填写所在区域信息"></textarea>
+		    				<!--<span>建议您如实填写详细收货地址，如街道名称，门牌号，楼层，房间号等,无需再次填写所在区域信息</span>-->				
+		    		    </label>
+		    		</p>
+		    		<p class="labelCont default">
+		    			<label>
+		    				<input type="checkbox" id="default" name="defaultAddr" hidden="hidden" value="true" />
+		    				<label for="default" class="defaultBg"></label>	    				
+		    				<span>设为默认地址</span>
+		    			</label>
+		    		</p>
+		    		<p class="buttList">
+		    			<button type="submit" id="createButt" class="sureButt butt">保存为新地址</button>
+		    			<a type="submit" class="butt cancelButt" href="manageAddrPage.html">取消</a>
+		    		</p>
+				</div>
+			</div>			
+		</form>
+		<!-- addrMain /-->
+	</div>
+	<!-- addrPanel /-->
+</body>
+<script>  
+    var token = false;  //保存用户的userID 
+	var enter="";//{$enter};
+	if(enter == 1){
+		token = true;
+	}
+	else if(enter == 0){
+		//windowRequest('','openLogin');
+		token = true;
+	}
+</script>
+<script src="../../js/common/jquery-1.11.1.min.js"></script>
+<!--<script src="../../js/common/layer2.2/layer.js" ></script>-->
+<!--<script src="../../js/common/vue.min.js" ></script>-->
+<script src="../../js/common/common.js"></script>
+<script src="../../js/personal/initaddr.js"></script>
+<script src="../../js/personal/addrjs.js"></script>
+</html>

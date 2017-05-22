@@ -1,0 +1,38 @@
+header{color:#575757; background:url(images/part_01.jpg) no-repeat center top;}
+.headCont span,.headCont a{color:#fff;}
+.headCont i{color:#ffbe57;}
+.headCont a:hover{color:#ffbe57;}
+.skinList .sureButt{background:#19A6B8;}
+
+/**part1**/
+.part1{background:url(images/part_02.jpg) no-repeat center top;}
+
+/**part2**/
+.part2{background:url(images/part_03.jpg) no-repeat center top;}
+.infoMain input{color:#fff;}
+.infoMain span{color:#ffdd9e;}
+.infoMain .tip{color:#fff;}
+.infoMain .error{color:#fda53e;}
+
+/**part3**/
+.part3{background:url(images/part_04.jpg) no-repeat center top;}
+.winList li{color:#fda53e;}
+
+/**part4**/
+.part4{background:url(images/part_05.jpg) no-repeat center top;}
+
+/**part5**/
+.part5{background:url(images/part_06.jpg) no-repeat center top;}
+
+/**part6**/
+.part6{background:url(images/part_07.jpg) no-repeat center top;}
+
+/**part7**/
+.part7{background:url(images/part_08.jpg) no-repeat center top;}
+
+/**footer**/
+footer{background:#700700; color:#fff;}
+
+/**弹框信息提醒**/
+.successTip .word{color:#f5c507;}
+.successTip .ljTip{color:#5f5f5f;}

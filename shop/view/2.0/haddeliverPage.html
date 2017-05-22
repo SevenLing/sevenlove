@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>商城-999装扮</title>
+	<link rel="stylesheet" href="../../js/common/layer2.2/skin/layer.css" />
+	<link rel="stylesheet" href="../../js/common/layer2.2/skin/resetLayer.css" />
+	<link rel="stylesheet" href="../../css/common/pc/shop/reset.css" />
+	<link rel="stylesheet" href="../../css/common/pc/personal/laydate.css" />
+	<link rel="stylesheet" href="../../css/common/pc/personal/laydate02.css" />
+	<link rel="stylesheet" href="../../css/common/pc/personal/style-prod.css" />
+	<link id="skin-999" rel="stylesheet" href="">
+</head>
+<body>
+	<div class="orderPanel">
+		<div id="headPart">
+			
+		</div>
+		<!-- titlePart /-->
+				
+		<!-- orderMain -->
+		<div class="orderMain">
+			<div id="orderCont" class="orderCont">
+				<h1 class="contTitle">
+					<span class="column prodName">商品</span>
+					<span class="column prodPrice">单价</span>
+					<span class="column prodHandle">商品操作</span>
+					<span class="column prodCount">数量</span>
+					<span class="column sprodPrice">实付款</span>
+					<span class="column prodStatus">交易状态</span>
+					<span class="column dealHandle">交易操作</span>
+				</h1>
+				<ul id="orderList" class="orderList">
+					<template v-for="item in prodList">
+						<li v-if="item.prodStatus == '交易成功'">
+							<div class="orderInfo">
+								<span class="orderDate">{{item.orderDate}}</span>
+								
+								<span class="orderNum">订单号：{{item.orderNum}}</span>
+								<span class="orderStatus">{{item.prodStatus}}</span>
+							</div>
+							<div class="infoList">
+								<span class="column prodName">
+									<img src="{{item.prodimgSrc}}" />
+									<span class="info">
+										<span class="pName">{{item.prodName}}</span>
+										<span class="pAttr">
+											<i v-for="attr in item.prodAttr">{{attr.attr}}</i>
+										</span>
+									</span>
+								</span>
+								<span class="column prodPrice">
+									<i>{{item.prodPrice}}</i>
+									<i class="costPrice" v-if="item.costPrice > item.prodPrice">{{item.costPrice}}</i>
+								</span>
+								<span class="column prodHandle">
+									<a :class="(item.prodStatus == '待收货' ?  'none': (item.prodStatus == '待发货' ?  'tuikuan':'shouhou'))">{{(item.prodStatus == '待收货' ?  '': (item.prodStatus == '待发货' ?  '退款':'申请售后'))}}</a>
+								</span>
+								<span class="column prodCount">{{item.prodCount}}</span>
+								<span class="column sprodPrice">{{item.sprodPrice}}</span>
+								<span class="column prodStatus"><a class="wuliu">物流详情</a></span>
+								<span class="column dealHandle">
+									<button :class="item.dealHandle == '评价' ? 'pingjia':'hadHandle'">{{item.dealHandle}}</button></span>
+							</div>
+							<!-- infoList /-->
+						</li>
+					</template>
+				</ul>
+			</div>		
+			<!-- orderCont /-->
+			
+			<div id="notThing" class="notThing notData">
+				<div class="notOrder">
+					<p><img src="../../images/common/pc/personal/notthings.png" /></p>
+					<p id="tipWord" class="tipWord">您还没有相关的订单！</p>
+				</div>					
+			</div>
+			<!-- notOrder /-->
+		</div>
+		<!-- orderMain /-->
+	</div>
+	<!-- orderPanel /-->
+	
+	<div id="alertBg" class="alertBg"></div>
+	
+	<!-- 主题详细信息弹窗 -->
+	<div id="orderinfoTip" class="alertCont">
+		<div class="themeinfoTip">
+			<div class="infoCont">
+				<p class="themeImg" id="themeImg"></p>
+				<div class="info">
+					<p>名称：<span id="themeName"></span></p>
+					<p>类型：<span id="prodType"></span></p>
+					<p>售价：<span id="themePrice" class="themePrice"></span></p>
+				</div>
+			</div>			
+		</div>
+	</div>
+	<!-- 主题详细信息弹窗 /-->
+	
+	<!-- 购买提示弹窗 -->
+	<div id="chargeTip" class="alertCont chargeTip">
+		<p class="tips orange">装扮需花费<span class="themePrice"></span>，是否继续？</p>		
+	</div>
+	<!-- 购买提示弹窗 /-->
+	
+	<!-- 金币不足提示弹窗 -->
+	<div id="notgoldTip" class="alertCont notgoldTip">
+		<p class="tips orange">亲，您的金币不足，请先充值！</p>
+	</div>
+	<!-- 金币不足提示弹窗 /-->
+	
+	<!-- 重启客户端提示弹窗 -->
+	<div id="resetTip" class="alertCont resetTip">
+		<p class="tips orange">亲，皮肤生效需要重启客户端哦！</p>		
+	</div>
+	<!-- 重启客户端提示弹窗 /-->
+</body>
+<script>
+    var token = false;  //保存用户的userID 
+	var enter="";//{$enter};
+	if(enter == 1){
+		token = true;
+	}
+	else if(enter == 0){
+		//windowRequest('','openLogin');
+		token = true;
+	}
+</script>
+<script src="../../js/common/jquery-1.11.1.min.js"></script>
+<script src="../../js/common/layer2.2/layer.js" ></script>
+<script src="../../js/common/vue.min.js" ></script>
+<script src="../../js/shop/common.js"></script>
+<script src="../../js/personal/order.js"></script>
+</html>

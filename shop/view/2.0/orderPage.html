@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>个人中心-我的订单</title>
+	<link rel="stylesheet" href="../../css/common/pc/shop/reset.css" />
+	<link rel="stylesheet" href="../../css/common/pc/personal/laydate.css" />
+	<link rel="stylesheet" href="../../css/common/pc/personal/laydate02.css" />
+	<link rel="stylesheet" href="../../css/common/pc/personal/style-prod.css" />
+	<link id="skin-999" rel="stylesheet" href="">
+	<style>
+		/* 设置滚动条的样式*/
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        /* 滚动槽 */
+        ::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(219,219,219,0);
+            border-radius: 5px;
+        }
+        /* 滚动条滑块*/
+        ::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background: rgba(219,219,219,1);
+            -webkit-box-shadow: inset 0 0 6px rgba(219,219,219,1);
+        }
+        /* 滚动条滑块*/
+        ::-webkit-scrollbar-thumb:hover {
+            border-radius: 10px;
+            background: rgba(174,176,177,1);
+            -webkit-box-shadow: inset 0 0 6px rgba(174,176,177,1);
+        }
+
+        ::-webkit-scrollbar-thumb:window-inactive {
+            background: rgba(219,219,219,1);
+        }
+	</style>
+</head>
+<body>
+	<div id="vueBox" class="orderPanel">
+		<h1 class="title">我的订单</h1>
+		<!-- tabTitle -->
+		<nav id="tabTitle" class="tabTitle">
+			<div class="titleLeft">
+				<a class="active">全部订单</a>
+				<a>待付款</a>
+				<a>待发货</a>
+				<a>待收货</a>
+				<a>已收货</a>
+			</div>
+			<div class="titleRight">
+				<form method="" action="">
+					<label id="dateCont" class="dateCont">
+						<input id="startDate" type="text" name="startDate" placeholder="年 / 月 / 日" readonly />
+					</label>
+					<span class="to">至</span>
+					<label class="dateCont">
+						<input id="endDate" type="text" name="endDate" placeholder="年 / 月 / 日" readonly />
+					</label>
+					<button type="submit" id="searchButt" class="searchButt">确定</button>
+				</form>
+			</div>
+		</nav>
+				
+		<!-- orderMain -->
+		<div class="orderMain">		
+			<div class="orderCont active">
+				<div id="orderList">
+					<h1 class="contTitle">
+						<span class="column prodName">商品</span>
+						<span class="column prodPrice">单价</span>
+						<span class="column prodHandle">商品操作</span>
+						<span class="column prodCount">数量</span>
+						<span class="column sprodPrice">实付款</span>
+						<span class="column prodStatus">交易状态</span>
+						<span class="column dealHandle">交易操作</span>
+					</h1>
+					<ul class="orderList">
+						<li>
+							<div class="orderInfo">
+								<span class="orderDate">2017-03-27</span>
+								
+								<span class="orderNum">订单号：<i class="num">30850521133699999</i></span>
+								<span class="orderStatus">待付款</span>
+							</div>
+							<div class="infoList">
+								<span class="column prodName">
+									<a href="#">
+										<img class="prodImg" src="../../images/common/pc/personal/prodImg/2.png" />
+										<span class="info">
+											<span class="pName">999金元宝</span>
+											<span class="pAttr">
+												<i>300g</i>
+											</span>
+										</span>
+									</a>
+								</span>
+								<span class="column prodPrice">
+									<i>5744.00</i>
+									<i class="costPrice"></i>
+								</span>
+								<span class="column prodHandle">
+									<a class="delete">删除</a>
+								</span>
+								<span class="column prodCount">2</span>
+								<span class="column sprodPrice">
+									5744.00
+									<span class="fare">(含运费：<i>10.00</i>)</span>
+								</span>
+								<span class="column prodStatus"><a class="none"></a></span>
+								<span class="column dealHandle">
+									<a href="#" class="payfor">付款</a></span>
+							</div>
+							<!-- infoList /-->
+						</li>
+					    <li>
+							<div class="orderInfo">
+								<span class="orderDate">2017-03-27</span>
+								
+								<span class="orderNum">订单号：<i class="num">30850521133656158</i></span>
+								<span class="orderStatus">待发货</span>
+							</div>
+							<div class="infoList">
+								<a href="#" class="column prodName">
+									<img class="prodImg" src="../../images/common/pc/personal/prodImg/1.png" />
+									<span class="info">
+										<span class="pName">999金元宝</span>
+										<span class="pAttr">
+											<i>100g</i>
+											<i>圆形</i>
+										</span>
+									</span>
+								</a>
+								<span class="column prodPrice">
+									<i>5744.00</i>
+									<i class="costPrice"></i>
+								</span>
+								<span class="column prodHandle">
+									<a class="tuikuan">退款</a>
+								</span>
+								<span class="column prodCount">2</span>
+								<span class="column sprodPrice">5744.00</span>
+								<span class="column prodStatus"><a class="wuliu">物流详情</a></span>
+								<span class="column dealHandle">
+									<a class="none"></a></span>
+							</div>
+							<!-- infoList /-->
+						</li>
+						<li>
+							<div class="orderInfo">
+								<span class="orderDate">2017-03-27</span>
+								
+								<span class="orderNum">订单号：<i class="num">30850521133656158</i></span>
+								<span class="orderStatus">待发货</span>
+							</div>
+							<div class="infoList">
+								<span class="column prodName">
+									<img class="prodImg" src="../../images/common/pc/personal/prodImg/1.png" />
+									<span class="info">
+										<span class="pName">999金元宝</span>
+										<span class="pAttr">
+											<i>100g</i>
+											<i>圆形</i>
+										</span>
+									</span>
+								</span>
+								<span class="column prodPrice">
+									<i>5744.00</i>
+									<i class="costPrice"></i>
+								</span>
+								<span class="column prodHandle">
+									<a class="dealing">退款处理中</a>
+								</span>
+								<span class="column prodCount">2</span>
+								<span class="column sprodPrice">5744.00</span>
+								<span class="column prodStatus"><a class="wuliu">物流详情</a></span>
+								<span class="column dealHandle">
+									<a class="none"></a></span>
+							</div>
+							<!-- infoList /-->
+						</li>
+						<li>
+							<div class="orderInfo">
+								<span class="orderDate">2017-03-27</span>
+								
+								<span class="orderNum">订单号：<i class="num">30850521133699999</i></span>
+								<span class="orderStatus">待收货</span>
+							</div>
+							<div class="infoList">
+								<span class="column prodName">
+									<img class="prodImg" src="../../images/common/pc/personal/prodImg/2.png" />
+									<span class="info">
+										<span class="pName">999金元宝</span>
+										<span class="pAttr">
+											<i>300g</i>
+										</span>
+									</span>
+								</span>
+								<span class="column prodPrice">
+									<i>5744.00</i>
+									<i class="costPrice"></i>
+								</span>
+								<span class="column prodHandle">
+									<a class="none">退款</a>
+								</span>
+								<span class="column prodCount">2</span>
+								<span class="column sprodPrice">5744.00</span>
+								<span class="column prodStatus"><a class="wuliu">物流详情</a></span>
+								<span class="column dealHandle">
+									<a class="shouhuo">确认收货</a></span>
+							</div>
+							<!-- infoList /-->
+						</li>
+						<li>
+							<div class="orderInfo">
+								<span class="orderDate">2017-03-27</span>
+								
+								<span class="orderNum">订单号：<i class="num">30850521133688888</i></span>
+								<span class="orderStatus">交易成功</span>
+							</div>
+							<div class="infoList">
+								<span class="column prodName">
+									<img class="prodImg" src="../../images/common/pc/personal/prodImg/1.png" />
+									<span class="info">
+										<span class="pName">999金元宝</span>
+										<span class="pAttr">
+											<i>20g</i>
+										</span>
+									</span>
+								</span>
+								<span class="column prodPrice">
+									<i>5744.00</i>
+									<i class="costPrice">8744.00</i>
+								</span>
+								<span class="column prodHandle">
+									<a class="shouhou">申请售后</a>
+								</span>
+								<span class="column prodCount">2</span>
+								<span class="column sprodPrice">5744.00</span>
+								<span class="column prodStatus"><a class="wuliu">物流详情</a></span>
+								<span class="column dealHandle">
+									<a class="pingjia">评价</a></span>
+							</div>
+							<!-- infoList /-->
+						</li>
+						<li>
+							<div class="orderInfo">
+								<span class="orderDate">2017-03-27</span>
+								
+								<span class="orderNum">订单号：<i class="num">30850521133688888</i></span>
+								<span class="orderStatus">交易成功</span>
+							</div>
+							<div class="infoList">
+								<span class="column prodName">
+									<img class="prodImg" src="../../images/common/pc/personal/prodImg/1.png" />
+									<span class="info">
+										<span class="pName">999金元宝</span>
+										<span class="pAttr">
+											<i>20g</i>
+										</span>
+									</span>
+								</span>
+								<span class="column prodPrice">
+									<i>5744.00</i>
+									<i class="costPrice"></i>
+								</span>
+								<span class="column prodHandle">
+									<a class="shouhou">申请售后</a>
+								</span>
+								<span class="column prodCount">2</span>
+								<span class="column sprodPrice">5744.00</span>
+								<span class="column prodStatus"><a class="wuliu">物流详情</a></span>
+								<span class="column dealHandle">
+									<a class="hadHandle">我已评价</a></span>
+							</div>
+							<!-- infoList /-->
+						</li>
+						<li>
+							<div class="orderInfo">
+								<span class="orderDate">2017-03-27</span>
+								
+								<span class="orderNum">订单号：<i class="num">30850521133688888</i></span>
+								<span class="orderStatus">交易成功</span>
+							</div>
+							<div class="infoList">
+								<span class="column prodName">
+									<img class="prodImg" src="../../images/common/pc/personal/prodImg/1.png" />
+									<span class="info">
+										<span class="pName">999金元宝</span>
+										<span class="pAttr">
+											<i>20g</i>
+										</span>
+									</span>
+								</span>
+								<span class="column prodPrice">
+									<i>5744.00</i>
+									<i class="costPrice"></i>
+								</span>
+								<span class="column prodHandle">
+									<a class="shouhou">申请售后</a>
+								</span>
+								<span class="column prodCount">2</span>
+								<span class="column sprodPrice">5744.00</span>
+								<span class="column prodStatus"><a class="wuliu">物流详情</a></span>
+								<span class="column dealHandle">
+									<a class="hadHandle">默认评价</a></span>
+							</div>
+							<!-- infoList /-->
+						</li>
+					</ul>
+				</div>
+				<!-- orderList /-->
+				
+				<div class="notThing notData">
+					<div class="notOrder">
+						<p><img src="../../images/common/pc/personal/notthings.png" /></p>
+						<p id="tipWord" class="tipWord">您当前还没有任何订单哦！</p>
+					</div>					
+				</div>
+				<!-- notOrder /-->
+			</div>
+			<!-- orderCont 全部订单 /-->
+			
+			<div class="orderCont">
+			    <div id="waitpayList">
+					<h1 class="contTitle">
+						<span class="column prodName">商品</span>
+						<span class="column prodPrice">单价</span>
+						<span class="column prodHandle">商品操作</span>
+						<span class="column prodCount">数量</span>
+						<span class="column sprodPrice">实付款</span>
+						<span class="column prodStatus">交易状态</span>
+						<span class="column dealHandle">交易操作</span>
+					</h1>
+					<ul class="orderList">
+						<li>
+							<div class="orderInfo">
+								<span class="orderDate">2017-03-27</span>
+								
+								<span class="orderNum">订单号：<i class="num">30850521133699999</i></span>
+								<span class="orderStatus">待付款</span>
+							</div>
+							<div class="infoList">
+								<span class="column prodName">
+									<img class="prodImg" src="../../images/common/pc/personal/prodImg/2.png" />
+									<span class="info">
+										<span class="pName">999金元宝</span>
+										<span class="pAttr">
+											<i>300g</i>
+										</span>
+									</span>
+								</span>
+								<span class="column prodPrice">
+									<i>5744.00</i>
+									<i class="costPrice"></i>
+								</span>
+								<span class="column prodHandle">
+									<a class="delete">删除</a>
+								</span>
+								<span class="column prodCount">2</span>
+								<span class="column sprodPrice">
+									5744.00
+									<span class="fare">(含运费：<i>10.00</i>)</span>
+								</span>
+								<span class="column prodStatus"><a class="none"></a></span>
+								<span class="column dealHandle">
+									<a class="payfor">付款</a></span>
+							</div>
+							<!-- infoList /-->
+						</li>
+					</ul>
+				</div>
+				<!-- waitpayList /-->
+				
+				<div class="notThing notData">
+					<div class="notOrder">
+						<p><img src="../../images/common/pc/personal/notthings.png" /></p>
+						<p id="tipWord" class="tipWord">您还没有相关的订单！</p>
+					</div>					
+				</div>
+				<!-- notOrder /-->
+			</div>		
+			<!-- orderCont 待付款订单 /-->
+			
+			<div class="orderCont">
+				<div id="notsendList">
+					<h1 class="contTitle">
+						<span class="column prodName">商品</span>
+						<span class="column prodPrice">单价</span>
+						<span class="column prodHandle">商品操作</span>
+						<span class="column prodCount">数量</span>
+						<span class="column sprodPrice">实付款</span>
+						<span class="column prodStatus">交易状态</span>
+						<span class="column dealHandle">交易操作</span>
+					</h1>
+					<ul class="orderList">
+						<li>
+							<div class="orderInfo">
+								<span class="orderDate">2017-03-27</span>
+								
+								<span class="orderNum">订单号：<i class="num">30850521133656158</i></span>
+								<span class="orderStatus">待发货</span>
+							</div>
+							<div class="infoList">
+								<span class="column prodName">
+									<img class="prodImg" src="../../images/common/pc/personal/prodImg/1.png" />
+									<span class="info">
+										<span class="pName">999金元宝</span>
+										<span class="pAttr">
+											<i>100g</i>
+											<i>圆形</i>
+										</span>
+									</span>
+								</span>
+								<span class="column prodPrice">
+									<i>5744.00</i>
+									<i class="costPrice"></i>
+								</span>
+								<span class="column prodHandle">
+									<a class="tuikuan">退款</a>
+								</span>
+								<span class="column prodCount">2</span>
+								<span class="column sprodPrice">5744.00</span>
+								<span class="column prodStatus"><a class="wuliu">物流详情</a></span>
+								<span class="column dealHandle">
+									<a class="none"></a></span>
+							</div>
+							<!-- infoList /-->
+						</li>
+						<li>
+							<div class="orderInfo">
+								<span class="orderDate">2017-03-27</span>
+								
+								<span class="orderNum">订单号：<i class="num">30850521133656158</i></span>
+								<span class="orderStatus">待发货</span>
+							</div>
+							<div class="infoList">
+								<span class="column prodName">
+									<img class="prodImg" src="../../images/common/pc/personal/prodImg/1.png" />
+									<span class="info">
+										<span class="pName">999金元宝</span>
+										<span class="pAttr">
+											<i>100g</i>
+											<i>圆形</i>
+										</span>
+									</span>
+								</span>
+								<span class="column prodPrice">
+									<i>5744.00</i>
+									<i class="costPrice"></i>
+								</span>
+								<span class="column prodHandle">
+									<a class="dealing">退款处理中</a>
+								</span>
+								<span class="column prodCount">2</span>
+								<span class="column sprodPrice">5744.00</span>
+								<span class="column prodStatus"><a class="wuliu">物流详情</a></span>
+								<span class="column dealHandle">
+									<a class="none"></a></span>
+							</div>
+							<!-- infoList /-->
+						</li>
+					</ul>
+				</div>
+				<!-- notsendList /-->
+				
+				<div class="notThing notData">
+					<div class="notOrder">
+						<p><img src="../../images/common/pc/personal/notthings.png" /></p>
+						<p id="tipWord" class="tipWord">您还没有相关的订单！</p>
+					</div>					
+				</div>
+				<!-- notOrder /-->
+			</div>		
+			<!-- orderCont 待发货订单 /-->
+			
+			<div class="orderCont">
+			    <div id="waitdeliverList">
+					<h1 class="contTitle">
+						<span class="column prodName">商品</span>
+						<span class="column prodPrice">单价</span>
+						<span class="column prodHandle">商品操作</span>
+						<span class="column prodCount">数量</span>
+						<span class="column sprodPrice">实付款</span>
+						<span class="column prodStatus">交易状态</span>
+						<span class="column dealHandle">交易操作</span>
+					</h1>
+					<ul class="orderList">
+						<li>
+							<div class="orderInfo">
+								<span class="orderDate">2017-03-27</span>
+								
+								<span class="orderNum">订单号：<i class="num">30850521133699999</i></span>
+								<span class="orderStatus">待收货</span>
+							</div>
+							<div class="infoList">
+								<span class="column prodName">
+									<img class="prodImg" src="../../images/common/pc/personal/prodImg/2.png" />
+									<span class="info">
+										<span class="pName">999金元宝</span>
+										<span class="pAttr">
+											<i>300g</i>
+										</span>
+									</span>
+								</span>
+								<span class="column prodPrice">
+									<i>5744.00</i>
+									<i class="costPrice"></i>
+								</span>
+								<span class="column prodHandle">
+									<a class="none">退款</a>
+								</span>
+								<span class="column prodCount">2</span>
+								<span class="column sprodPrice">5744.00</span>
+								<span class="column prodStatus"><a class="wuliu">物流详情</a></span>
+								<span class="column dealHandle">
+									<a class="shouhuo">确认收货</a></span>
+							</div>
+							<!-- infoList /-->
+						</li>
+					</ul>
+				</div>
+				<!-- waitdeliverList /-->
+				
+				<div class="notThing notData">
+					<div class="notOrder">
+						<p><img src="../../images/common/pc/personal/notthings.png" /></p>
+						<p id="tipWord" class="tipWord">您还没有相关的订单！</p>
+					</div>					
+				</div>
+				<!-- notOrder /-->
+			</div>		
+			<!-- orderCont 待收货订单 /-->
+			
+			<div class="orderCont">
+			    <div id="haddeliverList">
+					<h1 class="contTitle">
+						<span class="column prodName">商品</span>
+						<span class="column prodPrice">单价</span>
+						<span class="column prodHandle">商品操作</span>
+						<span class="column prodCount">数量</span>
+						<span class="column sprodPrice">实付款</span>
+						<span class="column prodStatus">交易状态</span>
+						<span class="column dealHandle">交易操作</span>
+					</h1>
+					<ul class="orderList">
+						<li>
+							<div class="orderInfo">
+								<span class="orderDate">2017-03-27</span>
+								
+								<span class="orderNum">订单号：<i class="num">30850521133688888</i></span>
+								<span class="orderStatus">交易成功</span>
+							</div>
+							<div class="infoList">
+								<span class="column prodName">
+									<img class="prodImg" src="../../images/common/pc/personal/prodImg/1.png" />
+									<span class="info">
+										<span class="pName">999金元宝</span>
+										<span class="pAttr">
+											<i>20g</i>
+										</span>
+									</span>
+								</span>
+								<span class="column prodPrice">
+									<i>5744.00</i>
+									<i class="costPrice">8744.00</i>
+								</span>
+								<span class="column prodHandle">
+									<a class="shouhou">申请售后</a>
+								</span>
+								<span class="column prodCount">2</span>
+								<span class="column sprodPrice">5744.00</span>
+								<span class="column prodStatus"><a class="wuliu">物流详情</a></span>
+								<span class="column dealHandle">
+									<a class="pingjia">评价</a></span>
+							</div>
+							<!-- infoList /-->
+						</li>
+						<li>
+							<div class="orderInfo">
+								<span class="orderDate">2017-03-27</span>
+								
+								<span class="orderNum">订单号：<i class="num">30850521133688888</i></span>
+								<span class="orderStatus">交易成功</span>
+							</div>
+							<div class="infoList">
+								<span class="column prodName">
+									<img class="prodImg" src="../../images/common/pc/personal/prodImg/1.png" />
+									<span class="info">
+										<span class="pName">999金元宝</span>
+										<span class="pAttr">
+											<i>20g</i>
+										</span>
+									</span>
+								</span>
+								<span class="column prodPrice">
+									<i>5744.00</i>
+									<i class="costPrice"></i>
+								</span>
+								<span class="column prodHandle">
+									<a class="shouhou">申请售后</a>
+								</span>
+								<span class="column prodCount">2</span>
+								<span class="column sprodPrice">5744.00</span>
+								<span class="column prodStatus"><a class="wuliu">物流详情</a></span>
+								<span class="column dealHandle">
+									<a class="hadHandle">我已评价</a></span>
+							</div>
+							<!-- infoList /-->
+						</li>
+						<li>
+							<div class="orderInfo">
+								<span class="orderDate">2017-03-27</span>
+								
+								<span class="orderNum">订单号：<i class="num">30850521133688888</i></span>
+								<span class="orderStatus">交易成功</span>
+							</div>
+							<div class="infoList">
+								<span class="column prodName">
+									<img class="prodImg" src="../../images/common/pc/personal/prodImg/1.png" />
+									<span class="info">
+										<span class="pName">999金元宝</span>
+										<span class="pAttr">
+											<i>20g</i>
+										</span>
+									</span>
+								</span>
+								<span class="column prodPrice">
+									<i>5744.00</i>
+									<i class="costPrice"></i>
+								</span>
+								<span class="column prodHandle">
+									<a class="shouhou">申请售后</a>
+								</span>
+								<span class="column prodCount">2</span>
+								<span class="column sprodPrice">5744.00</span>
+								<span class="column prodStatus"><a class="wuliu">物流详情</a></span>
+								<span class="column dealHandle">
+									<a class="hadHandle">默认评价</a></span>
+							</div>
+							<!-- infoList /-->
+						</li>
+					</ul>
+				</div>
+				<!-- haddeliverList /-->
+				
+				<div class="notThing notData">
+					<div class="notOrder">
+						<p><img src="../../images/common/pc/personal/notthings.png" /></p>
+						<p id="tipWord" class="tipWord">您还没有相关的订单！</p>
+					</div>					
+				</div>
+				<!-- notOrder /-->
+			</div>		
+			<!-- orderCont 已收货订单 /-->					
+		</div>
+		<!-- orderMain /-->
+	</div>
+	<!-- orderPanel /-->
+	
+	<!-- 弹窗背景 -->
+	<div id="alertBg" class="alertBg"></div>
+	<!-- 弹窗背景 /-->
+	
+	<!-- 加载弹窗内容 -->
+	<form method="" action="" id="alertCont" class="alertCont"  target="hideIframe"></form>
+	<!-- 加载弹窗内容 /-->
+	
+	<!-- 删除弹窗 -->
+	<div id="deleteAlert" class="alertCont none">
+		<input class="num" name="orderNum" hidden />
+		<div class="deleteInfo">
+			<span class="closeAlert close">
+				<img src="../../images/common/pc/personal/close_icon.png" />
+			</span>
+			<h1 class="title">
+				<span>提示</span>
+			</h1>
+			<div class="infoCont">
+				<p class="orange2">确定要删除该商品吗？</p>
+			</div>			
+			<div class="buttList">
+				<button type="submit" id="deleteButt" class="butt deleteButt">删除</button>
+				<a class="butt cancelButt">取消</a>
+			</div>
+		</div>
+	</div>
+	<!-- 删除弹窗 /-->
+	
+	<!-- 删除成功 -->
+	<div id="deleteSuccess" class="deleteSuccess autoAlert">
+		<div class="alertInfo">
+			<span>删除成功</span>
+		</div>	
+	</div>
+	<!-- 删除成功 /-->
+	
+	<!-- 退款弹窗 -->
+	<div id="refundAlert" class="alertCont none">
+		<input class="num" name="orderNum" hidden />
+		<div class="refundInfo">
+			<span class="closeAlert close">
+				<img src="../../images/common/pc/personal/close_icon.png" />
+			</span>
+			<h1 class="title">
+				<span>退款申请</span>
+			</h1>
+			<div class="infoCont">
+				<label class="checkboxCont">
+    				<input type="radio" id="reason1" name="reason" hidden="hidden" value="拍错" />
+    				<label for="reason1" class="checked"></label>	    				
+    				<span>拍错/拍多</span>
+    			</label>
+    			<label class="checkboxCont">
+    				<input type="radio" id="reason2" name="reason" hidden="hidden" value="不想买了" />
+    				<label for="reason2" class="checked"></label>	    				
+    				<span>不想买了</span>
+    			</label>
+    			<label class="checkboxCont">
+    				<input type="radio" id="reason3" name="reason" hidden="hidden" value="其他" />
+    				<label for="reason3" class="checked"></label>	    				
+    				<span>其他</span>
+    			</label> 
+    			<div class="refundReason">
+					<textarea name="otherReason" id="refundReason" class="input-reason" type="text" placeholder="请填写退款原因"></textarea>
+				</div>
+			</div>
+			
+			<div class="buttList">
+				<button type="submit" id="refundButt" class="butt refundButt">退款</button>
+				<a class="butt cancelButt">取消</a>
+			</div>
+			<p class="tips refundTip">*申请成功后，退款将于3个工作日内返回您的账户，请注意查收</p>
+		</div>
+	</div>
+	<!-- 退款弹窗 /-->
+	
+	<!-- 未选择退款理由 -->
+	<div id="notReason" class="notReason autoAlert">
+		<div class="alertInfo">
+			<span>亲，您还未选择退款理由</span>
+		</div>	
+	</div>
+	<!-- 未选择退款理由 /-->
+	
+	<!-- 选择退款理由为其他时，没有填写理由 -->
+	<div id="notReason2" class="notReason autoAlert">
+		<div class="alertInfo">
+			<span>亲，您还没有填写退款理由</span>
+		</div>	
+	</div>
+	<!-- 选择退款理由为其他时，没有填写理由 /-->
+	
+	<!-- 退款提交成功 -->
+	<div id="refundSuccess" class="refundSuccess autoAlert">
+		<div class="alertInfo">
+			<span>已提交申请</span>
+		</div>	
+	</div>
+	<!-- 退款提交成功 /-->
+	
+	<!-- 确认收货 -->
+	<div id="confirmReceipt" class="confirmReceipt autoAlert">
+		<div class="alertInfo">
+			<span>确认成功<br>订单转至已收货页面</span>
+		</div>	
+	</div>
+	<!-- 确认收货 /-->
+	
+	<!-- 上传图片已达上限 -->
+	<div id="overTop" class="overTop autoAlert">
+		<div class="alertInfo">
+			<span>亲，上传图片已达上限</span>
+		</div>	
+	</div>
+	<!-- 上传图片已达上限 /-->
+	
+	<!-- 图片大小达到上限 -->
+	<div id="sizeoverTop" class="sizeoverTop autoAlert">
+		<div class="alertInfo">
+			<span>亲，上传的每张图片<br>都不能超过1M</span>
+		</div>	
+	</div>
+	<!-- 图片大小达到上限 /-->
+	
+	<!-- 图片大小达到上限 -->
+	<div id="assessoverTop" class="assessoverTop autoAlert">
+		<div class="alertInfo">
+			<span>字符已超过1000字，<br>请进行删减</span>
+		</div>	
+	</div>
+	<!-- 图片大小达到上限 /-->
+	
+	<!-- 没有留下好评度 -->
+	<div id="stayAssess" class="stayAssess autoAlert">
+		<div class="alertInfo">
+			<span>亲，您还没有留下好评度</span>
+		</div>	
+	</div>
+	<!-- 没有留下好评度 /-->
+	
+	<!-- 评论发布成功 -->
+	<div id="sendSuccess" class="sendSuccess autoAlert">
+		<div class="alertInfo">
+			<span>发布成功</span>
+		</div>	
+	</div>
+	<!-- 评论发布成功 /-->
+	
+	<!-- 评价弹窗 -->
+	<div id="assessAlert" class="alertCont none">
+		<input class="num" name="orderNum" hidden />
+		<div class="assessInfo">
+			<span class="closeAlert close">
+				<img src="../../images/common/pc/personal/close_icon.png" />
+			</span>
+			<h1 class="title">
+				<span>商品评价</span>
+			</h1>
+			<div class="infoCont">
+				<div class="starLevel">
+					<input name="starLevel" hidden id="starLevel" />
+					<img id="prodImg" src="" />
+					<span class="star">商品好评度：
+						<i class="star-i"></i>
+						<i class="star-i"></i>
+						<i class="star-i"></i>
+						<i class="star-i"></i>
+						<i class="star-i"></i>
+					</span>
+				</div>
+				<div class="assessCont">
+					<textarea id="assessCont" name="assessCont" type="text" placeholder="我们提供的商品满足您的期待吗，快说说您对他的评价吧"></textarea>
+					<div class="sendPhoto">
+						<label class="photo">
+							<input type="file" id="photo" accept="image/*" multiple="multiple" hidden />
+							<label for="photo" class="photoBg"></label>
+						</label>
+						<label id="imgList" class="imgList">
+							
+						</label>
+						<span>
+							<i id="imgCount">0</i>/5
+						</span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="buttList">			
+				<label class="checkboxCont">
+    				<input type="checkbox" id="niming" name="niming" hidden="hidden" value="匿名" />
+    				<label for="niming" class="checked"></label>	    				
+    				<span>匿名评价</span>
+    			</label> 
+    			<button type="submit" id="sendButt" class="butt sendButt">发布评价</button>
+			</div>
+		</div>
+	</div>
+	<!-- 评价弹窗 /-->
+	
+	<!-- 申请售后弹窗 -->
+	<div id="serviceAlert" class="alertCont none">
+		<input class="num" name="orderNum" hidden />
+		<div class="serviceInfo">
+			<span class="closeAlert close">
+				<img src="../../images/common/pc/personal/close_icon.png" />
+			</span>
+			<h1 class="title">
+				<span>申请售后</span>
+			</h1>
+			<div class="infoCont">
+				<img src="../../images/common/pc/personal/kefu_icon.png" />
+			</div>
+			
+			<div class="buttList">
+				<a href="javascript:windowRequest('','客服窗口')" class="butt">在线客服</a>			
+			</div>			
+		</div>
+	</div>
+	<!-- 申请售后弹窗 /-->
+	
+	<!-- 查看物流弹窗 -->
+	<div id="logisticAlert" class="alertCont none">
+		<!--<input class="num" name="orderNum" hidden />-->
+		<div class="logisticInfo">
+			<span class="closeAlert close">
+				<img src="../../images/common/pc/personal/close_icon.png" />
+			</span>
+			<h1 class="title">
+				<span>物流详情</span>
+			</h1>
+			<div class="infoCont">
+				<div class="basicInfo">
+					<span id="express" class="express">圆通快递</span>
+					<span>订单号：<i class="num"></i></span>
+					<span id="packageStatus" class="packageStatus">您的包裹已被签收</span>
+				</div>
+				<div class="logisticCont">
+					<ul>
+						<li>
+							<span class="date">2017-03-20</span>
+							<ul class="dayInfo">
+								<li>
+									<span class="time">11:32:56</span>
+									<p>[广州市]圆通快递 广州珠江新城先冼村部收件员 已揽件</p>
+								</li>
+								<li>
+									<span class="time">02:00:00</span>
+									<p>您的订单开始处理</p>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<span class="date">2017-03-19</span>
+							<ul class="dayInfo">
+								<li>
+									<span class="time">11:32:56</span>
+									<p>[广州市]圆通快递 广州珠江新城先冼村部收件员 已揽件[广州市]圆通快递 广州珠江新城先冼村部收件员 已揽件</p>
+								</li>
+								<li>
+									<span class="time">02:00:00</span>
+									<p>您的订单开始处理</p>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<span class="date">2017-03-18</span>
+							<ul class="dayInfo">
+								<li>
+									<span class="time">11:32:56</span>
+									<p>[广州市]圆通快递 广州珠江新城先冼村部收件员 已揽件[广州市]圆通快递 广州珠江新城先冼村部收件员 已揽件</p>
+								</li>
+								<li>
+									<span class="time">02:00:00</span>
+									<p>您的订单开始处理</p>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>				
+			</div>		
+		</div>
+	</div>
+	<!-- 查看物流弹窗 /-->
+</body>
+<script>
+    var token = false;  //保存用户的userID 
+	var enter="";//{$enter};
+	if(enter == 1){
+		token = true;
+	}
+	else if(enter == 0){
+		//windowRequest('','openLogin');
+		token = true;
+	}
+</script>
+<script src="../../js/common/jquery-1.11.1.min.js"></script>
+<!--<script src="../../js/common/layer2.2/layer.js" ></script>-->
+<!--<script src="../../js/common/vue.min.js" ></script>-->
+<script src="../../js/personal/laydate.dev.js"></script>
+<script src="../../js/personal/order.js"></script>
+</html>

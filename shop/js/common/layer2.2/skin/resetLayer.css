@@ -1,0 +1,10 @@
+/**信息弹窗**/ 
+.layui-layer{background:#fff; border-radius:6px; box-shadow:0 0 10px 2px rgba(153,108,31,.3);}
+.resetlayui-layer .layui-layer-title{padding:0 42px; height:40px; line-height:40px; font-size:14px; color:#fff; background:url(../../../../images/common/pc/shop/theme/title_logo.png) no-repeat 10px center; background-color:#eebc66;}
+.resetlayui-layer .layui-layer-setwin{top:12px; right:10px;}
+.resetlayui-layer .layui-layer-ico{background:url(../../../../images/common/pc/shop/theme/close_icon.png)  no-repeat center center !important;}
+.resetlayui-layer .layui-layer-btn{padding-top:15px; padding-bottom:26px; text-align:center;}
+.resetlayui-layer .layui-layer-btn a{padding:0; margin:0 26px; background:#eca62c; border:1px solid #eca62c; width:78px; height:32px; line-height:32px; text-align:center; border-radius:3px;}
+.resetlayui-layer .layui-layer-btn .layui-layer-btn1{border:1px solid #999; background:#fff;}
+.layui-layer-content{padding:0 38px;}
+.layui-layer-content .tips{padding-top:40px; padding-bottom:15px;}

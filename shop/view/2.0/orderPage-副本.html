@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>个人中心-我的订单</title>
+	<!--<link rel="stylesheet" href="../../js/common/layer2.2/skin/layer.css" />
+	<link rel="stylesheet" href="../../js/common/layer2.2/skin/resetLayer.css" />-->
+	<link rel="stylesheet" href="../../css/common/pc/shop/reset.css" />
+	<link rel="stylesheet" href="../../css/common/pc/personal/laydate.css" />
+	<link rel="stylesheet" href="../../css/common/pc/personal/laydate02.css" />
+	<link rel="stylesheet" href="../../css/common/pc/personal/style-prod.css" />
+	<link id="skin-999" rel="stylesheet" href="">
+	<style>
+		/* 设置滚动条的样式*/
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        /* 滚动槽 */
+        ::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(219,219,219,0);
+            border-radius: 5px;
+        }
+        /* 滚动条滑块*/
+        ::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background: rgba(219,219,219,1);
+            -webkit-box-shadow: inset 0 0 6px rgba(219,219,219,1);
+        }
+        /* 滚动条滑块*/
+        ::-webkit-scrollbar-thumb:hover {
+            border-radius: 10px;
+            background: rgba(174,176,177,1);
+            -webkit-box-shadow: inset 0 0 6px rgba(174,176,177,1);
+        }
+
+        ::-webkit-scrollbar-thumb:window-inactive {
+            background: rgba(219,219,219,1);
+        }
+	</style>
+</head>
+<body>
+	<div id="vueBox" class="orderPanel">
+		<h1 class="title">我的订单</h1>
+		<!-- tabTitle -->
+		<nav id="tabTitle" class="tabTitle">
+			<div class="titleLeft">
+				<a class="active">全部订单</a>
+				<a>待发货</a>
+				<a>待收货</a>
+				<a>已收货</a>
+			</div>
+			<div class="titleRight">
+				<label id="dateCont" class="dateCont">
+					<input id="startDate" type="text" placeholder="年 / 月 / 日" readonly />
+				</label>
+				<span class="to">至</span>
+				<label class="dateCont">
+					<input id="endDate" type="text" placeholder="年 / 月 / 日" readonly />
+				</label>
+				<button id="searchButt" class="searchButt">确定</button>
+			</div>
+		</nav>
+				
+		<!-- orderMain -->
+		<div class="orderMain">		
+			<div class="orderCont active">
+				<div id="orderList">
+					<h1 class="contTitle">
+						<span class="column prodName">商品</span>
+						<span class="column prodPrice">单价</span>
+						<span class="column prodHandle">商品操作</span>
+						<span class="column prodCount">数量</span>
+						<span class="column sprodPrice">实付款</span>
+						<span class="column prodStatus">交易状态</span>
+						<span class="column dealHandle">交易操作</span>
+					</h1>
+					<ul class="orderList">
+						<template v-for="item in dataList">
+							<li v-if="item.prodStatus != ''">
+								<div class="orderInfo">
+									<span class="orderDate">{{item.orderDate}}</span>
+									
+									<span class="orderNum">订单号：<i class="num">{{item.orderNum}}</i></span>
+									<span class="orderStatus">{{item.prodStatus}}</span>
+								</div>
+								<div class="infoList">
+									<span class="column prodName">
+										<img src="{{item.prodimgSrc}}" />
+										<span class="info">
+											<span class="pName">{{item.prodName}}</span>
+											<span class="pAttr">
+												<i v-for="attr in item.prodAttr">{{attr.attr}}</i>
+											</span>
+										</span>
+									</span>
+									<span class="column prodPrice">
+										<i>{{item.prodPrice}}</i>
+										<i class="costPrice" v-if="item.costPrice > item.prodPrice">{{item.costPrice}}</i>
+									</span>
+									<span class="column prodHandle">
+										<a :class="(item.prodStatus == '待收货' ?  'none': (item.prodStatus == '待发货' ?  'tuikuan':'shouhou'))">{{(item.prodStatus == '待收货' ?  '': (item.prodStatus == '待发货' ?  '退款':'申请售后'))}}</a>
+									</span>
+									<span class="column prodCount">{{item.prodCount}}</span>
+									<span class="column sprodPrice">{{item.sprodPrice}}</span>
+									<span class="column prodStatus"><a class="wuliu">物流详情</a></span>
+									<span class="column dealHandle">
+										<button :class="(item.prodStatus == '待发货' ? 'none': (item.prodStatus == '待收货' ? 'shouhuo':(item.dealHandle == '评价' ? 'pingjia':'hadHandle')))">{{item.dealHandle}}</button></span>
+								</div>
+								<!-- infoList /-->
+							</li>
+						</template>
+					</ul>
+				</div>
+				<!-- orderList /-->
+				
+				<div class="notThing notData">
+					<div class="notOrder">
+						<p><img src="../../images/common/pc/personal/notthings.png" /></p>
+						<p id="tipWord" class="tipWord">您当前还没有任何订单哦！</p>
+					</div>					
+				</div>
+				<!-- notOrder /-->
+			</div>
+			<!-- orderCont 全部订单 /-->
+			
+			<div class="orderCont">
+				<div id="notsendList">
+					<h1 class="contTitle">
+						<span class="column prodName">商品</span>
+						<span class="column prodPrice">单价</span>
+						<span class="column prodHandle">商品操作</span>
+						<span class="column prodCount">数量</span>
+						<span class="column sprodPrice">实付款</span>
+						<span class="column prodStatus">交易状态</span>
+						<span class="column dealHandle">交易操作</span>
+					</h1>
+					<ul class="orderList">
+						<template v-for="item in dataList">
+							<li v-if="item.prodStatus == '待发货'">
+								<div class="orderInfo">
+									<span class="orderDate">{{item.orderDate}}</span>								
+									<span class="orderNum">订单号：<i class="num">{{item.orderNum}}</i></span>
+									<span class="orderStatus">{{item.prodStatus}}</span>
+								</div>
+								<div class="infoList">
+									<span class="column prodName">
+										<img src="{{item.prodimgSrc}}" />
+										<span class="info">
+											<span class="pName">{{item.prodName}}</span>
+											<span class="pAttr">
+												<i v-for="attr in item.prodAttr">{{attr.attr}}</i>
+											</span>
+										</span>
+									</span>
+									<span class="column prodPrice">
+										<i>{{item.prodPrice}}</i>
+										<i class="costPrice" v-if="item.costPrice > item.prodPrice">{{item.costPrice}}</i>
+									</span>
+									<span class="column prodHandle">
+										<a class="tuikuan">退款</a>
+									</span>
+									<span class="column prodCount">{{item.prodCount}}</span>
+									<span class="column sprodPrice">{{item.sprodPrice}}</span>
+									<span class="column prodStatus"><a class="wuliu">物流详情</a></span>
+									<span class="column dealHandle">
+										<button class="none"></button></span>
+								</div>
+								<!-- infoList /-->
+							</li>
+						</template>
+					</ul>
+				</div>
+				<!-- notsendList /-->
+				
+				<div class="notThing notData">
+					<div class="notOrder">
+						<p><img src="../../images/common/pc/personal/notthings.png" /></p>
+						<p id="tipWord" class="tipWord">您还没有相关的订单！</p>
+					</div>					
+				</div>
+				<!-- notOrder /-->
+			</div>		
+			<!-- orderCont 待发货订单 /-->
+			
+			<div class="orderCont">
+			    <div id="waitdeliverList">
+					<h1 class="contTitle">
+						<span class="column prodName">商品</span>
+						<span class="column prodPrice">单价</span>
+						<span class="column prodHandle">商品操作</span>
+						<span class="column prodCount">数量</span>
+						<span class="column sprodPrice">实付款</span>
+						<span class="column prodStatus">交易状态</span>
+						<span class="column dealHandle">交易操作</span>
+					</h1>
+					<ul class="orderList">
+						<template v-for="item in dataList">
+							<li v-if="item.prodStatus == '待收货'">
+								<div class="orderInfo">
+									<span class="orderDate">{{item.orderDate}}</span>
+									
+									<span class="orderNum">订单号：<i class="num">{{item.orderNum}}</i></span>
+									<span class="orderStatus">{{item.prodStatus}}</span>
+								</div>
+								<div class="infoList">
+									<span class="column prodName">
+										<img src="{{item.prodimgSrc}}" />
+										<span class="info">
+											<span class="pName">{{item.prodName}}</span>
+											<span class="pAttr">
+												<i v-for="attr in item.prodAttr">{{attr.attr}}</i>
+											</span>
+										</span>
+									</span>
+									<span class="column prodPrice">
+										<i>{{item.prodPrice}}</i>
+										<i class="costPrice" v-if="item.costPrice > item.prodPrice">{{item.costPrice}}</i>
+									</span>
+									<span class="column prodHandle">
+										<a class="none"></a>
+									</span>
+									<span class="column prodCount">{{item.prodCount}}</span>
+									<span class="column sprodPrice">{{item.sprodPrice}}</span>
+									<span class="column prodStatus"><a class="wuliu">物流详情</a></span>
+									<span class="column dealHandle">
+										<button class="shouhuo">确认收货</button></span>
+								</div>
+								<!-- infoList /-->
+							</li>
+						</template>
+					</ul>
+				</div>
+				<!-- waitdeliverList /-->
+				
+				<div class="notThing notData">
+					<div class="notOrder">
+						<p><img src="../../images/common/pc/personal/notthings.png" /></p>
+						<p id="tipWord" class="tipWord">您还没有相关的订单！</p>
+					</div>					
+				</div>
+				<!-- notOrder /-->
+			</div>		
+			<!-- orderCont 待收货订单 /-->
+			
+			<div class="orderCont">
+			    <div id="haddeliverList">
+					<h1 class="contTitle">
+						<span class="column prodName">商品</span>
+						<span class="column prodPrice">单价</span>
+						<span class="column prodHandle">商品操作</span>
+						<span class="column prodCount">数量</span>
+						<span class="column sprodPrice">实付款</span>
+						<span class="column prodStatus">交易状态</span>
+						<span class="column dealHandle">交易操作</span>
+					</h1>
+					<ul class="orderList">
+						<template v-for="item in dataList">
+							<li v-if="item.prodStatus == '交易成功'">
+								<div class="orderInfo">
+									<span class="orderDate">{{item.orderDate}}</span>
+									
+									<span class="orderNum">订单号：<i class="num">{{item.orderNum}}</i></span>
+									<span class="orderStatus">{{item.prodStatus}}</span>
+								</div>
+								<div class="infoList">
+									<span class="column prodName">
+										<img src="{{item.prodimgSrc}}" />
+										<span class="info">
+											<span class="pName">{{item.prodName}}</span>
+											<span class="pAttr">
+												<i v-for="attr in item.prodAttr">{{attr.attr}}</i>
+											</span>
+										</span>
+									</span>
+									<span class="column prodPrice">
+										<i>{{item.prodPrice}}</i>
+										<i class="costPrice" v-if="item.costPrice > item.prodPrice">{{item.costPrice}}</i>
+									</span>
+									<span class="column prodHandle">
+										<a :class="(item.prodStatus == '待收货' ?  'none': (item.prodStatus == '待发货' ?  'tuikuan':'shouhou'))">{{(item.prodStatus == '待收货' ?  '': (item.prodStatus == '待发货' ?  '退款':'申请售后'))}}</a>
+									</span>
+									<span class="column prodCount">{{item.prodCount}}</span>
+									<span class="column sprodPrice">{{item.sprodPrice}}</span>
+									<span class="column prodStatus"><a class="wuliu">物流详情</a></span>
+									<span class="column dealHandle">
+										<button :class="item.dealHandle == '评价' ? 'pingjia':'hadHandle'">{{item.dealHandle}}</button></span>
+								</div>
+								<!-- infoList /-->
+							</li>
+						</template>
+					</ul>
+				</div>
+				<!-- haddeliverList /-->
+				
+				<div class="notThing notData">
+					<div class="notOrder">
+						<p><img src="../../images/common/pc/personal/notthings.png" /></p>
+						<p id="tipWord" class="tipWord">您还没有相关的订单！</p>
+					</div>					
+				</div>
+				<!-- notOrder /-->
+			</div>		
+			<!-- orderCont 已收货订单 /-->					
+		</div>
+		<!-- orderMain /-->
+	</div>
+	<!-- orderPanel /-->
+	
+	<!-- 弹窗背景 -->
+	<div id="alertBg" class="alertBg"></div>
+	<!-- 弹窗背景 /-->
+	
+	<!-- 加载弹窗内容 -->
+	<form method="post" action="" id="alertCont" class="alertCont"  target="hideIframe"></form>
+	<!-- 加载弹窗内容 /-->
+	
+	<!-- 防止提交之后页面刷新 -->
+	<iframe name="hideIframe" class="hideIframe"></iframe>
+	<!-- 防止提交之后页面刷新 /-->
+	
+	<!-- 退款弹窗 -->
+	<div id="refundAlert" class="alertCont none">
+		<input class="num" value="" hidden />
+		<div class="refundInfo">
+			<span class="closeAlert close">
+				<img src="../../images/common/pc/personal/close_icon.png" />
+			</span>
+			<h1 class="title">
+				<span>退款申请</span>
+			</h1>
+			<div class="infoCont">
+				<label class="checkboxCont">
+    				<input type="radio" id="reason1" name="reason" hidden="hidden" />
+    				<label for="reason1" class="checked"></label>	    				
+    				<span>拍错/拍多</span>
+    			</label>
+    			<label class="checkboxCont">
+    				<input type="radio" id="reason2" name="reason" hidden="hidden" />
+    				<label for="reason2" class="checked"></label>	    				
+    				<span>不想买了</span>
+    			</label>
+    			<label class="checkboxCont">
+    				<input type="radio" id="reason3" name="reason" hidden="hidden" />
+    				<label for="reason3" class="checked"></label>	    				
+    				<span>其他</span>
+    			</label> 
+    			<div class="refundReason">
+					<textarea id="refundReason" class="input-reason" type="text" placeholder="请填写退款原因"></textarea>
+				</div>
+			</div>
+			
+			<div class="buttList">
+				<button type="submit" id="refundButt" class="butt refundButt">退款</button>
+				<button type="submit" class="butt cancelButt">取消</button>
+			</div>
+			<p class="tips refundTip">*申请成功后，退款将于3个工作日内返回您的账户，请注意查收</p>
+		</div>
+	</div>
+	<!-- 退款弹窗 /-->
+	
+	<!-- 未选择退款理由 -->
+	<div id="notReason" class="notReason autoAlert">
+		<div class="alertInfo">
+			<span>亲，您还未选择退款理由</span>
+		</div>	
+	</div>
+	<!-- 未选择退款理由 /-->
+	
+	<!-- 选择退款理由为其他时，没有填写理由 -->
+	<div id="notReason2" class="notReason autoAlert">
+		<div class="alertInfo">
+			<span>亲，您还没有填写退款理由</span>
+		</div>	
+	</div>
+	<!-- 选择退款理由为其他时，没有填写理由 /-->
+	
+	<!-- 退款提交成功 -->
+	<div id="refundSuccess" class="refundSuccess autoAlert">
+		<div class="alertInfo">
+			<span>已提交申请</span>
+		</div>	
+	</div>
+	<!-- 退款提交成功 /-->
+	
+	<!-- 金币不足提示弹窗 -->
+	<div id="notgoldTip" class="alertCont notgoldTip">
+		<p class="tips orange">亲，您的金币不足，请先充值！</p>
+	</div>
+	<!-- 金币不足提示弹窗 /-->
+	
+	<!-- 重启客户端提示弹窗 -->
+	<div id="resetTip" class="alertCont resetTip">
+		<p class="tips orange">亲，皮肤生效需要重启客户端哦！</p>		
+	</div>
+	<!-- 重启客户端提示弹窗 /-->
+</body>
+<script>
+    var token = false;  //保存用户的userID 
+	var enter="";//{$enter};
+	if(enter == 1){
+		token = true;
+	}
+	else if(enter == 0){
+		//windowRequest('','openLogin');
+		token = true;
+	}
+</script>
+<script src="../../js/common/jquery-1.11.1.min.js"></script>
+<!--<script src="../../js/common/layer2.2/layer.js" ></script>-->
+<script src="../../js/common/vue.min.js" ></script>
+<script src="../../js/personal/laydate.dev.js"></script>
+<script src="../../js/personal/order.js"></script>
+</html>
