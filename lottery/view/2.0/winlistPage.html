@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-touch-fullscreen" content="no" /> 
+    <meta name="full-screen" content="yes" />
+	<meta name="browsermode" content="application" />
+	<meta name="x5-fullscreen" content="true" />
+	<meta name="x5-page-mode" content="app" /> 
+	<title>中奖记录</title>
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+	<div class="winlistCont">
+		<div class="winCont">
+			<h1 class="Title prizeTitle"></h1>
+			<div id="personalwinCont" class="innerCont">				
+				<div id="personalWin" class="listcont">
+					<div id="personalList" class="winList">
+						<ul>
+	    					<li v-for="item in winlist">
+	    						<a>
+		    				    	<span class="prize">
+		    				    		<i>{{item.Prizename}}</i>
+		    				    		<i class="time">{{item.Date}}</i>
+		    				    	</span>
+						    		<span class="status">已领取</span>
+						    	</a>
+	    				    </li>				   
+	    				</ul>
+	    				<ul></ul>
+    				</div>
+				</div>
+				<!-- listcont /-->
+				<div id="notData" class="notData">
+					<img class="nothingImg" src="../../images/notThings.png" />
+					<p>暂无中奖记录<br>快去玩抽奖试试运气吧！</p>
+				</div>
+			</div>			
+		</div>
+		<!-- personalWin /-->
+	</div>
+	<!-- winlistCont /-->
+</body>
+<script src="../../js/common/jquery-1.11.1.min.js"></script>
+<script>
+    var token = false;  //保存用户的userID 
+	var enter="1";//{$enter};
+	if(enter == 1){
+		token = true;
+	}
+	else if(enter == 0){
+		//windowRequest('','openLogin');
+		token = true;
+	}
+</script>
+<script src="../../js/slider.js"></script>
+<script src="../../js/common/global.js" ></script>
+<script src="../../js/common/vue.min.js" ></script>
+<script src="../../js/winSlide.js"></script>
+</html>

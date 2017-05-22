@@ -1,0 +1,162 @@
+/**common**/
+html,body{height:100%;}
+body{-webkit-tap-highlight-color:transparent; margin:auto; overflow-x:hidden; color:#57340a; font-size:.24rem; background:#fff0b7;}
+img{width:100%;}
+.Warp{width:7.5rem; margin:auto; -webkit-box-sizing:border-box; box-sizing:border-box;}
+.partCont{position:relative; width:6.8rem; margin:auto;}
+.lotteryCont{position:relative; width:100%; height:100%; margin:auto; -webkit-box-sizing:border-box; box-sizing:border-box;}
+.orange{color:#e96f03 !important;}
+.white{color:#fff !important;}
+.red{color:#832404 !important;}
+/*.login{text-decoration:underline; color:#ff8c19;}*/
+::-webkit-input-placeholder{color:#999 !important;}
+.labelCont{position:relative;}
+.inpLabel{position:relative; display:block;}
+.inpLabel input,.inpLabel span{position:absolute; left:0; top:0; border:0; background:none; width:100%; height:100%; -webkit-box-sizing:border-box; box-sizing:border-box;}
+.inpLabel .error{display:none; position:absolute; left:0; bottom:-.42rem; font-size:.2rem;}
+
+.notData{display:none; position:absolute; top:1.15rem; width:100%; text-align:center; color:#e24f0a; line-height:.33rem;}
+.nothingImg{padding-bottom:.45rem; width:3.3rem;}
+.notThing:before{display:inline-block; content:""; height:100%; vertical-align:middle;}
+.notThing .tip{display:inline-block; vertical-align:middle; color:#fff;}
+
+/**幸运抽奖css**/
+.lotteryCont{padding-top:2.43rem; background:url(../images/lottery_bg.png) no-repeat center -1.03rem; background-size:7.5rem;}
+
+/**part1**/
+.part1 .slideCont{position:relative; padding:.2rem 0; margin:auto; width:5.21rem; height:.52rem; line-height:.52rem; background:url(../images/slide_bg.png) no-repeat center; background-size:5.21rem; overflow:hidden;}
+.allwinList{position:absolute; white-space:nowrap;}
+.allwinList li{display:inline-block; padding-right:.15rem;}
+.allwinList li .userName{padding:.05rem;}
+
+/**part2**/
+.part2 .partCont{position:relative; padding:.73rem .41rem; width:7.02rem; height:6.56rem; background:url(../images/rotate_bg.png) no-repeat; background-size:7.02rem; box-sizing:border-box;}
+.lotteryInnercont .rotateBg{position:absolute; left:0; top:0; width:100%; height:100%; background:url(../images/rotate.png) no-repeat left center; background-size:cover;}
+.lotteryInnercont .rotateBg.active{-webkit-animation:myRotate .6s infinite running; animation:myRotate .6s infinite running;}
+.part2 .slideCont{position:relative; height:100%; width:100%;}
+.lotteryInnercont .plateBtn{position:absolute; z-index:99; top:1.76rem; left:2.1rem; width:1.98rem; height:1.64rem; background:url(../images/start_butt.png) no-repeat left center; background-size:6.04rem; cursor:pointer;}
+.lotteryInnercont .plateBtn:active{-webkit-transform:scale(.95,.95); transform:scale(.95,.95);}
+.lotteryInnercont .plateBtn2{background-position:-2.03rem center;}
+.lotteryInnercont .plateBtn3{background-position:-4.06rem center;}
+.plateBtn a{display:block; width:100%; height:100%;}
+.giftSlide{position:relative; width:100%; height:100%;}
+.giftSlide li{position:absolute; width:1.98rem; height:1.64rem; cursor:pointer; overflow:hidden; box-sizing:border-box; background:url(../images/active_bg.png) no-repeat -2.11rem center; background-size:4.09rem;}
+.giftSlide li img{position:absolute; top:.16rem; left:50%; margin-left:-.57rem; width:1.14rem;}
+.giftSlide .giftButt.active{background-position:left center;;}
+.giftSlide .gift1{top:0; left:0;}
+.giftSlide .gift2{top:0; left:2.11rem;}
+.giftSlide .gift3{top:0; left:4.22rem;}
+.giftSlide .gift4{top:1.76rem; left:4.22rem;}
+.giftSlide .gift5{top:3.52rem; left:4.22rem;}
+.giftSlide .gift6{top:3.52rem; left:2.11rem;}
+.giftSlide .gift7{top:3.52rem; left:0;}
+.giftSlide .gift8{top:1.76rem; left:0;} 
+.lotteryCont .tips{display:none; position:absolute; text-align:center;}
+.lotteryCont .activeTime{top:.2rem; left:0; width:100%;}
+.lotteryCont .chanceTip{bottom:.1rem; left:0; width:100%; font-weight:bold;}
+.lotteryCont .count{display:inline-block; vertical-align:middle; padding:0 .1rem; font-size:.36rem;}
+
+/**part3**/
+.part3{padding:.47rem 0;}
+.buttList{text-align:center;}
+.buttList .butt{display:inline-block; margin:auto .22rem; width:2.5rem; height:.75rem; line-height:.75rem; background:url(../images/butt_bg.png) no-repeat left center; background-size:5.06rem; font-size:.3rem; color:#fff; cursor:pointer;}
+.buttList .butt:active{background-position:-2.56rem center;}
+
+/**弹窗样式**/
+.alertTip{position:fixed; display:none; z-index:999; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,.6);}
+.alertCont{position:absolute; top:50%; left:50%; margin-left:-2.91rem; margin-top:-1.75rem; width:5.82rem; height:3.5rem; border-radius:.12rem; background:#fff2c5; text-align:center;}
+.alertCont:before{content:""; display:inline-block; vertical-align:middle; height:100%; width:0;}
+.alertCont .innerCont{display:inline-block; margin-top:.12rem; vertical-align:middle;}
+.alertTip .close{position:absolute; z-index:9; top:.16rem; right:.19rem; width:.24rem; height:.24rem; background:url(../images/close.png) no-repeat left center; background-size:.54rem; cursor:pointer;}
+.alertTip .close:active{background-position:-.31rem center;}
+.alertTip .butt{width:2rem; background:url(../images/butt_bg2.png) no-repeat left center; background-size:4.06rem;}
+.alertTip .cancelButt{background-position:-2.06rem center;}
+.alertTip .butt:active{background-position:-2.06rem center;}
+.alertTip .cancelButt:active{background-position:left center;}
+.alertTip .tipWord{padding-bottom:.35rem; line-height:.53rem; font-size:.3rem;}
+
+/**未登录弹窗**/
+.notLogin .tipWord span{display:block; font-size:.24rem;}
+.notLogin .tipWord .wenxin{padding-bottom:.05rem; font-size:.36rem;}
+
+/**中奖弹窗**/
+.lotteryResult .alertCont{height:4.3rem;}
+.lotteryResult .tipWord{padding-bottom:.3rem;}
+.lotteryResult .tipWord span{display:block; font-size:.24rem;}
+.lotteryResult .tipWord .wenxin{font-size:.36rem;}
+.lotteryResult .tipWord .prizeImg{padding-top:.12rem;}
+.lotteryResult .tipWord .prizeImg img{width:1.16rem;}
+.lotteryResult .tipWord .prizeName{padding-left:.05rem; color:#ff9800;}
+
+/**填写手机号弹窗**/
+.writeMobile .inpLabel{margin-top:.1rem; width:3.2rem; height:.65rem; border:1px solid #f6e6ad; background:#fff; border-radius:.06rem;}
+.writeMobile .inpLabel input,.writeMobile .inpLabel span{padding:.17rem; line-height:.31rem; font-size:.24rem; color:#b2b2b2; text-align:left;}
+.writeMobile .tipWord{padding-bottom:.4rem;}
+
+/**填写收货地址弹窗**/
+.addrCont{position:absolute; top:50%; left:50%; margin-left:-3.1rem; margin-top:-4.35rem; width:6.2rem; height:8.7rem; border-radius:.12rem; background:#fff2c5; text-align:center; color:#832404;}
+.addrCont .innerCont{width:5.5rem;}
+.addrCont .title{margin-bottom:.33rem; padding-bottom:.3rem; border-bottom:1px solid #f5e4aa; line-height:.48rem; text-align:center; font-size:.3rem;}
+.addrCont .labelCont{position:relative; padding-left:1.3rem; padding-bottom:.22rem; text-align:left;}
+.addrCont .info{position:absolute; left:0; width:1.15rem; height:100%; text-align:right; line-height:.65rem; white-space:nowrap;}
+.addrCont .info i{padding-right:.08rem; color:#f30707;}
+.addrCont .inpLabel{display:inline-block; margin:auto; width:2.75rem; height:.65rem; border:1px solid #f7e7b2; background:#fff; border-radius:.05rem; box-sizing:border-box;}
+.addrCont .inpLabel input,.addrCont .inpLabel span{padding:.17rem .12rem; line-height:.31rem; font-size:.24rem; color:#b2b2b2; text-align:left;}
+.addrCont .inpLabel input{color:#666;}
+.addrCont .error{left:290px; bottom:13px;}
+.addrCont .selectCont{font-size:0; margin:0 -2.66%;}
+.addrCont .selectBox{position:relative; display:inline-block; width:28%; margin:0 2.66%; font-size:.24rem; height:.65rem; border:1px solid #f7e7b2; background:#fff; border-radius:.05rem; box-sizing:border-box;}
+.addrCont .selectBox span{position:absolute; z-index:9; top:0; left:0; padding:0 .12rem;  height:100%; width:100%; box-sizing:border-box; line-height:.65rem; color:#666; white-space:nowrap;}
+.addrCont .selectBox .select_icon{z-index:8; left:auto; right:.1rem; top:0; border:0; width:.18rem; background:url(../images/arrow.png) no-repeat left center; background-size:.5rem;}
+.addrCont .selectBox.select .select_icon{background-position:-.33rem center;}
+.addrCont .selectBox .dataList{display:none; position:absolute; top:.63rem; z-index:9; width:100%; max-height:2rem; background:#fff; -webkit-box-shadow:0 0 .06rem rgba(0,0,0,.2); box-shadow:0 0 .06rem rgba(0,0,0,.2); overflow:auto;}
+.addrCont .selectBox li{padding:0 .1rem; line-height:.4rem; color:#999; font-size:.2rem;}
+.addrCont .selectBox li:hover{background:#f2f1f1; color:#000;}
+.addrCont .selectBox li.select,.addrCont .selectBox li.select:hover{background:#fee4bd; color:#000;}
+.addrCont .addrLabel{padding:.12rem; width:100%; height:1.72rem;}
+.addrCont .addrLabel textarea{width:100%; height:100%; line-height:.32rem; border:0; background:none; font-size:.24rem; resize:none; color:#666;}
+.addrLabel textarea::-webkit-input-placeholder{color:#b2b2b2 !important;}
+.default label{position:relative; padding-left:.35rem;}
+.default .defaultBg{position:absolute; left:0; top:.02rem; padding:0; width:.25rem; height:.25rem; border:1px solid #ff9800; border-radius:50%;}
+.default .defaultBg:before{content:""; position:absolute; left:.03rem; top:.03rem; width:.19rem; height:.19rem; border-radius:50%;}
+.default input:checked + .defaultBg:before{background:#ff9800;}
+.addrCont .buttList{padding-top:.4rem !important;}
+
+/**填写信息出错弹窗**/
+.errorTip{display:none; position:fixed; z-index:9999; top:0; left:0; height:100%; width:100%; background:rgba(0,0,0,.3);}
+.errorTip .innerCont{position:absolute; left:50%; top:50%; margin-left:-1.5rem; margin-top:-.5rem; width:3rem; height:1rem; text-align:center; background:#fffbf2; border-radius:.06rem; box-shadow:0 0 .1rem rgba(0,0,0,.2);}
+.errorTip .innerCont:before{content:""; display:inline-block; width:0; height:100%; vertical-align:middle;}
+.errorTip .errorInfo{display:inline-block; vertical-align:middle;}
+
+/**幸运抽奖css end**/
+
+/**中奖记录**/
+.winlistCont{padding:.35rem 0; height:100%; box-sizing:border-box; background:url(../images/body_bg.png) no-repeat center -1.27rem; background-size:7.5rem;}
+.winCont{position:relative; padding:0 .34rem; padding-top:1.2rem; height:100%; box-sizing:border-box;}
+.Title{position:absolute; z-index:10; left:.83rem; top:.52rem; width:5.82rem; height:1.07rem; background:url(../images/winlist_title.png) no-repeat; background-size:cover;}
+.winlistCont .innerCont{position:relative; padding-top:.75rem; background:#fefadd; box-shadow:0 0 .18rem rgba(0,0,0,.1); border-radius:3px; box-sizing:border-box;}
+.listcont{position:relative;height:8.6rem; overflow:hidden;}
+.winList{position:absolute; top:0; width:100%;}
+.winList li a{display:block; padding:.15rem .35rem; line-height:.35rem; font-size:0; color:#e24f09; border-bottom:1px solid #f4d467; overflow:hidden;}
+.winList li span{display:inline-block; width:60%; vertical-align:middle; font-size:.24rem;}
+.winList li .status{width:40%; text-align:right;}
+.winList li i{display:block; font-size:.3rem; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; text-align:left;}
+.winList li .time{text-align:left; font-size:.2rem; color:#fa9813;}
+
+/**活动规则**/
+.acruleTitle{background:url(../images/acrule_title.png) no-repeat; background-size:cover;}
+.ruleCont{padding:.75rem .22rem; padding-bottom:.22rem; height:auto; min-height:8.6rem; max-height:100%; line-height:.35rem; overflow:auto;}
+
+/**动画**/
+@-webkit-keyframes myRotate{
+	0%{background:url(../images/rotate.png) no-repeat left center; background-size:cover;}
+	49%{background:url(../images/rotate.png) no-repeat left center; background-size:cover;}
+	50%{background:url(../images/rotate2.png) no-repeat left center; background-size:cover;}
+	100%{background:url(../images/rotate2.png) no-repeat left center; background-size:cover;}
+}
+@keyframes myRotate{
+	0%{background:url(../images/rotate.png) no-repeat left center; background-size:cover;}
+	49%{background:url(../images/rotate.png) no-repeat left center; background-size:cover;}
+	50%{background:url(../images/rotate2.png) no-repeat left center; background-size:cover;}
+	100%{background:url(../images/rotate2.png) no-repeat left center; background-size:cover;}
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+	<title>活动规则</title>
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+	<div class="winlistCont">
+		<div class="winCont">
+			<h1 id="prizeTitle" class="Title acruleTitle"></h1>
+			<div id="rule" class="ruleCont innerCont listcont">
+			</div>			
+		</div>
+		<!-- personalWin /-->
+	</div>
+	<!-- winlistCont /-->
+</body>
+<script src="../../js/common/jquery-1.11.1.min.js"></script>
+<script>
+    var token = false;  //保存用户的userID 
+	var enter="1";//{$enter};
+	if(enter == 1){
+		token = true;
+	}
+	else if(enter == 0){
+		//windowRequest('','openLogin');
+		token = true;
+	}
+</script>
+<script src="../../js/common/global.js" ></script>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+	<title>幸运抽奖</title>
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<link rel="stylesheet" href="../../css/style.css" />
+	<link id="skin-999" rel="stylesheet" href="">
+</head>
+<body>			
+	<!-- lottery -->
+	<div class="Warp">
+		<div class="lotteryCont">
+			<!-- part1 -->
+			<div class="part1">
+				<div id="slideCont" class="slideCont">
+					<ul id="allwinList" class="allwinList">
+						<li class="orange" v-for="item in winlist">恭喜用户<span class="userName">{{item.UserName}}</span>抽中<span>{{item.Prizename}}</span>
+						</li>
+					</ul>
+				</div>				
+			</div>
+			<!-- part1 /-->
+			
+			<!-- part2 -->
+			<div class="part2 lotteryInnercont">
+				<div class="partCont">
+					<div class="rotateBg" id="rotateBg"></div>
+					<p class="tips activeTime white" id="activeTime">
+						活动时间：<span id="startTime">--</span>至<span id="deadLine">--</span>
+					</p>
+					<div class="slideCont">
+						<a class="plateBtn" id="plateBtn"></a>
+						<ul class="giftSlide" id="giftSlide">
+					    	<li class="lottery-unit gift1 giftButt"><img class="prizeImg" src="../../images/banner/goldbook.png" /></li>
+					        <li class="lottery-unit gift2 giftButt"><img class="prizeImg" src="../../images/banner/canyujiang.png" /></li>
+					        <li class="lottery-unit gift3 giftButt"><img class="prizeImg" src="../../images/banner/gold-1.png" /></li>					        
+					        <li class="lottery-unit gift4 giftButt"><img class="prizeImg" src="../../images/banner/canyujiang.png" /></li>
+					        <li class="lottery-unit gift5 giftButt"><img class="prizeImg" src="../../images/banner/jifen-3.png" /></li>
+					        <li class="lottery-unit gift6 giftButt"><img class="prizeImg" src="../../images/banner/canyujiang.png" /></li>
+					        <li class="lottery-unit gift7 giftButt"><img class="prizeImg" src="../../images/banner/gold-8.png" /></li>
+					        <li class="lottery-unit gift8 giftButt"><img class="prizeImg" src="../../images/banner/canyujiang.png" /></li>					        
+					    </ul>
+					</div>									
+					<span class="chanceTip white tips" id="chanceTip"></span>
+				</div>
+				<!-- partCont /-->
+			</div>
+			<!-- part2 /-->
+			
+			<!-- part3 -->
+			<div class="part3">
+				<p class="buttList">
+					<a id="acruleButt" class="acruleButt butt" href="acRulePage.html">查看活动规则</a>
+					<a class="winlistButt butt" href="winlistPage.html">我的中奖记录</a>
+				</p>				
+			</div>								
+			<!-- part3 /-->
+		</div>
+		<!-- lotteryCont /--> 
+	</div>
+	<!-- Warp /-->
+	
+	<!--未登录提示 -->
+    <div id="notLogin" class="notLogin alertTip">
+    	<div class="alertCont">
+    		<span class="close initClose"></span>
+    		<div class="innerCont">
+    			<p class="tipWord red">
+    				<span class="wenxin">温馨提示</span>
+    				<span>登录后才能抽奖</span>   				
+    			</p>
+    			<p class="buttList">
+    				<a class="butt initClose cancelButt">取消</a>
+    				<a id="loginButt" class="butt sureButt" onclick="loginAPP()">登录</a>
+    			</p>
+    		</div>   		
+    	</div>
+    	<!--alertCont /-->
+    </div>
+    <!--未登录提示 /-->
+    
+    <!--中奖提示 -->
+    <div class="lotteryResult alertTip" id="lotteryResult">
+    	<div class="alertCont">
+    		<span class="close deClose"></span>
+    		<div class="innerCont">
+    			<p class="tipWord red">
+    				<span class="wenxin">恭喜您~中奖啦！</span>
+    				<span>奖品是<i class="prizeName" id="prizeName"></i></span>
+    				<span class="prizeImg"><img id="prizeImg" src="" /></span>
+    			</p>
+    			<p class="buttList">
+    				<a id="sureBtn" class="butt sureButt">确定</a>
+    			</p>
+    		</div>   		
+    	</div>
+    	<!--alertCont /-->   					
+	</div>
+    <!--中奖提示 /-->
+    
+    <!--没中奖提示 -->
+    <div class="notsuccessResult alertTip" id="notsuccessResult">
+    	<div class="alertCont">
+    		<span class="close deClose"></span>
+    		<div class="innerCont">
+    			<p class="tipWord red">
+    				好遗憾<br>您与奖品擦肩而过了   				
+    			</p>
+    		</div>   		
+    	</div>
+    	<!--alertCont /-->	  				
+	</div>
+    <!--没中奖提示 /-->
+    
+    <!--抽奖次数用完提示 -->
+    <div class="notChance alertTip" id="notChance">
+    	<div class="alertCont">
+    		<span class="close initClose"></span>
+    		<div class="innerCont">
+    			<p class="tipWord red">
+    				sorry，今日抽奖机会已用完！   				
+    			</p>
+    		</div>   		
+    	</div>
+    	<!--alertCont /--> 				
+	</div>
+    <!--抽奖次数用完提示 /-->
+        
+    <!--扣除积分提示 -->
+    <div class="jifenTip alertTip" id="jifenTip">
+    	<div class="alertCont">
+    		<span class="close initClose"></span>
+    		<div class="innerCont">
+    			<p class="tipWord red">
+    				积分抽奖需要扣除5积分，是否继续？		
+    			</p>
+    			<p class="buttList">
+    				<a class="butt initClose cancelButt">取消</a>
+    				<a id="deductButt" class="butt deductButt">确定</a>
+    			</p>
+    		</div>   		
+    	</div>
+    	<!--alertCont /-->
+	</div>
+    <!--扣除积分提示 /-->
+    
+    <!--没有积分提示 -->
+    <div class="notPoints alertTip" id="notPoints">
+    	<div class="alertCont">
+    		<span class="close initClose"></span>
+    		<div class="innerCont">
+    			<p class="tipWord red">
+    				亲，余额积分不足<br>快去直播间听课获取吧			
+    			</p>
+    		</div>   		
+    	</div>
+    	<!--alertCont /-->	  				
+	</div>
+    <!--没有积分提示 /-->    
+    
+    <!--填写号码提示 -->
+    <div class="writeMobile alertTip" id="writeMobile">
+    	<div class="alertCont">
+    		<span class="close deClose"></span>
+    		<div class="innerCont">
+    			<p class="tipWord red">
+    				<span>离 领 奖 就 差 一 步 啦！</span>
+    				<label class="inpLabel">
+	    				<input class="input-txt" type="text" name="userTel" id="userTel" maxlength="11" />
+	    				<span>请输入11位有效手机号码</span>
+	    				<i class="error orange" id="telError">请输入正确的手机号码</i>
+	    		    </label>   						
+    			</p>
+    			<p class="buttList">
+    				<a class="butt receiveButt">确定</a>
+    			</p>
+    		</div>   		
+    	</div>
+    	<!--alertCont /-->
+	</div>
+    <!--填写号码提示 /-->
+	
+	<!-- 填写收货地址弹窗 -->
+	<div id="alertAddr" class="alertAddr alertTip">
+		<div class="alertCont addrCont">
+			<span class="close deClose"></span>
+			<div class="innerCont">
+				<h1 class="title">恭喜您<br>留下地址，让礼物准确到达吧！</h1>
+				<p class="labelCont">
+					<span class="info"><i>*</i>收货人</span>
+					<label class="inpLabel">
+	    				<input class="input-txt" type="text" name="userName" id="userName" />
+	    				<span>输入真实姓名</span>	    				
+	    		    </label>
+	    		    <!--<i class="error orange" id="nameError">*输入真实姓名</i>-->
+	    		</p>
+	    		<p class="labelCont">
+	    			<span class="info"><i>*</i>手机号码</span>
+					<label class="inpLabel">
+	    				<input class="input-txt" type="text" name="userTel2" id="userTel2" maxlength="11" />
+	    				<span>输入有效手机号码</span>	    				
+	    		    </label>
+	    		    <!--<i class="error orange" id="telError2">*输入有效手机号码</i>-->
+	    		</p>
+	    		<div class="labelSelect labelCont">
+	    			<span class="info"><i>*</i>所在区域</span>
+	    			<div class="selectCont">	    				
+	    				<div class="selectBox">
+	    					<span id="select_showbox1" class="select_showbox"></span>
+	    					<span class="select_icon"></span>
+	    					<ul id="provinceList" class="dataList">
+	    						<li id="0">请选择</li>
+	    						<!--<template v-if="checkData()">
+	    							<li v-for="item in list">{{item}}</li>	    							
+	    						</template>	  
+	    						<li v-else>暂无数据</li>-->
+	    					</ul>
+	    				</div>
+	    				<div class="selectBox">
+	    					<span id="select_showbox2" class="select_showbox"></span>
+	    					<span class="select_icon"></span>
+	    					<ul id="cityList" class="dataList">
+	    						<li id="0">请选择</li>
+	    						<!--<template v-if="checkData()">
+	    							<li v-for="item in list">{{item}}</li>	    							
+	    						</template>	  
+	    						<li v-else>暂无数据</li>-->
+	    					</ul>
+	    				</div>
+	    				<div class="selectBox">
+	    					<span id="select_showbox3" class="select_showbox"></span>
+	    					<span class="select_icon"></span>
+	    					<ul id="areaList" class="dataList">
+	    						<li id="0">请选择</li>
+	    						<!--<template v-if="checkData()">
+	    							<li v-for="item in list">{{item}}</li>	    							
+	    						</template>	  
+	    						<li v-else>暂无数据</li>-->
+	    					</ul>
+	    				</div>
+	    			</div>
+	    			<!-- selectCont /-->
+	    		</div>
+	    		<p class="labelCont">
+	    			<span class="info"><i>*</i>收货地址</span>
+					<label class="inpLabel addrLabel">
+	    				<textarea id="detailAddr" class="input-txt" type="text" placeholder="建议您如实填写详细收货地址，如街道名称，门牌号，楼层，房间号等,无需再次填写所在区域信息"></textarea>
+	    				<!--<span>建议您如实填写详细收货地址，如街道名称，门牌号，楼层，房间号等,无需再次填写所在区域信息</span>-->				
+	    		    </label>
+	    		</p>
+	    		<!--<p class="labelCont default">
+	    			<label>
+	    				<input type="checkbox" id="default" hidden="hidden" />
+	    				<label for="default" class="defaultBg"></label>	    				
+	    				<span>设为默认地址</span>
+	    			</label>
+	    		</p>-->
+	    		<p class="buttList">
+    				<a class="butt receiveButt">确定</a>
+    			</p>   			
+			</div>
+		</div>
+	</div>
+	<!-- 填写收货地址弹窗 /-->
+	
+	<!-- 选择收货地址弹窗 -->
+	<div id="selectAddr" class="selectAddr alertTip">
+		
+	</div>
+	<!-- 选择收货地址弹窗 /-->
+	
+	<!-- 信息填写错误提示弹窗 -->
+	<div id="errorTip" class="errorTip">
+		<div class="innerCont">
+			<span id="errorInfo" class="errorInfo"></span>
+		</div>		
+	</div>
+	<!-- 信息填写错误提示弹窗 /-->
+</body>
+<script src="../../js/common/jquery-1.11.1.min.js"></script>
+<script>
+    /**用于获取IOS的监听**/
+	window.onerror = function(err) {
+		log('window.onerror: ' + err)
+	}
+
+    function setupWebViewJavascriptBridge(callback) {
+        if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
+        if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
+        window.WVJBCallbacks = [callback];
+        var WVJBIframe = document.createElement('iframe');
+        WVJBIframe.style.display = 'none';
+        WVJBIframe.src = 'wvjbscheme://__BRIDGE_LOADED__';
+        document.documentElement.appendChild(WVJBIframe);
+        setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
+    }
+
+    setupWebViewJavascriptBridge(function(bridge) {
+
+		var callbackButton = document.getElementById('loginButt')
+		callbackButton.onclick = function(e) {
+			e.preventDefault()
+			bridge.callHandler('loginAPP', {}, function(response) {
+			})
+		}
+	})
+    /**用于获取IOS的监听**/
+    
+    var token = false;  //保存用户的userID 
+	var enter="";//{$enter};
+	if(enter == 1){
+		token = true;
+	}
+	else if(enter == 0){
+		//windowRequest('','openLogin');
+		token = true;
+	}
+</script>
+<script src="../../js/common/global.js" ></script>
+<script src="../../js/common/vue.min.js" ></script>
+<script src="../../js/awardRotate.js"></script>
+<script src="../../js/lottery.js"></script>
+<script src="../../js/common/AreaData_min.js"></script>
+<script src="../../js/common/initdata.js"></script>
+<script src="../../js/winSlide.js"></script>
+</html>

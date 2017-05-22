@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>商城-999装扮</title>
+	<script src="../../js/common/jquery-1.11.1.min.js"></script>
+	<script src="../../js/common/layer2.2/layer.js" ></script>
+	<link rel="stylesheet" href="../../js/common/layer2.2/skin/layer.css" />
+	<link rel="stylesheet" href="../../js/common/layer2.2/skin/resetLayer.css" />
+	<link rel="stylesheet" href="../../css/common/pc/shop/reset.css" />
+	<link rel="stylesheet" href="../../css/common/pc/shop/flexslider.css" />
+	<link rel="stylesheet" href="../../css/common/pc/shop/style.css" />
+	<link id="skin-999" rel="stylesheet" href="">
+</head>
+<body class="themeBody">	
+	<!--banner-->
+	<div class="flexslider" id="flexslider">
+		<ul class="slides">
+			<template v-for="item in banner">
+				<li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1; background: url(http://cms.99live.com/upload/{{item.ThumbnailImg}}) 50% 0px no-repeat;">
+					<a href="javascript: window.windowRequest ? window.windowRequest('{{item.NewsUrl}}','OpenHandOutLink') : false ;" target="_blank"></a>
+				</li>
+			</template>
+		</ul>
+	</div>
+	<!-- banner /-->
+	
+	<!-- tabTitle -->
+	<div id="tabTitle" class="tabTitle">
+		<div class="titleLeft commonIcon">
+			<a class="active" href="themePage.html">999装扮</a>
+			<a href="lotteryPage.html">幸运抽奖</a>
+			<a href="#">积分兑换</a>
+		</div>
+		<div class="titleRight commonIcon">
+			<label class="searchCont inpLabel">
+				<input class="searchVal input-txt" id="searchVal" />
+				<span>搜索商品</span>
+				<button class="searchButt" id="searchButt"></button>
+			</label>
+		</div>
+	</div>
+	<!-- tabTitle /-->
+	
+	<!-- shopMian -->
+	<div id="shopMian" class="shopMain themeMain">
+		<div id="themeCont" class="themeCont">
+			<p class="themeTip">
+				<span class="tipIcon"></span>
+				<span>装饰只能使用999金币购买</span>
+			</p>
+			<ul id="themeList" class="themeList">
+				<li data-type="{{item.themeName}}" data-src="{{item.themeSrc}}" v-for="item in list">
+					<div class="themeinfoCont">
+						<p class="themeImg"><img src="{{item.themeImg}}" /></p>
+						<p class="themeInfo">
+							<span class="prodType">{{item.prodType}}</span>
+							<span class="themeName">{{item.themeName}}</span>
+							<span data="{{item.themePrice}}" class="themePrice orange">{{item.themePrice}}金币</span>
+						</p>
+					</div>
+					<div class="butt">
+						<button class="preButt previewButt">预览</button>
+		    			<button :class="(item.type == 'charge' ? 'buyButt' : 'zbButt')">{{item.type == 'charge' ? '购买' : '装扮'}}</button>
+					</div>
+					<!-- themeinfoCont /-->
+				</li>				
+			</ul>
+		</div>		
+		<!-- themeCont /-->
+		<div id="notThing" class="notThing">
+			<div class="notTheme">
+				<p><img src="../../images/common/pc/shop/notthings.png" /></p>
+				<p id="tipWord" class="tipWord">很遗憾，没有找到与“<span id="prodName" class="orange"></span>”相关的产品哦！</p>
+			</div>					
+		</div>
+		<!-- notTheme /-->
+	</div>
+	<!-- shopMain /-->
+	
+	<div id="alertBg" class="alertBg"></div>
+	
+	<!-- 主题详细信息弹窗 -->
+	<div id="themeinfoTip" class="alertCont">
+		<div class="themeinfoTip">
+			<div class="infoCont">
+				<p class="themeImg" id="themeImg"></p>
+				<div class="info">
+					<p>名称：<span id="themeName"></span></p>
+					<p>类型：<span id="prodType"></span></p>
+					<p>售价：<span id="themePrice" class="themePrice"></span></p>
+				</div>
+			</div>			
+		</div>
+	</div>
+	<!-- 主题详细信息弹窗 /-->
+	
+	<!-- 购买提示弹窗 -->
+	<div id="chargeTip" class="alertCont chargeTip">
+		<p class="tips orange">装扮需花费<span class="themePrice"></span>，是否继续？</p>		
+	</div>
+	<!-- 购买提示弹窗 /-->
+	
+	<!-- 金币不足提示弹窗 -->
+	<div id="notgoldTip" class="alertCont notgoldTip">
+		<p class="tips orange">亲，您的金币不足，请先充值！</p>
+	</div>
+	<!-- 金币不足提示弹窗 /-->
+	
+	<!-- 重启客户端提示弹窗 -->
+	<div id="resetTip" class="alertCont resetTip">
+		<p class="tips orange">亲，皮肤生效需要重启客户端哦！</p>		
+	</div>
+	<!-- 重启客户端提示弹窗 /-->
+</body>
+<script>
+    var token = false;  //保存用户的userID 
+	var enter="";//{$enter};
+	if(enter == 1){
+		token = true;
+	}
+	else if(enter == 0){
+		//windowRequest('','openLogin');
+		token = true;
+	}
+</script>
+<script src="../../js/common/vue.min.js" ></script>
+<script src="../../js/common/jquery.flexslider-min.js"></script>
+<!--<script src="../../js/common/layer2.2/extend/layer.ext.js" ></script>-->
+<script src="../../js/common/pc/index/index_l.js"></script>
+<script src="../../js/common/pc/index/controller.js"></script>
+<script src="../../js/shop/common.js"></script>
+<script src="../../js/shop/skin/changeskin.js"></script>
+</html>

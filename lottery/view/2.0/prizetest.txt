@@ -1,0 +1,1 @@
+﻿{"status":"succeed","obj":{"prize":"参与奖","freeTime":1,"pointsTime":3,"clickTime":4,"ActivityType":""}}
