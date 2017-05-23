@@ -99,13 +99,13 @@
                         <h1 class="opacity">个人项目</h1>
                         <div class="whiteBg animation-bg2">
                             <div class="project">
-                                <h1><a href="http://www.99live.com" target="_blank">999财经直播官网</a></h1>
-                                <p>描述：页面布局主要用html5与css3，用jq的Ajax来进行数据的交互。</p>
+                                <h1><a href="http://www.cooefashion.com" target="_blank">COOE官网PC端</a></h1>
+                                <p>描述：页面布局主要用html5与css3，通过@media与js的结合来控制页面的响应式，用jq的Ajax来进行数据的交互。</p>
                                 <p>职责：负责设计图的裁切，前端的开发</p>
                             </div>
                             <div class="project">
-                                <h1><a id="openApp">移动端项目</a></h1>
-                                <p>描述：页面布局主要用html5与css3，通过rem单位来控制页面的响应式，用jq的Ajax来进行数据的交互。</p>
+                                <h1><a href="http://vip.cooefashion.com" target="_blank">VIP系统</a></h1>
+                                <p>描述：页面布局主要用html5与css3，移动端通过@media与js的结合来控制页面的响应式，PC端则用bootstrap框架。</p>
                                 <p>职责：负责设计图的裁切，前端的开发</p>
                             </div>
                             <div class="project">
@@ -131,16 +131,6 @@
         <div class="swiper-pagination swiper-pagination-bullets"></div>
         <div class="swiper-arrow"></div>
     </div><!-- swiper-container/ -->
-    
-    <!--弹窗-->
-    <div id="alertTip" class="alertTip"></div>
-    
-    <div id="appAlert" class="alert">
-    	<div class="alertCont">
-    		<span class="close closeAlert" onclick="closeAlert()">关闭</span>
-    		<a class="link" href="http://m.99live.com" target="_blank">999财经直播webAPP</a>
-    	</div>
-    </div>
     <script src="js/swiper.min.js"></script>
     <script>
         var browser=navigator.appName   //获取浏览器的类别 
@@ -162,23 +152,6 @@
             spaceBetween: 30,
             mousewheelControl: true
         });
-        
-        var $alertTip = document.getElementById("alertTip");
-        var $openApp = document.getElementById("openApp");
-        var $appAlert = document.getElementById("appAlert");
-        
-        function openAlert(obj){       	
-        	alertTip.style.display = "block";
-        	alertTip.innerHTML = obj.innerHTML;
-        }
-        
-        function closeAlert(){
-        	$alertTip.style.display = "none";
-        }
-        
-        $openApp.onclick = function(){
-        	openAlert($appAlert);
-        }              
     </script>
 </body>
 </html>
