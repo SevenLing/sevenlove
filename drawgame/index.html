@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>投资礼遇,翻牌赢iPhone7</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/css.css" />
+</head>
+<body>
+    <div class="Warp">  
+    	<!-- part1 -->
+    	<div class="part1"></div>
+    	<!-- part1 /-->
+    	
+    	<!-- part2 -->
+    	<div class="part2"></div>
+    	<!-- part2 /-->
+    	
+    	<!-- part3 -->
+    	<div class="part3">
+    		<div class="partCont">   			
+	    		<div id="giftCont" class="giftCont">
+		    		<div id="box" class="fishGift" >
+		    			<div id="writeinfoButt" class="writeinfoButt middle"></div>
+		    			<div id="chanceTip" class="chanceTip middle">
+		    				<span>还剩余<i id="clickCount">-</i>次翻牌机会</span>
+		    			</div>
+					    <ul id="giftSlide">
+					    	<li class="gift1 giftButt"><img class="prizeImg" src="images/banner/iphone7.png" /><img class="prizeBg" src="images/banner/prizeBg.png" /></li>
+					        <li class="gift2 giftButt"><img class="prizeImg" src="images/banner/goldbook.png" /><img class="prizeBg" src="images/banner/prizeBg.png" /></li>
+					        <li class="gift3 giftButt"><img class="prizeImg" src="images/banner/ebook.png" /><img class="prizeBg" src="images/banner/prizeBg.png" /></li>					        
+					        <li class="gift4 giftButt"><img class="prizeImg" src="images/banner/huafei30.png" /><img class="prizeBg" src="images/banner/prizeBg.png" /></li>
+					        <li class="gift5 giftButt"><img class="prizeImg" src="images/banner/xiaomi.png" /><img class="prizeBg" src="images/banner/prizeBg.png" /></li>
+					        <li class="gift6 giftButt"><img class="prizeImg" src="images/banner/gold999.png" /><img class="prizeBg" src="images/banner/prizeBg.png" /></li>
+					        <li class="gift7 giftButt"><img class="prizeImg" src="images/banner/golden.png" /><img class="prizeBg" src="images/banner/prizeBg.png" /></li>
+					        <li class="gift8 giftButt"><img class="prizeImg" src="images/banner/huafei50.png" /><img class="prizeBg" src="images/banner/prizeBg.png" /></li>					        
+					    </ul>
+				    </div>
+			    </div>
+    		</div>          
+    	</div>
+    	<!-- part3 /-->
+    	
+    	<!-- part4 -->
+    	<div class="part4">
+    		<div class="partCont">
+	    		<div id="carouselUp" class="carouselUp">	    			
+					<ul id="winList" class="winList">
+					    <!--<li>
+					    	<span class="userName">某*某</span>
+					    	<span class="userTel">155*****556</span>
+					    	<span class="prizeName">翻牌获得 999金币10个</span>
+					    </li>-->
+				    </ul>
+				    <ul class="winList"></ul>
+				</div>
+				<!-- carouselUp /-->
+			</div>
+    	</div>
+    	<!-- part4 /-->
+    	
+    	<!--part5-->
+    	<div class="part5">
+    		<div class="part5_01"></div>
+    		<div class="part5_02"></div>
+    	</div>
+    	<!-- part5 /-->
+       	
+    	<!-- part6 -->
+    	<div class="part6">
+            <div class="partCont">
+            	<a class="openaccount" href="http://m.99live.com/openAccount.html"></a>
+            </div>
+    	</div>
+    	<!-- part6 /--> 
+    	
+    	<!-- 加载弹窗内容 -->
+		<!--<div id="addAlert" class="alterTips"></div>-->
+		<!-- 加载弹窗内容 /-->
+    	
+    	<!-- infoAlert -->
+        <div id="infoAlert" class="infoAlert alterTips">
+            <div class="alertCont">
+            	<span class="close closeAlert"></span>
+                <img src="images/info_alert.png" />
+                <div class="alertInnercont">                                                       
+                    <p> 
+                    	<span>姓名：</span>
+                        <label class="inpLabel">
+                            <input type="text" name="userName" id="userName" />
+                        </label>
+                        <label class="error" id="nameError">请输入正确的姓名</label>
+                    </p>
+                    <p>
+                    	<span>账号：</span>
+                        <label class="inpLabel">
+                            <input type="text" name="userId" id="userId" maxlength="10" />
+                        </label>
+                        <label class="error" id="idError">请输入10位数交易账号</label>
+                    </p>
+                    <p>
+                    	<span>手机号：</span>
+                        <label class="inpLabel">
+                            <input type="text" name="userTel" id="userTel" maxlength="11" />
+                        </label>
+                        <label class="error" id="telError">请输入11位有效手机号</label>
+                    </p>
+                    <p class="tip">
+                    	没有账号？点击<a class="openaccount" href="http://m.99live.com/openAccount.html">开户</a>获取
+                    </p>                   
+                </div>
+                <button id="joinButt" class="submitInfo" type="submit"></button>
+            </div>
+        </div>  
+        <!-- infoAlert /-->
+                      
+        <!-- 用户信息未填写提示 -->    	
+    	<div id="notjoinTip" class="alterTips notjoinTip autoAlert">
+    		<div class="alertInfo">
+				<span>亲，要先填写资料才能翻牌哦！</span>
+			</div>   		
+    	</div>
+    	<!-- 用户信息未填写提示  /-->
+        
+        <!-- 用户提交信息成功提示 -->
+        <div id="submitSuccess" class="alterTips submitSuccess autoAlert">
+        	<div class="alertInfo">
+				<span>填写成功，可以翻牌抽奖啦！</span>
+			</div>       	
+        </div>
+        <!-- 用户提交信息成功提示  /-->
+        
+        <!-- 填写完信息之后提示翻牌机会用完 -->
+        <div id="notChance2" class="alterTips notChance autoAlert">
+        	<div class="alertInfo">
+				<span>同一个账号只能翻牌两次<br>您的翻牌机会已用完啦</span>
+			</div>       	
+        </div>
+        <!-- 填写完信息之后提示翻牌机会用完  /-->
+        
+        <!-- 翻牌机会用完提示 -->
+        <div id="notChance" class="alterTips notChance autoAlert">
+        	<div class="alertInfo">
+				<span>您的翻牌机会已用完<br>不能再翻牌啦！</span>
+			</div>       	
+        </div>
+        <!-- 翻牌机会用完提示  /-->       
+    	
+    	<!-- 中奖提示 -->
+    	<div id="successAlert" class="alterTips successAlert"> 
+    		<div class="alertCont">
+    			<span class="close closeAlert"></span> 
+    			<div class="innerCont">
+    				<img src="images/tip_success.png" />
+                	<p class="prizeImg"><img id="prize" src="" /></p>
+					<p class="word">奖品将在活动结束7个工作日后发放！</p>
+					<a id="receiveButt" class="receiveButt"></a>
+    			</div>           	                            
+			</div>
+    	</div>
+    	<!-- 中奖提示 /-->
+    	
+    	<!-- 领取奖品提示 -->
+    	<div id="receiveTip" class="alterTips receiveTip autoAlert">
+    		<div class="alertInfo">
+				<span>领取成功</span>
+			</div>
+    	</div>
+    	<!-- 领取奖品提示  /-->				
+    </div>
+    <!-- fishWarp /-->
+    
+    <!--无关内容-->
+    
+	<!--无关内容/-->
+</body>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/activityip.js"></script>
+<script type="application/javascript" src="js/fastclick.js"></script>
+<script src="js/infoValidate.js"></script>
+<script src="js/winSlide.js"></script>
+<script src="js/global.js"></script>
+<script type="application/javascript">
+	window.addEventListener('load', function () {
+		FastClick.attach(document.body);    //初始化fastclick事件
+	}, false);
+</script>
+</html>
