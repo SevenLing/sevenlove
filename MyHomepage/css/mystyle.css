@@ -7,6 +7,7 @@ i{font-style:inherit;}
 body{background: #fff;font-size: 13px;color:#383838; min-width:320px; background:url(../images/body-bg.jpg) no-repeat center; background-size:100% 100%; background-attachment:fixed;}
 .childBody{background:#fff;}
 .WhiteBg{padding:15px; background:#fff;}
+.paragraph{margin-top:15px;}
 .whiteBg{background:#fff;}
 .swiper-wrapper{background:none;}
 .swiper-arrow{position:absolute; bottom:8px; left:50%; z-index:999; margin-left:-10px; display:none; width:20px; height:20px; background:url(../images/arrow.png) no-repeat center; background-size:contain;}
@@ -76,7 +77,7 @@ body{background: #fff;font-size: 13px;color:#383838; min-width:320px; background
 /***slide3***/
 .project{padding:0 10px; margin-bottom:20px;}
 .project h1{margin-top: 5px; margin-bottom: 10px;}
-.project h1 a{font-size:16px; color:#6CF;}
+.project h1 a{font-size:16px; color:#6CF; cursor:pointer;}
 .project p{font-size:14px; line-height:20px;}
 .swiper-slide-cont3 .animation-bg2{opacity:0;}
 .swiper-slide-active .animation-bg2{-webkit-animation:fadeIn 2s .5s; -moz-animation:fadeIn 2s .5s; animation:fadeIn 2s .5s; -webkit-animation-fill-mode:forwards; -moz-animation-fill-mode:forwards; animation-fill-mode:forwards;}
@@ -301,8 +302,7 @@ body{background:#fff;}
 .alertTip{display:none; position:fixed; z-index:999; top:0; left:0; width:100%; height:100%; text-align:center; background:rgba(0,0,0,.5);}
 .alertTip:before{content:""; display:inline-block; vertical-align:middle; height:100%; width:0;}
 .alert{display:none;}
-.alertCont{position:relative; padding:25px; display:inline-block; vertical-align:middle; background:#fff; border-radius:6px;}
-.alertCont .close{position:absolute; top:5px; right:5px;}
-
-/**子页内容**/
-.swiper-slide .link{color:#333;}
+.alertCont{position:relative; padding:25px; display:inline-block; min-width:270px;   vertical-align:middle; background:#fff; border-radius:3px;}
+.alertCont .close{position:absolute; top:5px; right:5px; width:20px; height:20px; background:url(../images/close.png) no-repeat center; cursor:pointer;}
+.alertCont .paragraph{text-align:left;}
+.alertCont .link{color:#333; font-size:14px;}

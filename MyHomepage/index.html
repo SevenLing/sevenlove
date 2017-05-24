@@ -97,30 +97,25 @@
                 <div class="swiper-slide-cont swiper-slide-cont3">
                     <div class="WhiteBg">
                         <h1 class="opacity">个人项目</h1>
-                        <div class="whiteBg animation-bg2">
+                        <div class="whiteBg animation-bg2">                           
                             <div class="project">
-                                <h1><a href="http://www.99live.com" target="_blank">999财经直播官网</a></h1>
-                                <p>描述：页面布局主要用html5与css3，用jq的Ajax来进行数据的交互。</p>
-                                <p>职责：负责设计图的裁切，前端的开发</p>
-                            </div>
-                            <div class="project">
-                                <h1><a id="openApp">移动端项目</a></h1>
-                                <p>描述：页面布局主要用html5与css3，通过rem单位来控制页面的响应式，用jq的Ajax来进行数据的交互。</p>
+                                <h1><a id="openApp">webPC+webAPP项目</a></h1>
+                                <p>描述：页面布局主要用html5与css3，移动端通过rem单位与js的结合来控制页面的响应式，用Ajax+Vue做数据渲染。使用html5的history(pushState/replaceState)操作部分页面的切换，例如分页的操作</p>
                                 <p>职责：负责设计图的裁切，前端的开发</p>
                             </div>
                             <div class="project">
-                                <h1><a href="http://sevenling.github.io/sevenlove/websiteAPP" target="_blank">COOE官网移动端</a></h1>
-                                <p>描述：页面布局主要用html5与css3，通过rem单位与js的结合来控制页面的响应式，用jq的Ajax来进行数据的交互。</p>
+                                <h1><a id="openActive">活动专题</a></h1>
+                                <p>描述：页面布局主要用html5与css3，移动端通过rem单位与js的结合来控制页面的响应式，用jq的Ajax做数据渲染。</p>
                                 <p>职责：负责设计图的裁切，前端的开发</p>
                             </div>
-                            <div class="project hidden">
-                                <h1><a href="#">订货会系统</a></h1>
-                                <p>描述：页面布局主要用html与css3，通过@media与js的结合来控制页面的响应式，用jq的Ajax来进行数据的交互</p>
+                            <div class="project">
+                                <h1><a id="openH5">H5专题</a></h1>
+                                <p>描述：页面布局主要用html5与css3，通过rem单位与js的结合来控制页面的响应式，用zepto+swiper控制页面的切换，animate实现页面上的各种动画效果。</p>
                                 <p>职责：负责设计图的裁切，前端的开发</p>
                             </div>
-                            <div class="project hidden">
-                                <h1><a href="#">销售系统</a></h1>
-                                <p>描述：页面布局主要用html5与css3，用bootstrap框架来做响应式布局。</p>
+                            <div class="project">
+                                <h1><a href="http://sevenling.github.io/sevenlove/shop/view/2.0/orderPage.html" target="_blank">999财经直播PC客户端-我的订单</a></h1>
+                                <p>描述：页面布局主要用html5与css3，用form表单来进行数据的交互。</p>
                                 <p>职责：负责设计图的裁切，前端的开发</p>
                             </div>
                         </div><!-- animation-bg2/ -->
@@ -132,14 +127,42 @@
         <div class="swiper-arrow"></div>
     </div><!-- swiper-container/ -->
     
-    <!--弹窗-->
+    <!-- 弹窗 -->
     <div id="alertTip" class="alertTip"></div>
     
+    <!-- webAPP项目弹窗 -->
     <div id="appAlert" class="alert">
     	<div class="alertCont">
-    		<span class="close closeAlert" onclick="closeAlert()">关闭</span>
-    		<a class="link" href="http://m.99live.com" target="_blank">999财经直播webAPP</a>
+    		<span class="close closeAlert" onclick="closeAlert()"></span>          
+            <p class="paragraph"><a class="link" href="http://sevenling.github.io/sevenlove/lottery/view/2.0/lotteryPage.html" target="_blank">•  999财经直播-幸运抽奖</a></p>
+            <p class="paragraph"><a class="link" href="http://m.yingpan030.com" target="_blank">•  赢盘商贸官网移动端</a></p>
+    		<p class="paragraph"><a class="link" href="http://m.99live.com" target="_blank">•  999财经直播官网移动端</a></p>
+            <p class="paragraph"><a class="link" href="http://www.99live.com" target="_blank">•  999财经直播官网PC端</a></p>
+            <p class="paragraph"><a class="link" href="http://sevenling.github.io/sevenlove/zbjamc" target="_blank">•  999财经直播间</a></p>
     	</div>
+    </div>
+
+    <!-- 活动专题弹窗 -->
+    <div id="activeAlert" class="alert">
+        <div class="alertCont">
+            <span class="close closeAlert" onclick="closeAlert()"></span>
+            <p class="paragraph"><a class="link" href="http://sevenling.github.io/sevenlove/drawgame" target="_blank">•  投资礼遇，翻牌赢iphone</a></p>
+            <p class="paragraph"><a class="link" href="http://www.qiaojingold.com/Events/GoldEgg/index.html" target="_blank">•  金鸡贺岁，欢乐砸金蛋</a></p>
+            <p class="paragraph"><a class="link" href="http://www.qiaojingold.com/Events/Christmas/index.html" target="_blank">•  火拼双蛋节：豪礼大放送，疯狂0元秒</a></p>
+            <p class="paragraph"><a class="link" href="http://www.qiaojingold.com/Events/Apple/index.html" target="_blank">•  开心农场，全民狂欢：抢苹果送豪礼</a></p>                      
+            <p class="paragraph"><a class="link" href="http://www.qiaojingold.com/Events/Fishing/index.html" target="_blank">•  玩转捕鱼赢大奖</a></p>
+            <p class="paragraph"><a class="link" href="http://www.qiaojingold.com/Events/Qixi/index.html" target="_blank">•  七夕拼浪漫 成双壕礼免费送</a></p>            
+        </div>
+    </div>
+
+    <!-- H5专题弹窗 -->
+    <div id="h5Alert" class="alert">
+        <div class="alertCont">
+            <span class="close closeAlert" onclick="closeAlert()"></span>
+            <p class="paragraph"><a class="link" href="http://m.99live.com/greetingcard20170120/index_999.html?from=timeline&isappinstalled=0" target="_blank">•  999财经直播贺年卡</a></p>
+            <p class="paragraph"><a class="link" href="http://sevenling.github.io/sevenlove/lexinH5" target="_blank">•  乐信资产</a></p>
+            <p class="paragraph"><a class="link" href="http://sevenling.github.io/sevenlove/APPonline" target="_blank">•  999财经直播APP上线宣传</a></p>                  
+        </div>
     </div>
     <script src="js/swiper.min.js"></script>
     <script>
@@ -163,9 +186,13 @@
             mousewheelControl: true
         });
         
-        var $alertTip = document.getElementById("alertTip");
+        var $alertTip = document.getElementById("alertTip"); 
         var $openApp = document.getElementById("openApp");
+        var $openActive = document.getElementById("openActive"); 
+        var $openH5 = document.getElementById("openH5");     
         var $appAlert = document.getElementById("appAlert");
+        var $activeAlert = document.getElementById("activeAlert");
+        var $h5Alert = document.getElementById("h5Alert");
         
         function openAlert(obj){       	
         	alertTip.style.display = "block";
@@ -178,7 +205,15 @@
         
         $openApp.onclick = function(){
         	openAlert($appAlert);
-        }              
+        }
+
+        $openActive.onclick = function(){
+            openAlert($activeAlert);
+        } 
+
+        $openH5.onclick = function(){
+            openAlert($h5Alert);
+        }            
     </script>
 </body>
 </html>
