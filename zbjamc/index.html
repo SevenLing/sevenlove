@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content= "width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui" />    
+	<meta name="apple-mobile-web-app-capable" content= "yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name= "apple-touch-fullscreen" content= "no" /> 
+	<meta name="full-screen" content="yes" />
+	<meta name="browsermode" content="application" />
+	<meta name="x5-orientation" content="portrait" />
+	<meta name="x5-fullscreen" content="true" />
+	<meta name="x5-page-mode" content="app" /> 
+	<meta name="renderer" content="webkit" />
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>视频直播间</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+</head>
+<body>
+    <div class="zbjPanel">
+    	<div class="zbjVideo">
+    		<!--<div style="height:.3rem; background:#fff; border-bottom:.1rem solid #ccc;"></div>-->
+    	<!-- 	<video loop controls>
+                <source src="http://pull.99ducaijing.cn/live/80091/playlist.m3u8" type="" media="">
+    		</video> -->
+            <div class="video">
+            	<video id="Object1" controls="" preload="auto" src="http://pic.99live.com/group1/M00/00/D3/KlE1x1fJHjOEJ4eoAAAAALiO9VQ922.mp4" autoplay="autoplay" width="100%" style="height:3.23rem;"></video>
+            </div>
+    		<span class="back"></span>
+    		<span class="share"></span>
+    	</div>
+    	<nav>
+    		<ul id="navList" class="navList">
+    			<li class="selectLi">聊天</li>
+    			<li>导师观点</li>
+    			<li>直播课程</li>
+    		</ul>
+    	</nav>
+    	<section id="zbjTab" class="zbjTab">
+    		<!--聊天窗口-->
+    		<div class="tabChat tabChild">
+    		    <div id="chatCont" class="tabCont">
+                    <div id="chatInnercont" class="chatInnercont">
+        		    	<div class="chat" usid="1">
+        		    		<div class="showSay">
+    		    				<a class="toSay">对他说</a><p class="stopShow"><span>|</span><a class="stopSay">禁言他+删除言论</a></p>
+    		    			</div>
+        		    		<span class="userImg">
+        		    			<img src="images/headImg.png" alt="HC"/>
+        		    		</span>
+        		    		<div class="userWord">
+        		    			<span class="userName">smile</span>
+        		    			<p class="chatWord">别误读美国非农数别误读美国非农数别误读美国非农数别误读美国非农数</p>
+        		    			<span class="time">14:15</span>
+        		    		</div>
+        		    	</div>
+        		    	<div class="chat" usid="2">
+        		    		<div class="showSay">
+    		    				<a class="toSay">对他说</a><p class="stopShow"><span>|</span><a class="stopSay">禁言他+删除言论</a></p>
+    		    			</div>
+        		    		<span class="userImg"><img src="images/headImg.png" /></span>
+        		    		<div class="userWord">
+        		    			<span class="userName">holly</span>
+        		    			<p class="chatWord">别误读美国非农数</p>
+                                <span class="time">14:25</span>
+        		    		</div>   		    		
+        		    	</div>
+                        <div class="chat" usid="2">
+                        	<div class="showSay">
+    		    				<a class="toSay">对他说</a><p class="stopShow"><span>|</span><a class="stopSay">禁言他+删除言论</a></p>
+    		    			</div>
+                            <span class="userImg"><img src="images/headImg.png" /></span>
+                            <div class="userWord">
+                                <span class="userName">smile</span>
+                                <p class="chatWord">别误读美国非农数别误读美国非农数别误读美国非农数别误读美国非农数</p>
+                                <span class="time">14:40</span>
+                            </div>
+                        </div>
+                        <div class="chat" usid="1">
+                        	<div class="showSay">
+    		    				<a class="toSay">对他说</a><p class="stopShow"><span>|</span><a class="stopSay">禁言他+删除言论</a></p>
+    		    			</div>
+                            <span class="userImg"><img src="images/headImg.png" /></span>
+                            <div class="userWord">
+                                <span class="userName">smile</span>
+                                <p class="chatWord">别误读美国非农数别误读美国非农数别误读美国非农数别误读美国非农数</p>
+                                <span class="time">14:42</span>
+                            </div>
+                        </div>
+                        <div class="chat" usid="2">
+                        	<div class="showSay">
+    		    				<a class="toSay">对他说</a><p class="stopShow"><span>|</span><a class="stopSay">禁言他+删除言论</a></p>
+    		    			</div>
+                            <span class="userImg"><img src="images/headImg.png" /></span>
+                            <div class="userWord">
+                                <span class="userName">smile</span>
+                                <p class="chatWord">别误读美国非农数别误读美国非农数别误读美国非农数别误读美国非农数</p>
+                                <span class="time">14:42</span>
+                            </div>
+                        </div>
+                    </div>
+    		    </div>
+	    		<footer>
+	    			<div class="sendCont"><textarea type="text" name="sendCont" id="sendCont" required="required" placeholder="请输入信息"></textarea></div>
+	    			<button id="send" type="submit">发送</button>   		
+	    		</footer>
+	    	</div><!-- tabChild /-->
+           
+            <!--导师观点窗口-->
+            <div class="tabCont tabChild">
+                <div class="tabView">
+                    <div class="viewCont">
+                        <div class="title">
+                            <span class="teachImg"><img src="images/teachImg.png" alt="HC"/></span>
+                            <div class="jianjie">
+                                <span class="teachName">金燕（金牌分析师）</span>
+                                <p>你若盛开，清风自来；你若精彩，天自安排。</p>
+                            </div>
+                        </div>
+                        <div class="innercont">
+                            新浪财经讯 6月16日消息，北京时间16日凌晨2点美联储宣布，维持0.25%-0.50%的基准利率不变。自去年12月实施9年多首次加息以来，联储已连续四次会议按兵不动，时间之长多个加息周期来。
+                        </div>
+                    </div>
+
+                    <div class="viewCont">
+                        <div class="title">
+                            <span class="teachImg"><img src="images/teachImg.png" alt="HC"/></span>
+                            <div class="jianjie">
+                                <span class="teachName">浮生（金牌分析师）</span>
+                                <p>你若盛开，清风自来；你若精彩，天自安排。</p>
+                            </div>
+                        </div>
+                        <div class="innercont">
+                            新浪财经讯 6月16日消息，北京时间16日凌晨2点美联储宣布，维持0.25%-0.50%的基准利率不变。自去年12月实施9年多首次加息以来，联储已连续四次会议按兵不动，时间之长多个加息周期来。
+                        </div>
+                    </div>
+
+                    <div class="viewCont">
+                        <div class="title">
+                            <span class="teachImg"><img src="images/teachImg.png" alt="HC"/></span>
+                            <div class="jianjie">
+                                <span class="teachName">金燕（金牌分析师）</span>
+                                <p>你若盛开，清风自来；你若精彩，天自安排。</p>
+                            </div>
+                        </div>
+                        <div class="innercont">
+                            美联储的最新经济评估如下：4月会议以来的资讯表明，劳动力市场改善的速度放缓，而经济活动的增长似乎已开始升温；虽然失业率持续下降，但就业增长亦减少；家庭开支的增长走强；今年初以来改善。
+                        </div>
+                    </div>
+                </div>
+            </div><!-- tabChild /-->
+            
+            <!--直播课程窗口-->
+            <div class="tabCont tabChild">
+                <div class="tabClass">
+                    <p class="timeLine"></p>
+                    <div class="classCont">
+                        <span class="time">09:00-10:30</span>
+                        <div class="innercont">
+                            <p class="speaker">主讲人：胖飞</p>
+                            <p class="class">课&nbsp&nbsp&nbsp程：从各平台的综合收益率分布从各平台的综合收益率分布。</p>
+                        </div>
+                    </div>
+
+                    <div class="classCont">
+                        <span class="time">10:30-12:00</span>
+                        <div class="innercont">
+                            <p class="speaker">主讲人：钱掌柜</p>
+                            <p class="class">课&nbsp&nbsp&nbsp程：从各平台的综合收益率分布。</p>
+                        </div>
+                    </div>
+
+                    <div class="classCont">
+                        <span class="time">14:00-16:00</span>
+                        <div class="innercont">
+                            <p class="speaker">主讲人：浮生</p>
+                            <p class="class">课&nbsp&nbsp&nbsp程：从各平台的综合收益率分布。</p>
+                        </div>
+                    </div>
+
+                    <div class="classCont">
+                        <span class="time">16:00-18:00</span>
+                        <div class="innercont">
+                            <p class="speaker">主讲人：胖飞</p>
+                            <p class="class">课&nbsp&nbsp&nbsp程：从各平台的综合收益率分布。</p>
+                        </div>
+                    </div>
+
+                    <div class="classCont">
+                        <span class="time">18:30-20:00</span>
+                        <div class="innercont">
+                            <p class="speaker">主讲人：胖飞</p>
+                            <p class="class">课&nbsp&nbsp&nbsp程：从各平台的综合收益率分布。</p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- tabChild /-->
+    	</section>    	
+    </div>
+    <!-- zbjPanel /-->
+</body>
+<script src="js/jquery-1.11.1.min.js"></script> 
+<script src="js/html5media.min.js"></script> 
+<script src="js/global.js" charset="utf-8"></script>
+</html>

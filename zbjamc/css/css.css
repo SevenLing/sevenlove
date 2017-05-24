@@ -1,0 +1,101 @@
+html,body{height:100%; min-width:320px; overflow:hidden;}
+::-webkit-input-placeholder, textarea::-webkit-input-placeholder{color:#000;}
+:-moz-placeholder, textarea:-moz-placeholder{color:#000;}
+::-moz-placeholder, textarea::-moz-placeholder{color:#000;}
+:-ms-input-placeholder, textarea:-ms-input-placeholder{color:#000;}
+img{width:100%;}
+.zbjPanel{height:100%; font-size:.24rem;}
+.zbjVideo{position:relative; font-size:0; height:3.23rem;}
+.zbjVideo .video{position:absolute; z-index:1; top:0; width:100%; height:100%;}
+.zbjVideo video{opacity:1; position:relative; z-index:1; width:100%; height:100%; background:#000;}
+.zbjVideo .back,.zbjVideo .share{position:absolute; z-index:999; top:.32rem; display:block; width:.56rem; height:.56rem; background:url(../images/sprite-icon.png) no-repeat; background-color:rgba(36,38,54,.8); background-size:1rem; border-radius:50%;}
+.zbjVideo .back{left:.2rem; background-position:.18rem center;}
+.zbjVideo .share{right:.2rem; background-position:-.6rem center;}
+nav{background:#e7e8f2; color:323232; text-align:center;}
+.navList{overflow:hidden; height:.8rem;}
+.navList li{width:33.3%; border:1px solid #e7e8f2; border-top:0; border-bottom:0; line-height:.8rem; float:left; box-sizing:border-box; -webkit-box-sizing:border-box;}
+.navList li:first-child{border-left:0;}
+.navList li:last-child{border-right:0;}
+.navList .selectLi{color:#3a70bc; background:#eff0fa; border-color:#f8f9ff;}
+.zbjTab{position:relative; background:#f8f9ff; box-sizing:border-box; -webkit-box-sizing:border-box; height:calc(100% - 4.03rem); height:-webkit-calc(100% - 4.03rem);}
+.tabCont{height:100%; overflow:auto; padding:.2rem 0; box-sizing:border-box; -webkit-box-sizing:border-box;}
+.padding20{padding:.2rem;}
+
+/***聊天css***/
+.tabChat{height:100%; padding-bottom:.83rem; box-sizing:border-box; -webkit-box-sizing:border-box;}
+.chatInnercont{padding:0 .2rem;}
+/**发送框**/
+.tabChat footer{position:absolute; bottom:0; left:0; width:100%; height:.83rem; padding:.13rem .2rem; box-sizing:border-box; -webkit-box-sizing:border-box; background:#fff;}
+.tabChat footer .sendCont{display:inline-block; width:4.46rem; height:.57rem; border:.02rem solid #3a70bc; border-radius:.25rem; box-sizing:border-box; background:#fff; overflow:hidden;}
+.tabChat footer textarea{padding:.13rem .15rem; padding-right:13%; width:110%; height:100%; border:0; -webkit-appearance:none; appearance:none; -webkit-box-sizing:border-box; font-size:.26rem; resize:none; background:none;}
+.tabChat footer button{position:absolute; right:.2rem; top:.13rem; width:1.23rem; height:.57rem; border:0; border-radius:.16rem; background:#3a70bc; font-size:.3rem; color:#fff;}
+/**发送框end**/
+.tabChat .userImg{height:.65rem; width:.65rem; border-radius:50%; overflow:hidden; vertical-align:top;}
+.tabChat .userWord{position:relative; display:inline-block; margin-left:.32rem; max-width:4rem; vertical-align:top; color:#909090;}
+.tabChat .userName{line-height:.3rem; font-size:.18rem; display:block; padding-left:.1rem;}
+.tabChat .userId{display:none;}
+.tabChat .chatWord{position:relative; padding:.15rem; color:#323232; border:1px solid #dededf; border-radius:.25rem; line-height:.35rem; background:#fff; word-wrap: break-word}
+.tabChat .time{position:absolute; top:50%; line-height:.3rem; color:#909090; font-size:.18rem;}
+.chatLeft,.chatRight{padding-bottom:.2rem; overflow:hidden;}
+.chatLeft .userImg{float:left;}
+.chatLeft .time{right:-.7rem;}
+.chatLeft .chatWord:before{position:absolute; content:""; left:-.28rem; top:.18rem; border-bottom:.1rem solid transparent; border-left:.14rem solid transparent; border-top:.1rem solid #dededf; border-right:.14rem solid #dededf;}
+.chatLeft .chatWord:after{position:absolute; content:""; left:-.24rem; top:.19rem; border-bottom:.09rem solid transparent; border-left:.13rem solid transparent; border-top:.09rem solid #fff; border-right:.13rem solid #fff;}
+.chatRight .userImg{float:right;}
+.chatRight .userWord{float:right; margin-left:0; margin-right:.32rem;}
+.chatRight .userName{text-align:right; padding-right:.1rem;}
+.chatRight .time{left:-.7rem;}
+.chatRight .chatWord:before{position:absolute; content:""; right:-.28rem; top:.18rem; border-bottom:.1rem solid transparent; border-right:.14rem solid transparent; border-top:.1rem solid #dededf; border-left:.14rem solid #dededf;}
+.chatRight .chatWord:after{position:absolute; content:""; right:-.24rem; top:.19rem; border-bottom:.09rem solid transparent; border-right:.13rem solid transparent; border-top:.09rem solid #fff; border-left:.13rem solid #fff;}
+.chat{position:relative;}
+.chat .showSay{display:none; position:absolute; top:.1rem; z-index:99; padding:0 .27rem; background:rgba(0,0,0,.7); border-radius:.18rem; height:.7rem; line-height:.25rem; color:#fff; font-size:.26rem;}
+.chat .showSay .stopShow{display:inline-block;}
+.chat .showSay a{display:inline-block; padding:.2rem .4rem; padding-right:0; background:url(../images/sprite-icon2.png) no-repeat; background-size:.32rem;}
+.chat .showSay span{display:inline-block; padding:.2rem .18rem;}
+.chat .showSay .toSay{background-position:left .18rem;}
+.chat .showSay .stopSay{background-position:left -.34rem;}
+.chatLeft .showSay{left:.8rem;}
+.chatLeft .showSay:before{content:""; position:absolute; width:.06rem; height:.1rem; background:url(../images/arrow.png) no-repeat left center; background-size:.14rem; top:.2rem; left:-.06rem;}
+.chatRight .showSay{right:.8rem; left:auto;}
+.chatRight .showSay:before{content:""; position:absolute; width:.06rem; height:.1rem; background:url(../images/arrow.png) no-repeat -.06rem center; background-size:.12rem; top:.2rem; right:-.06rem;}
+/***聊天css end***/
+
+/***导师观点css***/
+.viewCont{padding:.2rem; margin-bottom:.2rem; background:#fff;}
+.viewCont:last-child{margin-bottom:0;}
+.viewCont .title{height:auto; padding-bottom:.22rem; overflow:hidden;}
+.viewCont .teachImg{float:left; vertical-align:middle; height:.8rem; width:.8rem; border-radius:50%; overflow:hidden;}
+.viewCont .jianjie{vertical-align:middle; padding-left:.9rem; color:#606060; line-height:.3rem;}
+.viewCont .teachName{display:block; font-size:.3rem; line-height:.4rem; padding-bottom:.1rem; color:#252525;}
+.viewCont .innercont{position:relative; padding:.14rem .17rem; border:1px solid #dadada; border-radius:.06rem; line-height:.4rem; color:#323232; background:#fff;}
+.viewCont .innercont:before{position:absolute; content:""; left:.33rem; top:-16px; border-bottom:8px solid #dadada; border-right:6px solid transparent; border-top:8px solid transparent; border-left:6px solid transparent;}
+.viewCont .innercont:after{position:absolute; content:""; left:.34rem; top:-14px; border-bottom:7px solid #fff; border-right:5px solid transparent; border-top:7px solid transparent; border-left:5px solid transparent;}
+/***导师观点css end***/
+
+/***直播课程***/
+.tabClass{position:relative; padding:0 .2rem;}
+.timeLine{position:absolute; z-index:1; left:.78rem; height:100%; width:1px; background:#3a70bc;}
+.classCont{padding-left:1.36rem; padding-bottom:.2rem; position:relative; z-index:2;}
+.classCont:last-child{padding-bottom:0;}
+.classCont .innercont{position:relative; display:inline-block; vertical-align:top; margin-left:0; padding:.14rem .17rem; width:100%; border:1px solid #dadada; border-radius:.06rem; line-height:.33rem; -webkit-box-sizing:border-box; box-sizing:border-box; color:#323232; background:#fff;}
+.classCont .innercont:before{position:absolute; content:""; left:-16px; top:.22rem; border-right:8px solid #dadada; border-left:8px solid transparent; border-top:6px solid transparent; border-bottom:6px solid transparent;}
+.classCont .innercont:after{position:absolute; content:""; left:-15px; top:.22rem; border-right:8px solid #fff; border-left:8px solid transparent; border-top:6px solid transparent; border-bottom:6px solid transparent;}
+.classCont .speaker{padding-bottom:.1rem;}
+.classCont .time{position:absolute; left:0; display:inline-block; vertical-align:top; line-height:.63rem; color:#606060; font-size:.2rem; background:#f8f9ff;}
+.classCont .time:before{content:""; position:absolute; z-index:3; width:.07rem; height:.07rem; border-radius:50%; left:.55rem; top:.1rem; background:#3a70bc;}
+.classCont:first-of-type .time:before{width:0; height:0;}
+.classCont:last-child{background:#f8f9ff;}
+/***直播课程 end***/
+
+@media(max-width:375px){
+/***导师观点css***/
+.viewCont .innercont:before{left:.33rem; top:-12px; border-bottom:6px solid #dadada; border-right:4px solid transparent; border-top:6px solid transparent; border-left:4px solid transparent;}
+.viewCont .innercont:after{left:.34rem; top:-10px; border-bottom:5px solid #fff; border-right:3px solid transparent; border-top:5px solid transparent; border-left:3px solid transparent;}
+/***导师观点css end***/	
+
+/***直播课程***/
+/*.classCont .innercont{max-width:4.3rem;}*/
+.classCont .innercont:before{left:-12px; border-right:6px solid #dadada; border-left:6px solid transparent; border-top:4px solid transparent; border-bottom:4px solid transparent;}
+.classCont .innercont:after{left:-11px; border-right:6px solid #fff; border-left:6px solid transparent; border-top:4px solid transparent; border-bottom:4px solid transparent;}
+/***直播课程 end***/
+}
